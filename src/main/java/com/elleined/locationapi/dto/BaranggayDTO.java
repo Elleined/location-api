@@ -7,19 +7,16 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CityDTO {
-    private int id;
+public class BaranggayDTO {
 
-    @NotBlank(message = "City name must not be blank")
+    private int id;
+    @NotBlank(message = "Baranggay name must not be empty, blank, or null")
     private String name;
 
-    @Positive(message = "Zip code must be positive!")
-    private int zipCode;
+    @Positive(message = "City id cannot be negative")
+    private int cityId;
+    private String cityName;
 
-    @Positive(message = "Province id must be positive!")
     private int provinceId;
-
     private String provinceName;
-
-    private int baranggayCount;
 }
