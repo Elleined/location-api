@@ -12,9 +12,6 @@ import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.utility.StringValidator;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -85,6 +82,7 @@ public class LocationService {
 
     public AddressDTO getAddress(String currentUserUUID)
             throws ResourceNotFoundException, EmptyUUIDException {
+
         if (StringValidator.isNotValidBody(currentUserUUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.getByUUID(currentUserUUID);
         Address address = user.getUserAddress();
