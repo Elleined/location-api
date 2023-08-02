@@ -1,9 +1,9 @@
 package com.elleined.locationapi.model.address;
 
+import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
-import com.elleined.locationapi.model.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
