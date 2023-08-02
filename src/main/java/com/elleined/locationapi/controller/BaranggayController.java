@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/baranggays")
@@ -18,6 +19,11 @@ public class BaranggayController {
     @PostMapping
     public BaranggayDTO save(@Valid @RequestBody BaranggayDTO baranggayDTO) {
         return locationService.saveBaranggay(baranggayDTO);
+    }
+
+    @PostMapping("/saveAll")
+    public Set<BaranggayDTO> saveAll(@Valid @RequestBody Set<BaranggayDTO> baranggayDTOS) {
+        return locationService.saveAllBaranggay(baranggayDTOS);
     }
 
     @GetMapping("/{id}")

@@ -192,9 +192,20 @@ public class LocationService {
     }
 
     public BaranggayDTO saveBaranggay(BaranggayDTO baranggayDTO) throws ResourceNotFoundException {
-        City city = cityService.getById(baranggayDTO.getCityId());
-        Baranggay baranggay = baranggayService.save(city, baranggayDTO.getName());
+        Baranggay baranggay = baranggayMapper.toEntity(baranggayDTO);
+        baranggayService.save(baranggay);
         return baranggayMapper.toDTO(baranggay);
+    }
+
+    public Set<BaranggayDTO> saveAllBaranggay(Set<BaranggayDTO> baranggayDTOS) {
+        Set<Baranggay> baranggays = baranggayDTOS.stream()
+                .map(baranggayMapper::toEntity)
+                .collect(Collectors.toSet());
+        baranggayService.saveAll(baranggays);
+
+        return baranggays.stream()
+                .map(baranggayMapper::toDTO)
+                .collect(Collectors.toSet());
     }
 
     public BaranggayDTO getBaranggayById(int baranggayId) throws ResourceNotFoundException {

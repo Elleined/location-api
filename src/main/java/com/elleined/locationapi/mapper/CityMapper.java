@@ -5,12 +5,10 @@ import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.service.CityService;
 import com.elleined.locationapi.service.ProvinceService;
-import lombok.RequiredArgsConstructor;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 
 import java.util.HashSet;
 import java.util.Set;

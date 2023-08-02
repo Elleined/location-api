@@ -22,7 +22,7 @@ public class CityController {
     }
 
     @PostMapping("/saveAll")
-    public Set<CityDTO> saveAll(@Valid @RequestBody Set<@Valid CityDTO> cityDTOS) {
+    public Set<CityDTO> saveAll(@Valid @RequestBody Set<CityDTO> cityDTOS) {
         return locationService.saveAllCities(cityDTOS);
     }
 

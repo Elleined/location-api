@@ -19,16 +19,13 @@ public class BaranggayService {
 
     private final BaranggayRepository baranggayRepository;
 
-    Baranggay save(City city, String name) {
-        Baranggay baranggay = Baranggay.baranggayBuilder()
-                .locationName(name)
-                .city(city)
-                .build();
-
-        city.getBaranggays().add(baranggay);
+    void save(Baranggay baranggay) {
         baranggayRepository.save(baranggay);
-        log.debug("Baranggay with id of {} and with name of {} saved successfully", baranggay.getId(), name);
-        return baranggay;
+        log.debug("Baranggay with id of {} and with name of {} saved successfully", baranggay.getId(), baranggay.getLocationName());
+    }
+
+    void saveAll(Set<Baranggay> baranggays) {
+        baranggayRepository.saveAll(baranggays);
     }
 
     Baranggay getById(int id) throws ResourceNotFoundException {

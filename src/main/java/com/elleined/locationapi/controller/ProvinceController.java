@@ -38,7 +38,7 @@ public class ProvinceController {
     }
 
     @PostMapping("/saveAll")
-    public Set<ProvinceDTO> saveAll(@Valid @RequestBody Set<@Valid ProvinceDTO> provinceDTOs) {
+    public Set<ProvinceDTO> saveAll(@Valid @RequestBody Set<ProvinceDTO> provinceDTOs) {
         return locationService.saveAllProvince(provinceDTOs);
     }
 
