@@ -1,5 +1,7 @@
 package com.elleined.locationapi.service;
 
+import com.elleined.locationapi.dto.AddressDTO;
+import com.elleined.locationapi.mapper.AddressMapper;
 import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.address.DeliveryAddress;
 import com.elleined.locationapi.model.address.UserAddress;
@@ -17,15 +19,15 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Slf4j
 class AddressService {
-
     private final AddressRepository addressRepository;
 
-    UserAddress saveUserAddress(String details, Province province, City city, Baranggay baranggay) {
+    UserAddress saveUserAddress(User currentUser, String details, Province province, City city, Baranggay baranggay) {
         UserAddress address = UserAddress.userAddressBuilder()
                 .details(details)
                 .province(province)
                 .city(city)
                 .baranggay(baranggay)
+                .user(currentUser)
                 .build();
 
         addressRepository.save(address);
@@ -33,13 +35,13 @@ class AddressService {
         return address;
     }
 
-    DeliveryAddress saveDeliveryAddress(User user, String details, Province province, City city, Baranggay baranggay) {
+    DeliveryAddress saveDeliveryAddress(User currentUser, String details, Province province, City city, Baranggay baranggay) {
         DeliveryAddress address = DeliveryAddress.deliveryAddressBuilder()
                 .details(details)
                 .province(province)
                 .city(city)
                 .baranggay(baranggay)
-                .user(user)
+                .user(currentUser)
                 .build();
 
         addressRepository.save(address);

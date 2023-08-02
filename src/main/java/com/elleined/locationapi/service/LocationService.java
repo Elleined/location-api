@@ -4,13 +4,19 @@ import com.elleined.locationapi.dto.*;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.mapper.*;
 import com.elleined.locationapi.model.User;
+import com.elleined.locationapi.model.address.Address;
 import com.elleined.locationapi.model.address.DeliveryAddress;
+import com.elleined.locationapi.model.address.UserAddress;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -45,22 +51,51 @@ public class LocationService {
         return baranggayMapper.toDTO(baranggay);
     }
 
-    public UserDTO saveUser(String UUID, String details, int provinceId, int cityId, int baranggayId) throws ResourceNotFoundException {
-        Province province = provinceService.getById(provinceId);
-        City city = cityService.getById(cityId);
-        Baranggay baranggay = baranggayService.getById(baranggayId);
+    public AddressDTO saveUserAddress(@NotNull String UUID, @NotNull AddressDTO addressDTO) throws ResourceNotFoundException {
+        Province province = provinceService.getById(addressDTO.getProvinceId());
+        City city = cityService.getById(addressDTO.getCityId());
+        Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
+        User user = userService.getByUUID(UUID);
 
-        User user = userService.save(UUID, details, province, city, baranggay);
+        UserAddress userAddress = addressService.saveUserAddress(user, addressDTO.getDetails(), province, city, baranggay);
+        return addressMapper.toDTO(userAddress);
+    }
+
+    public AddressDTO saveDeliveryAddress(@NotNull String UUID, @NotNull AddressDTO addressDTO) throws ResourceNotFoundException {
+        Province province = provinceService.getById(addressDTO.getProvinceId());
+        City city = cityService.getById(addressDTO.getCityId());
+        Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
+        User user = userService.getByUUID(UUID);
+
+        DeliveryAddress deliveryAddress = addressService.saveDeliveryAddress(user, addressDTO.getDetails(), province, city, baranggay);
+        return addressMapper.toDTO(deliveryAddress);
+    }
+
+    public AddressDTO getAddress(String currentUserUUID) throws ResourceNotFoundException {
+        User user = userService.getByUUID(currentUserUUID);
+        Address address = user.getUserAddress();
+        return addressMapper.toDTO(address);
+    }
+
+    public Set<AddressDTO> getDeliveryAddresses(String currentUserUUID) throws ResourceNotFoundException {
+        User user = userService.getByUUID(currentUserUUID);
+        return user.getDeliveryAddress().stream()
+                .map(addressMapper::toDTO)
+                .collect(Collectors.toSet());
+    }
+
+    public UserDTO saveUser(String UUID) throws ResourceNotFoundException {
+        User user = userService.save(UUID);
         return userMapper.toDTO(user);
     }
 
-    public AddressDTO saveDeliveryAddress(String UUID, String details, int provinceId, int cityId, int baranggayId) throws ResourceNotFoundException {
-        Province province = provinceService.getById(provinceId);
-        City city = cityService.getById(cityId);
-        Baranggay baranggay = baranggayService.getById(baranggayId);
-        User user = userService.getByUUID(UUID);
+    public UserDTO getById(int userId) throws ResourceNotFoundException {
+        User user = userService.getById(userId);
+        return userMapper.toDTO(user);
+    }
 
-        DeliveryAddress deliveryAddress = addressService.saveDeliveryAddress(user, details, province, city, baranggay);
-        return addressMapper.toDTO(deliveryAddress);
+    public UserDTO getByUUID(String UUID) throws ResourceNotFoundException {
+        User user = userService.getByUUID(UUID);
+        return userMapper.toDTO(user);
     }
 }

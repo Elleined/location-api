@@ -13,7 +13,10 @@ public interface AddressMapper {
     @Mappings({
             @Mapping(target = "provinceName", source = "address.province.locationName"),
             @Mapping(target = "cityName", source = "address.city.locationName"),
-            @Mapping(target = "baranggayName", source = "address.baranggay.locationName")
+            @Mapping(target = "baranggayName", source = "address.baranggay.locationName"),
+            @Mapping(target = "provinceId", source = "address.province.id"),
+            @Mapping(target = "cityId", source = "address.city.id"),
+            @Mapping(target = "baranggayId", source = "address.baranggay.id")
     })
     AddressDTO toDTO(Address address);
 
