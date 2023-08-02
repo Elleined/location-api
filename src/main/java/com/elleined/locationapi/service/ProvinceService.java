@@ -9,8 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @Transactional
@@ -20,16 +20,13 @@ public class ProvinceService {
 
     private final ProvinceRepository provinceRepository;
 
-    Province save(String name, int regionId) {
-        Province province = Province.provinceBuilder()
-                .locationName(name)
-                .regionId(regionId)
-                .cities(new HashSet<>())
-                .build();
-
+    void save(Province province) {
         provinceRepository.save(province);
-        log.debug("Province with id of {} and with name of {} saved successfully", province.getId(), name);
-        return province;
+        log.debug("Province with id of {} and with name of {} saved successfully", province.getId(), province.getLocationName());
+    }
+
+    void saveAll(Set<Province> provinces) {
+        provinceRepository.saveAll(provinces);
     }
 
     Province getById(int id) throws ResourceNotFoundException {

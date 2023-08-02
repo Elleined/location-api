@@ -103,8 +103,20 @@ public class LocationService {
     }
 
     public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
-        Province province = provinceService.save(provinceDTO.getName(), provinceDTO.getRegionId());
+        Province province = provinceMapper.toEntity(provinceDTO);
+        provinceService.save(province);
         return provinceMapper.toDTO(province);
+    }
+
+    public Set<ProvinceDTO> saveAllProvince(Set<ProvinceDTO> provinceDTOs) {
+        Set<Province> provinces =  provinceDTOs.stream()
+                .map(provinceMapper::toEntity)
+                .collect(Collectors.toSet());
+        provinceService.saveAll(provinces);
+
+        return provinces.stream()
+                .map(provinceMapper::toDTO)
+                .collect(Collectors.toSet());
     }
 
     public ProvinceDTO getProvinceById(int provinceId) throws ResourceNotFoundException {

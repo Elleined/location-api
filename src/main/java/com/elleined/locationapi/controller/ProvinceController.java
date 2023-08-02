@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/provinces")
@@ -34,6 +35,11 @@ public class ProvinceController {
     @PostMapping
     public ProvinceDTO save(@Valid @RequestBody ProvinceDTO provinceDTO) {
         return locationService.saveProvince(provinceDTO);
+    }
+
+    @PostMapping("/saveAll")
+    public Set<ProvinceDTO> saveAll(@Valid @RequestBody Set<@Valid ProvinceDTO> provinceDTOs) {
+        return locationService.saveAllProvince(provinceDTOs);
     }
 
     @DeleteMapping("/{id}")

@@ -2,6 +2,7 @@ package com.elleined.locationapi.mapper;
 
 
 import com.elleined.locationapi.dto.ProvinceDTO;
+import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.service.ProvinceService;
 import org.mapstruct.Mapper;
@@ -9,6 +10,9 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Mapper(componentModel = "spring")
 public abstract class ProvinceMapper {
@@ -22,4 +26,17 @@ public abstract class ProvinceMapper {
             @Mapping(target = "baranggayCount", expression = "java(provinceService.getBaranggayCount(province))")
     })
     public abstract ProvinceDTO toDTO(Province province);
+
+
+    @Mappings({
+            @Mapping(target = "id", ignore = true),
+            @Mapping(target = "regionId", source = "provinceDTO.regionId"),
+            @Mapping(target = "locationName", source = "provinceDTO.name"),
+            @Mapping(target = "cities", expression = "java(initializeCities())")
+    })
+    public abstract Province toEntity(ProvinceDTO provinceDTO);
+
+    protected Set<City> initializeCities() {
+        return new HashSet<>();
+    }
 }
