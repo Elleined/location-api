@@ -5,14 +5,12 @@ import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.mapper.*;
 import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.address.DeliveryAddress;
-import com.elleined.locationapi.model.address.UserAddress;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.BindException;
 
 @Service
 @Transactional

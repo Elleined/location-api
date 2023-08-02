@@ -1,6 +1,5 @@
 package com.elleined.locationapi.dto;
 
-import com.elleined.locationapi.model.address.Address;
 import lombok.Builder;
 import lombok.Data;
 

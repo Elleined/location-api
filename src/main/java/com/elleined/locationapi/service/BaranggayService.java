@@ -3,16 +3,13 @@ package com.elleined.locationapi.service;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
-import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.repository.BaranggayRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional

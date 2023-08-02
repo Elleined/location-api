@@ -1,7 +1,5 @@
 package com.elleined.locationapi.service;
 
-import com.elleined.locationapi.dto.AddressDTO;
-import com.elleined.locationapi.dto.UserDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.address.Address;
@@ -27,7 +25,6 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final AddressService addressService;
-
 
     User save(String UUID, String details, Province province, City city, Baranggay baranggay) {
         UserAddress userAddress = addressService.saveUserAddress(details, province, city, baranggay);

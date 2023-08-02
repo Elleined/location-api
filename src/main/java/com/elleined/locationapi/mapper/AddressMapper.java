@@ -1,14 +1,11 @@
 package com.elleined.locationapi.mapper;
 
 import com.elleined.locationapi.dto.AddressDTO;
-import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.address.Address;
 import com.elleined.locationapi.model.address.DeliveryAddress;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-
-import java.util.Set;
 
 @Mapper(componentModel = "spring")
 public interface AddressMapper {
