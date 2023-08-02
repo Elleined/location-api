@@ -36,12 +36,6 @@ public class LocationService {
     private final UserMapper userMapper;
     private final AddressMapper addressMapper;
 
-    public BaranggayDTO saveBaranggay(int cityId, String name) throws ResourceNotFoundException {
-        City city = cityService.getById(cityId);
-        Baranggay baranggay = baranggayService.save(city, name);
-        return baranggayMapper.toDTO(baranggay);
-    }
-
     public AddressDTO saveUserAddress(String UUID, AddressDTO addressDTO)
             throws ResourceNotFoundException, EmptyUUIDException {
 
@@ -174,4 +168,32 @@ public class LocationService {
         return cityMapper.toDTO(city);
     }
 
+    public BaranggayDTO saveBaranggay(BaranggayDTO baranggayDTO) throws ResourceNotFoundException {
+        City city = cityService.getById(baranggayDTO.getCityId());
+        Baranggay baranggay = baranggayService.save(city, baranggayDTO.getName());
+        return baranggayMapper.toDTO(baranggay);
+    }
+
+    public BaranggayDTO getBaranggayById(int baranggayId) throws ResourceNotFoundException {
+        Baranggay baranggay = baranggayService.getById(baranggayId);
+        return baranggayMapper.toDTO(baranggay);
+    }
+
+    public List<BaranggayDTO> getAllByCity(int cityId) throws ResourceNotFoundException {
+        City city = cityService.getById(cityId);
+        return baranggayService.getAllByCity(city).stream()
+                .map(baranggayMapper::toDTO)
+                .toList();
+    }
+
+    public void deleteBaranggay(int baranggayId) {
+        baranggayService.delete(baranggayId);
+    }
+
+    public BaranggayDTO updateBaranggay(int baranggayId, BaranggayDTO baranggayDTO) {
+        City city = cityService.getById(baranggayDTO.getCityId());
+        Baranggay baranggay = baranggayService.getById(baranggayId);
+        baranggayService.update(baranggay, city, baranggayDTO.getName());
+        return baranggayMapper.toDTO(baranggay);
+    }
 }

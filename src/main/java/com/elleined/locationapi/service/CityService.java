@@ -51,12 +51,6 @@ public class CityService {
         log.debug("City with id of {} deleted successfully!", id);
     }
 
-    void delete(City city) {
-        int id = city.getId();
-        cityRepository.delete(city);
-        log.debug("City with id of {} deleted successfully!", id);
-    }
-
     void update(City city, Province province, String name, int zipCode) {
         city.setProvince(province);
         city.setLocationName(name);

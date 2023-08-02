@@ -39,12 +39,6 @@ public class BaranggayService {
         return city.getBaranggays();
     }
 
-    void delete(Baranggay baranggay) {
-        int id = baranggay.getId();
-        baranggayRepository.delete(baranggay);
-        log.debug("Baranggay with id of {} deleted successfully!", id);
-    }
-
     void delete(int id) {
         baranggayRepository.deleteById(id);
         log.debug("Baranggay with id of {} deleted successfully!", id);
