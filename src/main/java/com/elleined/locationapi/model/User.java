@@ -50,7 +50,7 @@ public class User {
             orphanRemoval = true
     )
     @Setter(AccessLevel.NONE)
-    private Set<DeliveryAddress> deliveryAddress;
+    private Set<DeliveryAddress> deliveryAddresses;
 
 
 }

@@ -1,6 +1,7 @@
 package com.elleined.locationapi.controller;
 
 import com.elleined.locationapi.dto.Response;
+import com.elleined.locationapi.exception.EmptyUUIDException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,12 @@ public class ExceptionController {
     public ResponseEntity<Response> handleResourceNotFoundException(ResourceNotFoundException ex) {
         var response = new Response(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(EmptyUUIDException.class)
+    public ResponseEntity<Response> handleEmptyUUIDException(EmptyUUIDException ex) {
+        var response = new Response(ex.getMessage(), HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(BindException.class)

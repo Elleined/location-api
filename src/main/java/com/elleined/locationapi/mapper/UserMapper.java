@@ -11,7 +11,7 @@ public abstract class UserMapper {
 
     @Mappings({
             @Mapping(target = "address", source = "user.userAddress"),
-            @Mapping(target = "deliveryAddresses", source = "user.deliveryAddress")
+            @Mapping(target = "deliveryAddresses", source = "user.deliveryAddresses")
     })
     public abstract UserDTO toDTO(User user);
 }

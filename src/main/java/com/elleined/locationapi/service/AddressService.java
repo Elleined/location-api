@@ -1,7 +1,5 @@
 package com.elleined.locationapi.service;
 
-import com.elleined.locationapi.dto.AddressDTO;
-import com.elleined.locationapi.mapper.AddressMapper;
 import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.address.DeliveryAddress;
 import com.elleined.locationapi.model.address.UserAddress;

@@ -1,6 +1,7 @@
 package com.elleined.locationapi.service;
 
 import com.elleined.locationapi.dto.*;
+import com.elleined.locationapi.exception.EmptyUUIDException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.mapper.*;
 import com.elleined.locationapi.model.User;
@@ -10,7 +11,10 @@ import com.elleined.locationapi.model.address.UserAddress;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
+import com.elleined.locationapi.utility.StringValidator;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,7 +55,10 @@ public class LocationService {
         return baranggayMapper.toDTO(baranggay);
     }
 
-    public AddressDTO saveUserAddress(@NotNull String UUID, @NotNull AddressDTO addressDTO) throws ResourceNotFoundException {
+    public AddressDTO saveUserAddress(String UUID, AddressDTO addressDTO)
+            throws ResourceNotFoundException, EmptyUUIDException {
+
+        if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         Province province = provinceService.getById(addressDTO.getProvinceId());
         City city = cityService.getById(addressDTO.getCityId());
         Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
@@ -61,7 +68,9 @@ public class LocationService {
         return addressMapper.toDTO(userAddress);
     }
 
-    public AddressDTO saveDeliveryAddress(@NotNull String UUID, @NotNull AddressDTO addressDTO) throws ResourceNotFoundException {
+    public AddressDTO saveDeliveryAddress(String UUID, AddressDTO addressDTO)
+            throws ResourceNotFoundException, EmptyUUIDException {
+        if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         Province province = provinceService.getById(addressDTO.getProvinceId());
         City city = cityService.getById(addressDTO.getCityId());
         Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
@@ -71,20 +80,26 @@ public class LocationService {
         return addressMapper.toDTO(deliveryAddress);
     }
 
-    public AddressDTO getAddress(String currentUserUUID) throws ResourceNotFoundException {
+    public AddressDTO getAddress(String currentUserUUID)
+            throws ResourceNotFoundException, EmptyUUIDException {
+        if (StringValidator.isNotValidBody(currentUserUUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.getByUUID(currentUserUUID);
         Address address = user.getUserAddress();
         return addressMapper.toDTO(address);
     }
 
-    public Set<AddressDTO> getDeliveryAddresses(String currentUserUUID) throws ResourceNotFoundException {
+    public Set<AddressDTO> getDeliveryAddresses(String currentUserUUID)
+            throws ResourceNotFoundException, EmptyUUIDException {
+
+        if (StringValidator.isNotValidBody(currentUserUUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.getByUUID(currentUserUUID);
-        return user.getDeliveryAddress().stream()
+        return user.getDeliveryAddresses().stream()
                 .map(addressMapper::toDTO)
                 .collect(Collectors.toSet());
     }
 
-    public UserDTO saveUser(String UUID) throws ResourceNotFoundException {
+    public UserDTO saveUser(String UUID) throws EmptyUUIDException {
+        if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.save(UUID);
         return userMapper.toDTO(user);
     }
@@ -94,7 +109,10 @@ public class LocationService {
         return userMapper.toDTO(user);
     }
 
-    public UserDTO getByUUID(String UUID) throws ResourceNotFoundException {
+    public UserDTO getByUUID(String UUID)
+            throws ResourceNotFoundException, EmptyUUIDException {
+        
+        if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.getByUUID(UUID);
         return userMapper.toDTO(user);
     }
