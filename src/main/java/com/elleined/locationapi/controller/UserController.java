@@ -23,19 +23,6 @@ public class UserController {
         return locationService.saveUser(UUID);
     }
 
-    @PostMapping("/saveUserAddress/{currentUserUUID}")
-    public AddressDTO saveUserAddress(@PathVariable("currentUserUUID") String currentUserUUID,
-                                      @Valid @RequestBody AddressDTO addressDTO) {
-
-        return locationService.saveUserAddress(currentUserUUID, addressDTO);
-    }
-
-    @PostMapping("/saveDeliveryAddress/{currentUserUUID}")
-    public AddressDTO saveDeliveryAddress(@PathVariable("currentUserUUID") String currentUserUUID,
-                                          @Valid @RequestBody AddressDTO addressDTO) {
-        return locationService.saveDeliveryAddress(currentUserUUID, addressDTO);
-    }
-
     @GetMapping("/id/{id}")
     public UserDTO getByUUID(@Positive @PathVariable("id") int id) {
         return locationService.getById(id);
@@ -44,6 +31,19 @@ public class UserController {
     @GetMapping("/{currentUserUUID}")
     public UserDTO getByUUID(@PathVariable("currentUserUUID") String currentUserUUID) {
         return locationService.getByUUID(currentUserUUID);
+    }
+
+    @PostMapping("/userAddress/{currentUserUUID}")
+    public AddressDTO saveUserAddress(@PathVariable("currentUserUUID") String currentUserUUID,
+                                      @Valid @RequestBody AddressDTO addressDTO) {
+
+        return locationService.saveUserAddress(currentUserUUID, addressDTO);
+    }
+
+    @PostMapping("/deliveryAddresses/{currentUserUUID}")
+    public AddressDTO saveDeliveryAddress(@PathVariable("currentUserUUID") String currentUserUUID,
+                                          @Valid @RequestBody AddressDTO addressDTO) {
+        return locationService.saveDeliveryAddress(currentUserUUID, addressDTO);
     }
 
     @GetMapping("/userAddress/{currentUserUUID}")

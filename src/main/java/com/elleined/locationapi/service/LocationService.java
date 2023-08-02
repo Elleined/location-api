@@ -59,10 +59,11 @@ public class LocationService {
             throws ResourceNotFoundException, EmptyUUIDException {
 
         if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
+
+        User user = userService.getByUUID(UUID);
         Province province = provinceService.getById(addressDTO.getProvinceId());
         City city = cityService.getById(addressDTO.getCityId());
         Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
-        User user = userService.getByUUID(UUID);
 
         UserAddress userAddress = addressService.saveUserAddress(user, addressDTO.getDetails(), province, city, baranggay);
         return addressMapper.toDTO(userAddress);
@@ -70,11 +71,13 @@ public class LocationService {
 
     public AddressDTO saveDeliveryAddress(String UUID, AddressDTO addressDTO)
             throws ResourceNotFoundException, EmptyUUIDException {
+
         if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
+
+        User user = userService.getByUUID(UUID);
         Province province = provinceService.getById(addressDTO.getProvinceId());
         City city = cityService.getById(addressDTO.getCityId());
         Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
-        User user = userService.getByUUID(UUID);
 
         DeliveryAddress deliveryAddress = addressService.saveDeliveryAddress(user, addressDTO.getDetails(), province, city, baranggay);
         return addressMapper.toDTO(deliveryAddress);
@@ -111,7 +114,7 @@ public class LocationService {
 
     public UserDTO getByUUID(String UUID)
             throws ResourceNotFoundException, EmptyUUIDException {
-        
+
         if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.getByUUID(UUID);
         return userMapper.toDTO(user);
