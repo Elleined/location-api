@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @Transactional
@@ -42,10 +43,8 @@ public class CityService {
         return cityRepository.findByZipCode(zipCode).orElseThrow(() -> new ResourceNotFoundException("City with zipCode of " + zipCode + " does not exists!"));
     }
 
-    List<City> getAllByProvince(Province province) {
-        return cityRepository.findAll().stream()
-                .filter(city -> city.getProvince().equals(province))
-                .toList();
+    Set<City> getAllByProvince(Province province) {
+       return province.getCities();
     }
 
     void delete(int id) {
