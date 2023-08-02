@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,6 +19,11 @@ public class CityController {
     @PostMapping
     public CityDTO save(@Valid @RequestBody CityDTO cityDTO) {
         return locationService.saveCity(cityDTO);
+    }
+
+    @PostMapping("/saveAll")
+    public Set<CityDTO> saveAll(@Valid @RequestBody Set<@Valid CityDTO> cityDTOS) {
+        return locationService.saveAllCities(cityDTOS);
     }
 
     @GetMapping("/{id}")

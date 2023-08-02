@@ -109,7 +109,7 @@ public class LocationService {
     }
 
     public Set<ProvinceDTO> saveAllProvince(Set<ProvinceDTO> provinceDTOs) {
-        Set<Province> provinces =  provinceDTOs.stream()
+        Set<Province> provinces = provinceDTOs.stream()
                 .map(provinceMapper::toEntity)
                 .collect(Collectors.toSet());
         provinceService.saveAll(provinces);
@@ -147,9 +147,20 @@ public class LocationService {
     }
 
     public CityDTO saveCity(CityDTO cityDTO) throws ResourceNotFoundException {
-        Province province = provinceService.getById(cityDTO.getProvinceId());
-        City city = cityService.save(province, cityDTO.getName(), cityDTO.getZipCode());
+        City city = cityMapper.toEntity(cityDTO);
+        cityService.save(city);
         return cityMapper.toDTO(city);
+    }
+
+    public Set<CityDTO> saveAllCities(Set<CityDTO> cityDTOS) {
+        Set<City> cities = cityDTOS.stream()
+                .map(cityMapper::toEntity)
+                .collect(Collectors.toSet());
+        cityService.saveAll(cities);
+
+        return cities.stream()
+                .map(cityMapper::toDTO)
+                .collect(Collectors.toSet());
     }
 
     public CityDTO getCityById(int cityId) throws ResourceNotFoundException {

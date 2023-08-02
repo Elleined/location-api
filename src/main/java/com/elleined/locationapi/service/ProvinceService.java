@@ -29,7 +29,7 @@ public class ProvinceService {
         provinceRepository.saveAll(provinces);
     }
 
-    Province getById(int id) throws ResourceNotFoundException {
+    public Province getById(int id) throws ResourceNotFoundException {
         return provinceRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Province with id of " + id + " does not exists"));
     }
 

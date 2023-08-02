@@ -1,25 +1,47 @@
 package com.elleined.locationapi.mapper;
 
 import com.elleined.locationapi.dto.CityDTO;
+import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.service.CityService;
+import com.elleined.locationapi.service.ProvinceService;
+import lombok.RequiredArgsConstructor;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Mapper(componentModel = "spring")
 public abstract class CityMapper {
 
     @Autowired
-    @Lazy
     protected CityService cityService;
+
+    @Autowired
+    protected ProvinceService provinceService;
 
     @Mappings({
             @Mapping(target = "name", source = "city.locationName"),
             @Mapping(target = "provinceName", source = "city.province.locationName"),
+            @Mapping(target = "provinceId", source = "city.province.id"),
             @Mapping(target = "baranggayCount", expression = "java(cityService.getBaranggayCount(city))")
     })
     public abstract CityDTO toDTO(City city);
+
+    @Mappings({
+            @Mapping(target = "id", ignore = true),
+            @Mapping(target = "province", expression = "java(provinceService.getById(cityDTO.getProvinceId()))"),
+            @Mapping(target = "locationName", source = "cityDTO.name"),
+            @Mapping(target = "zipCode", source = "cityDTO.zipCode"),
+            @Mapping(target = "baranggays", expression = "java(initializeBaranggays())")
+    })
+    public abstract City toEntity(CityDTO cityDTO);
+
+    protected Set<Baranggay> initializeBaranggays() {
+        return new HashSet<>();
+    }
 }

@@ -1,6 +1,7 @@
 package com.elleined.locationapi.service;
 
 
+import com.elleined.locationapi.dto.CityDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
@@ -20,18 +21,13 @@ import java.util.Set;
 public class CityService {
     private final CityRepository cityRepository;
 
-    City save(Province province, String name, int zipCode) {
-        City city = City.cityBuilder()
-                .locationName(name)
-                .zipCode(zipCode)
-                .province(province)
-                .baranggays(new HashSet<>())
-                .build();
-
-        province.getCities().add(city);
+    void save(City city) {
         cityRepository.save(city);
-        log.debug("City with id of {} and with name of {} saved successfully!", city.getId(), name);
-        return city;
+        log.debug("City with id of {} and with name of {} saved successfully!", city.getId(), city.getLocationName());
+    }
+
+    void saveAll(Set<City> cities) {
+        cityRepository.saveAll(cities);
     }
 
     City getById(int id) throws ResourceNotFoundException {
