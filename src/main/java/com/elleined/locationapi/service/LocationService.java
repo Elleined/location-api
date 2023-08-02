@@ -16,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -35,8 +36,8 @@ public class LocationService {
     private final UserMapper userMapper;
     private final AddressMapper addressMapper;
 
-    public ProvinceDTO saveProvince(String name, int regionId) {
-        Province province = provinceService.save(name, regionId);
+    public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
+        Province province = provinceService.save(provinceDTO.getName(), provinceDTO.getRegionId());
         return provinceMapper.toDTO(province);
     }
 
@@ -105,16 +106,43 @@ public class LocationService {
         return userMapper.toDTO(user);
     }
 
-    public UserDTO getById(int userId) throws ResourceNotFoundException {
+    public UserDTO getUserById(int userId) throws ResourceNotFoundException {
         User user = userService.getById(userId);
         return userMapper.toDTO(user);
     }
 
-    public UserDTO getByUUID(String UUID)
+    public UserDTO getUserByUUID(String UUID)
             throws ResourceNotFoundException, EmptyUUIDException {
 
         if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
         User user = userService.getByUUID(UUID);
         return userMapper.toDTO(user);
+    }
+
+    public ProvinceDTO getProvinceById(int provinceId) throws ResourceNotFoundException {
+        Province province =  provinceService.getById(provinceId);
+        return provinceMapper.toDTO(province);
+    }
+
+    public List<ProvinceDTO> getAllByRegionId(int regionId) {
+        return provinceService.getAllByRegionId(regionId).stream()
+                .map(provinceMapper::toDTO)
+                .toList();
+    }
+
+    public List<ProvinceDTO> getAllProvince() {
+        return provinceService.getAll().stream()
+                .map(provinceMapper::toDTO)
+                .toList();
+    }
+
+    public void deleteProvince(int provinceId) {
+        provinceService.delete(provinceId);
+    }
+
+    public ProvinceDTO updateProvince(int provinceId, ProvinceDTO provinceDTO) {
+        Province province = provinceService.getById(provinceId);
+        provinceService.update(province, provinceDTO.getName(), provinceDTO.getRegionId());
+        return provinceMapper.toDTO(province);
     }
 }

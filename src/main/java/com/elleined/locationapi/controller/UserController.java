@@ -19,11 +19,11 @@ public class UserController {
 
     @GetMapping("/id/{id}")
     public UserDTO getByUUID(@Positive @PathVariable("id") int id) {
-        return locationService.getById(id);
+        return locationService.getUserById(id);
     }
 
     @GetMapping("/{currentUserUUID}")
     public UserDTO getByUUID(@PathVariable("currentUserUUID") String currentUserUUID) {
-        return locationService.getByUUID(currentUserUUID);
+        return locationService.getUserByUUID(currentUserUUID);
     }
 }
