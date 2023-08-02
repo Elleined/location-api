@@ -36,17 +36,6 @@ public class LocationService {
     private final UserMapper userMapper;
     private final AddressMapper addressMapper;
 
-    public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
-        Province province = provinceService.save(provinceDTO.getName(), provinceDTO.getRegionId());
-        return provinceMapper.toDTO(province);
-    }
-
-    public CityDTO saveCity(int provinceId, String name, int zipCode) throws ResourceNotFoundException {
-        Province province = provinceService.getById(provinceId);
-        City city = cityService.save(province, name, zipCode);
-        return cityMapper.toDTO(city);
-    }
-
     public BaranggayDTO saveBaranggay(int cityId, String name) throws ResourceNotFoundException {
         City city = cityService.getById(cityId);
         Baranggay baranggay = baranggayService.save(city, name);
@@ -119,6 +108,11 @@ public class LocationService {
         return userMapper.toDTO(user);
     }
 
+    public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
+        Province province = provinceService.save(provinceDTO.getName(), provinceDTO.getRegionId());
+        return provinceMapper.toDTO(province);
+    }
+
     public ProvinceDTO getProvinceById(int provinceId) throws ResourceNotFoundException {
         Province province =  provinceService.getById(provinceId);
         return provinceMapper.toDTO(province);
@@ -140,9 +134,44 @@ public class LocationService {
         provinceService.delete(provinceId);
     }
 
-    public ProvinceDTO updateProvince(int provinceId, ProvinceDTO provinceDTO) {
+    public ProvinceDTO updateProvince(int provinceId, ProvinceDTO provinceDTO) throws ResourceNotFoundException {
         Province province = provinceService.getById(provinceId);
         provinceService.update(province, provinceDTO.getName(), provinceDTO.getRegionId());
         return provinceMapper.toDTO(province);
     }
+
+    public CityDTO saveCity(CityDTO cityDTO) throws ResourceNotFoundException {
+        Province province = provinceService.getById(cityDTO.getProvinceId());
+        City city = cityService.save(province, cityDTO.getName(), cityDTO.getZipCode());
+        return cityMapper.toDTO(city);
+    }
+
+    public CityDTO getCityById(int cityId) throws ResourceNotFoundException {
+        City city = cityService.getById(cityId);
+        return cityMapper.toDTO(city);
+    }
+
+    public CityDTO getCityByZipCode(int zipCode) throws ResourceNotFoundException {
+        City city = cityService.getByZipCode(zipCode);
+        return cityMapper.toDTO(city);
+    }
+
+    public List<CityDTO> getAllByProvince(int provinceId) throws ResourceNotFoundException {
+        Province province = provinceService.getById(provinceId);
+        return cityService.getAllByProvince(province).stream()
+                .map(cityMapper::toDTO)
+                .toList();
+    }
+
+    public void deleteCity(int cityId) {
+        cityService.delete(cityId);
+    }
+
+    public CityDTO updateCity(int cityId, CityDTO cityDTO) throws ResourceNotFoundException {
+        Province province = provinceService.getById(cityDTO.getProvinceId());
+        City city = cityService.getById(cityId);
+        cityService.update(city, province, cityDTO.getName(), cityDTO.getZipCode());
+        return cityMapper.toDTO(city);
+    }
+
 }

@@ -46,12 +46,6 @@ public class ProvinceService {
         return provinceRepository.findAll();
     }
 
-    void delete(Province province) {
-        int id = province.getId();
-        provinceRepository.delete(province);
-        log.debug("Province with id of {} deleted successfully!", id);
-    }
-
     void delete(int id) {
         provinceRepository.deleteById(id);
         log.debug("Province with id of {} deleted successfully!", id);

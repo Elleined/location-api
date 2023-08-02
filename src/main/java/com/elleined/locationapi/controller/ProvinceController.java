@@ -42,7 +42,7 @@ public class ProvinceController {
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     public ProvinceDTO update(@PathVariable("id") int id,
                               @Valid @RequestBody ProvinceDTO provinceDTO) {
         return locationService.updateProvince(id, provinceDTO);
