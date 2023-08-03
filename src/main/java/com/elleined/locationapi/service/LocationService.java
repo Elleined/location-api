@@ -3,6 +3,7 @@ package com.elleined.locationapi.service;
 import com.elleined.locationapi.dto.*;
 import com.elleined.locationapi.exception.EmptyUUIDException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
+import com.elleined.locationapi.exception.ZipCodeAlreadyExistsException;
 import com.elleined.locationapi.mapper.*;
 import com.elleined.locationapi.model.User;
 import com.elleined.locationapi.model.address.Address;
@@ -146,8 +147,12 @@ public class LocationService {
         return provinceMapper.toDTO(province);
     }
 
-    public CityDTO saveCity(CityDTO cityDTO) throws ResourceNotFoundException {
+    public CityDTO saveCity(CityDTO cityDTO)
+            throws ResourceNotFoundException, ZipCodeAlreadyExistsException {
+
         City city = cityMapper.toEntity(cityDTO);
+        if (cityService.isZipCodeAlreadyExists(cityDTO.getZipCode())) throw new ZipCodeAlreadyExistsException("City with zip code of " + cityDTO.getZipCode() + " already exists!");
+
         cityService.save(city);
         return cityMapper.toDTO(city);
     }
@@ -187,7 +192,7 @@ public class LocationService {
     public CityDTO updateCity(int cityId, CityDTO cityDTO) throws ResourceNotFoundException {
         Province province = provinceService.getById(cityDTO.getProvinceId());
         City city = cityService.getById(cityId);
-        cityService.update(city, province, cityDTO.getName(), cityDTO.getZipCode());
+        cityService.update(city, province, cityDTO.getName());
         return cityMapper.toDTO(city);
     }
 
