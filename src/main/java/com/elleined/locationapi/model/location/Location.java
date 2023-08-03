@@ -32,7 +32,6 @@ public abstract class Location {
 
     @Column(
             name = "location_name",
-            unique = true,
             nullable = false
     )
     private String locationName;
