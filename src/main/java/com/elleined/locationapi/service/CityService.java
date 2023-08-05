@@ -31,11 +31,4 @@ public class CityService {
         return cityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("City with id of " + id + " does not exists!"));
     }
 
-    City getByZipCode(int zipCode) throws ResourceNotFoundException {
-        return cityRepository.findByZipCode(zipCode).orElseThrow(() -> new ResourceNotFoundException("City with zipCode of " + zipCode + " does not exists!"));
-    }
-
-    boolean isZipCodeAlreadyExists(int zipCode) {
-        return cityRepository.fetchAllZipCode().stream().anyMatch(code -> zipCode == code);
-    }
 }
