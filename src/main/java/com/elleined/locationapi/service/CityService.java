@@ -4,6 +4,7 @@ package com.elleined.locationapi.service;
 import com.elleined.locationapi.dto.CityDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.City;
+import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.repository.CityRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -39,5 +41,9 @@ public class CityService {
 
     public boolean isAlreadyExists(Collection<CityDTO> cityDTOS) {
         return cityDTOS.stream().anyMatch(this::isAlreadyExists);
+    }
+
+    public List<City> searchByLocationName(String locationName) {
+        return cityRepository.searchByLocationName(locationName);
     }
 }

@@ -34,4 +34,9 @@ public class BaranggayController {
     public List<BaranggayDTO> getAllByCity(@PathVariable("cityId") int cityId) {
         return locationService.getAllByCity(cityId);
     }
+
+    @GetMapping("/searchByLocationName")
+    public List<BaranggayDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
+        return locationService.searchByBaranggayName(locationName);
+    }
 }

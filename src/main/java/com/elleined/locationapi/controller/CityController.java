@@ -34,4 +34,9 @@ public class CityController {
     public List<CityDTO> getAllByProvince(@PathVariable("provinceId") int provinceId) {
         return locationService.getAllByProvince(provinceId);
     }
+
+    @GetMapping("/searchByLocationName")
+    public List<CityDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
+        return locationService.searchByCityName(locationName);
+    }
 }

@@ -253,4 +253,16 @@ public class LocationService {
                 .map(provinceMapper::toDTO)
                 .toList();
     }
+
+    public List<CityDTO> searchByCityName(String locationName) {
+        return cityService.searchByLocationName(locationName).stream()
+                .map(cityMapper::toDTO)
+                .toList();
+    }
+
+    public List<BaranggayDTO> searchByBaranggayName(String locationName) {
+        return baranggayService.searchByLocationName(locationName).stream()
+                .map(baranggayMapper::toDTO)
+                .toList();
+    }
 }
