@@ -6,11 +6,24 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_city")
+@Table(
+        name = "tbl_city",
+        indexes = @Index(name = "location_name_idx", columnList = "location_name")
+)
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class City extends Location {
+public class City {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "location_id")
+    private int id;
+
+    @Column(name = "location_name")
+    private String locationName;
 
     @ManyToOne
     @JoinColumn(
@@ -27,11 +40,4 @@ public class City extends Location {
     )
     @Setter(AccessLevel.NONE)
     private Set<Baranggay> baranggays;
-
-    @Builder(builderMethodName = "cityBuilder")
-    public City(int id, String locationName, Province province, Set<Baranggay> baranggays) {
-        super(id, locationName);
-        this.province = province;
-        this.baranggays = baranggays;
-    }
 }

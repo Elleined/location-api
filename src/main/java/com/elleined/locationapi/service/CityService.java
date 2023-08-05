@@ -29,6 +29,7 @@ public class CityService {
 
     public City getById(int id) throws ResourceNotFoundException {
         return cityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("City with id of " + id + " does not exists!"));
+
     }
 
 }

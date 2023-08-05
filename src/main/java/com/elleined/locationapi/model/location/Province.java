@@ -7,11 +7,24 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_province")
+@Table(
+        name = "tbl_province",
+        indexes = @Index(name = "location_name_idx", columnList = "location_name")
+)
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Province extends Location {
+public class Province {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "location_id")
+    private int id;
+
+    @Column(name = "location_name")
+    private String locationName;
 
     @ManyToOne
     @JoinColumn(
@@ -28,11 +41,4 @@ public class Province extends Location {
     )
     @Setter(AccessLevel.NONE)
     private Set<City> cities;
-
-    @Builder(builderMethodName = "provinceBuilder")
-    public Province(int id, String locationName, Region region, Set<City> cities) {
-        super(id, locationName);
-        this.region = region;
-        this.cities = cities;
-    }
 }

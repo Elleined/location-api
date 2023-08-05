@@ -1,17 +1,28 @@
 package com.elleined.locationapi.model.location;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
-@Table(name = "tbl_baranggay")
+@Table(
+        name = "tbl_baranggay",
+        indexes = @Index(name = "location_name_idx", columnList = "location_name")
+)
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Baranggay extends Location {
+public class Baranggay {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "location_id")
+    private int id;
+
+    @Column(name = "location_name")
+    private String locationName;
 
     @ManyToOne
     @JoinColumn(
@@ -19,10 +30,4 @@ public class Baranggay extends Location {
             referencedColumnName = "location_id"
     )
     private City city;
-
-    @Builder(builderMethodName = "baranggayBuilder")
-    public Baranggay(int id, String locationName, City city) {
-        super(id, locationName);
-        this.city = city;
-    }
 }

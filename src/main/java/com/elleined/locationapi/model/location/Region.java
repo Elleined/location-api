@@ -6,13 +6,23 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_region")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name = "tbl_region", indexes = {
+        @Index(name = "location_name_idx", columnList = "location_name")
+})
+@Builder
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class Region extends Location {
+public class Region {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "location_id")
+    private int id;
+
+    @Column(name = "location_name")
+    private String locationName;
 
     @Column(name = "region_description")
     private String description;
@@ -25,11 +35,4 @@ public class Region extends Location {
     )
     @Setter(AccessLevel.NONE)
     private Set<Province> provinces;
-
-    @Builder
-    public Region(int id, String locationName, String description, Set<Province> provinces) {
-        super(id, locationName);
-        this.description = description;
-        this.provinces = provinces;
-    }
 }
