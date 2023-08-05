@@ -30,11 +30,6 @@ public class CityController {
         return locationService.getCityById(id);
     }
 
-    @GetMapping("/zipCode/{zipCode}")
-    public CityDTO getByZipCode(@PathVariable("zipCode") int zipCode) {
-        return locationService.getCityByZipCode(zipCode);
-    }
-
     @GetMapping("/getAllByProvince/{provinceId}")
     public List<CityDTO> getAllByProvince(@PathVariable("provinceId") int provinceId) {
         return locationService.getAllByProvince(provinceId);

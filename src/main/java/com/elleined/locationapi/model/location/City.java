@@ -15,14 +15,6 @@ import java.util.Set;
 @Setter
 public class City extends Location {
 
-    @Column(
-            name = "zip_code",
-            updatable = false,
-            nullable = false,
-            unique = true
-    )
-    private int zipCode;
-
     @ManyToOne
     @JoinColumn(
             name = "province_id",
@@ -40,9 +32,8 @@ public class City extends Location {
     private Set<Baranggay> baranggays;
 
     @Builder(builderMethodName = "cityBuilder")
-    public City(int id, String locationName, int zipCode, Province province, Set<Baranggay> baranggays) {
+    public City(int id, String locationName, Province province, Set<Baranggay> baranggays) {
         super(id, locationName);
-        this.zipCode = zipCode;
         this.province = province;
         this.baranggays = baranggays;
     }

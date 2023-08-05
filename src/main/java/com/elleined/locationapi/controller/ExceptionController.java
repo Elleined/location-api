@@ -3,7 +3,6 @@ package com.elleined.locationapi.controller;
 import com.elleined.locationapi.dto.Response;
 import com.elleined.locationapi.exception.EmptyUUIDException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
-import com.elleined.locationapi.exception.ZipCodeAlreadyExistsException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
@@ -35,11 +34,5 @@ public class ExceptionController {
                 .map(errorMessage -> new Response(errorMessage, HttpStatus.BAD_REQUEST))
                 .toList();
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
-    }
-
-    @ExceptionHandler(ZipCodeAlreadyExistsException.class)
-    public ResponseEntity<Response> handleZipCodeAlreadyExistsException(ZipCodeAlreadyExistsException ex) {
-        var response = new Response(ex.getMessage(), HttpStatus.BAD_REQUEST);
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }
