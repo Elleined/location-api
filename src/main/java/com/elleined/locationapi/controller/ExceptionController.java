@@ -1,6 +1,7 @@
 package com.elleined.locationapi.controller;
 
 import com.elleined.locationapi.dto.Response;
+import com.elleined.locationapi.exception.AlreadyExistsException;
 import com.elleined.locationapi.exception.EmptyUUIDException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,8 @@ import java.util.List;
 @ControllerAdvice
 public class ExceptionController {
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<Response> handleResourceNotFoundException(ResourceNotFoundException ex) {
+    @ExceptionHandler({ResourceNotFoundException.class, AlreadyExistsException.class})
+    public ResponseEntity<Response> handleResourceNotFoundException(RuntimeException ex) {
         var response = new Response(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }

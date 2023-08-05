@@ -1,5 +1,6 @@
 package com.elleined.locationapi.service;
 
+import com.elleined.locationapi.dto.BaranggayDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.repository.BaranggayRepository;
@@ -8,13 +9,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.Set;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class BaranggayService {
+public class BaranggayService implements ExistenceChecker<BaranggayDTO> {
 
     private final BaranggayRepository baranggayRepository;
 
@@ -29,5 +31,15 @@ public class BaranggayService {
 
     public Baranggay getById(int id) throws ResourceNotFoundException {
         return baranggayRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Baranggay with id of " + id + " does not exists!"));
+    }
+
+    @Override
+    public boolean isAlreadyExists(BaranggayDTO baranggayDTO) {
+        return baranggayRepository.existsById(baranggayDTO.getId());
+    }
+
+    @Override
+    public boolean isAlreadyExists(Collection<BaranggayDTO> baranggayDTOS) {
+        return baranggayDTOS.stream().anyMatch(this::isAlreadyExists);
     }
 }

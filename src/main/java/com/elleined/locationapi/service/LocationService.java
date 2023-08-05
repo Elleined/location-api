@@ -1,6 +1,7 @@
 package com.elleined.locationapi.service;
 
 import com.elleined.locationapi.dto.*;
+import com.elleined.locationapi.exception.AlreadyExistsException;
 import com.elleined.locationapi.exception.EmptyUUIDException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.mapper.*;
@@ -99,13 +100,21 @@ public class LocationService {
         return userMapper.toDTO(user);
     }
 
-    public RegionDTO saveRegion(RegionDTO regionDTO) {
+    public RegionDTO saveRegion(RegionDTO regionDTO)
+            throws AlreadyExistsException, ResourceNotFoundException {
+
+        if (regionService.isAlreadyExists(regionDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
+
         Region region = regionMapper.toEntity(regionDTO);
         regionService.save(region);
         return regionMapper.toDTO(region);
     }
 
-    public Set<RegionDTO> saveAllRegion(Set<RegionDTO> regionDTOs) {
+    public Set<RegionDTO> saveAllRegion(Set<RegionDTO> regionDTOs)
+            throws AlreadyExistsException, ResourceNotFoundException {
+
+        if (regionService.isAlreadyExists(regionDTOs)) throw new AlreadyExistsException("One of the provided id already exists!");
+
         Set<Region> regions = regionDTOs.stream()
                 .map(regionMapper::toEntity)
                 .collect(Collectors.toSet());
@@ -116,24 +125,31 @@ public class LocationService {
                 .collect(Collectors.toSet());
     }
 
-    public RegionDTO getRegionById(int regionId) {
+    public RegionDTO getRegionById(int regionId) throws ResourceNotFoundException {
         Region region = regionService.getById(regionId);
         return regionMapper.toDTO(region);
     }
 
-    public Set<RegionDTO> getAllRegion() {
+    public Set<RegionDTO> getAllRegion() throws ResourceNotFoundException {
         return regionService.getAll().stream()
                 .map(regionMapper::toDTO)
                 .collect(Collectors.toSet());
     }
 
-    public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
+    public ProvinceDTO saveProvince(ProvinceDTO provinceDTO)
+            throws AlreadyExistsException, ResourceNotFoundException {
+
+        if (provinceService.isAlreadyExists(provinceDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
         Province province = provinceMapper.toEntity(provinceDTO);
         provinceService.save(province);
         return provinceMapper.toDTO(province);
     }
 
-    public Set<ProvinceDTO> saveAllProvince(Set<ProvinceDTO> provinceDTOs) {
+    public Set<ProvinceDTO> saveAllProvince(Set<ProvinceDTO> provinceDTOs)
+            throws AlreadyExistsException, ResourceNotFoundException {
+
+        if (provinceService.isAlreadyExists(provinceDTOs)) throw new AlreadyExistsException("One of the provided id already exists!");
+
         Set<Province> provinces = provinceDTOs.stream()
                 .map(provinceMapper::toEntity)
                 .collect(Collectors.toSet());
@@ -149,20 +165,26 @@ public class LocationService {
         return provinceMapper.toDTO(province);
     }
 
-    public List<ProvinceDTO> getAllByRegion(int regionId) {
+    public List<ProvinceDTO> getAllByRegion(int regionId) throws ResourceNotFoundException {
         Region region = regionService.getById(regionId);
         return region.getProvinces().stream()
                 .map(provinceMapper::toDTO)
                 .toList();
     }
 
-    public CityDTO saveCity(CityDTO cityDTO) throws ResourceNotFoundException {
+    public CityDTO saveCity(CityDTO cityDTO)
+            throws ResourceNotFoundException, AlreadyExistsException {
+
+        if (cityService.isAlreadyExists(cityDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
         City city = cityMapper.toEntity(cityDTO);
         cityService.save(city);
         return cityMapper.toDTO(city);
     }
 
-    public Set<CityDTO> saveAllCities(Set<CityDTO> cityDTOS) {
+    public Set<CityDTO> saveAllCities(Set<CityDTO> cityDTOS)
+            throws ResourceNotFoundException, AlreadyExistsException {
+        if (cityService.isAlreadyExists(cityDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
+
         Set<City> cities = cityDTOS.stream()
                 .map(cityMapper::toEntity)
                 .collect(Collectors.toSet());
@@ -185,13 +207,19 @@ public class LocationService {
                 .toList();
     }
 
-    public BaranggayDTO saveBaranggay(BaranggayDTO baranggayDTO) throws ResourceNotFoundException {
+    public BaranggayDTO saveBaranggay(BaranggayDTO baranggayDTO)
+            throws ResourceNotFoundException, AlreadyExistsException {
+
+        if (baranggayService.isAlreadyExists(baranggayDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
         Baranggay baranggay = baranggayMapper.toEntity(baranggayDTO);
         baranggayService.save(baranggay);
         return baranggayMapper.toDTO(baranggay);
     }
 
-    public Set<BaranggayDTO> saveAllBaranggay(Set<BaranggayDTO> baranggayDTOS) {
+    public Set<BaranggayDTO> saveAllBaranggay(Set<BaranggayDTO> baranggayDTOS)
+            throws ResourceNotFoundException, AlreadyExistsException {
+
+        if (baranggayService.isAlreadyExists(baranggayDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
         Set<Baranggay> baranggays = baranggayDTOS.stream()
                 .map(baranggayMapper::toEntity)
                 .collect(Collectors.toSet());

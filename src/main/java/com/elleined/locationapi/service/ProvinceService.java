@@ -1,21 +1,25 @@
 package com.elleined.locationapi.service;
 
+import com.elleined.locationapi.dto.ProvinceDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.repository.ProvinceRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class ProvinceService {
+public class ProvinceService implements ExistenceChecker<ProvinceDTO> {
 
     private final ProvinceRepository provinceRepository;
 
@@ -36,6 +40,15 @@ public class ProvinceService {
         return (int) province.getCities().stream()
                 .map(City::getBaranggays)
                 .count();
+    }
 
+    @Override
+    public boolean isAlreadyExists(ProvinceDTO provinceDTO) {
+        return provinceRepository.existsById(provinceDTO.getId());
+    }
+
+    @Override
+    public boolean isAlreadyExists(Collection<ProvinceDTO> provinceDTOS) {
+        return provinceDTOS.stream().anyMatch(this::isAlreadyExists);
     }
 }
