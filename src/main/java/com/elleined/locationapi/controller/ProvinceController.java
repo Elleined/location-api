@@ -36,4 +36,9 @@ public class ProvinceController {
     public ProvinceDTO getById(@PathVariable("id") int id) {
         return locationService.getProvinceById(id);
     }
+
+    @GetMapping("/searchByLocationName")
+    public List<ProvinceDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
+        return locationService.searchByProvinceName(locationName);
+    }
 }

@@ -7,7 +7,6 @@ import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.repository.ProvinceRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,7 +18,7 @@ import java.util.Set;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class ProvinceService implements ExistenceChecker<ProvinceDTO> {
+public class ProvinceService {
 
     private final ProvinceRepository provinceRepository;
 
@@ -42,13 +41,15 @@ public class ProvinceService implements ExistenceChecker<ProvinceDTO> {
                 .count();
     }
 
-    @Override
     public boolean isAlreadyExists(ProvinceDTO provinceDTO) {
         return provinceRepository.existsById(provinceDTO.getId());
     }
 
-    @Override
     public boolean isAlreadyExists(Collection<ProvinceDTO> provinceDTOS) {
         return provinceDTOS.stream().anyMatch(this::isAlreadyExists);
+    }
+
+    public List<Province> searchByLocationName(String locationName) {
+        return provinceRepository.searchByLocationName(locationName);
     }
 }

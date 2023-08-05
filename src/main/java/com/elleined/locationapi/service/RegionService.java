@@ -19,7 +19,7 @@ import java.util.Set;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class RegionService implements ExistenceChecker<RegionDTO> {
+public class RegionService {
 
     private final RegionRepository regionRepository;
 
@@ -54,13 +54,15 @@ public class RegionService implements ExistenceChecker<RegionDTO> {
                 .count();
     }
 
-    @Override
     public boolean isAlreadyExists(RegionDTO regionDTO) {
         return regionRepository.existsById(regionDTO.getId());
     }
 
-    @Override
     public boolean isAlreadyExists(Collection<RegionDTO> regionDTOS) {
         return regionDTOS.stream().anyMatch(this::isAlreadyExists);
+    }
+
+    public List<Region> searchByLocationName(String locationName) {
+        return regionRepository.searchByLocationName(locationName);
     }
 }

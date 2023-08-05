@@ -17,7 +17,7 @@ import java.util.Set;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class CityService implements ExistenceChecker<CityDTO> {
+public class CityService {
     private final CityRepository cityRepository;
 
     void save(City city) {
@@ -33,12 +33,10 @@ public class CityService implements ExistenceChecker<CityDTO> {
         return cityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("City with id of " + id + " does not exists!"));
     }
 
-    @Override
     public boolean isAlreadyExists(CityDTO cityDTO) {
         return cityRepository.existsById(cityDTO.getId());
     }
 
-    @Override
     public boolean isAlreadyExists(Collection<CityDTO> cityDTOS) {
         return cityDTOS.stream().anyMatch(this::isAlreadyExists);
     }

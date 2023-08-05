@@ -6,6 +6,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -32,5 +33,10 @@ public class RegionController {
     @GetMapping("/{id}")
     public RegionDTO getById(@PathVariable("id") int id) {
         return locationService.getRegionById(id);
+    }
+
+    @GetMapping("/searchByLocationName")
+    public List<RegionDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
+        return locationService.searchByRegionName(locationName);
     }
 }

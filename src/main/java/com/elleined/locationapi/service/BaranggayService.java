@@ -16,7 +16,7 @@ import java.util.Set;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class BaranggayService implements ExistenceChecker<BaranggayDTO> {
+public class BaranggayService {
 
     private final BaranggayRepository baranggayRepository;
 
@@ -33,12 +33,10 @@ public class BaranggayService implements ExistenceChecker<BaranggayDTO> {
         return baranggayRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Baranggay with id of " + id + " does not exists!"));
     }
 
-    @Override
     public boolean isAlreadyExists(BaranggayDTO baranggayDTO) {
         return baranggayRepository.existsById(baranggayDTO.getId());
     }
 
-    @Override
     public boolean isAlreadyExists(Collection<BaranggayDTO> baranggayDTOS) {
         return baranggayDTOS.stream().anyMatch(this::isAlreadyExists);
     }

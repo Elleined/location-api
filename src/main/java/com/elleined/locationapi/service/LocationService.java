@@ -161,7 +161,7 @@ public class LocationService {
     }
 
     public ProvinceDTO getProvinceById(int provinceId) throws ResourceNotFoundException {
-        Province province =  provinceService.getById(provinceId);
+        Province province = provinceService.getById(provinceId);
         return provinceMapper.toDTO(province);
     }
 
@@ -239,6 +239,18 @@ public class LocationService {
         City city = cityService.getById(cityId);
         return city.getBaranggays().stream()
                 .map(baranggayMapper::toDTO)
+                .toList();
+    }
+
+    public List<RegionDTO> searchByRegionName(String locationName) {
+        return regionService.searchByLocationName(locationName).stream()
+                .map(regionMapper::toDTO)
+                .toList();
+    }
+
+    public List<ProvinceDTO> searchByProvinceName(String locationName) {
+        return provinceService.searchByLocationName(locationName).stream()
+                .map(provinceMapper::toDTO)
                 .toList();
     }
 }
