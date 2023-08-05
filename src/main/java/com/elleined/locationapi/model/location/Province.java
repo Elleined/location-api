@@ -7,14 +7,21 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_province")
+@Table(
+        name = "tbl_province",
+        indexes = @Index(name = "location_name_idx", columnList = "location_name")
+)
 @NoArgsConstructor
 @Getter
 @Setter
 public class Province extends Location {
 
-    @Column(name = "region_id")
-    private int regionId;
+    @ManyToOne
+    @JoinColumn(
+            name = "region_id",
+            referencedColumnName = "location_id"
+    )
+    private Region region;
 
     // province id reference is in tbl city table
     @OneToMany(
@@ -26,9 +33,9 @@ public class Province extends Location {
     private Set<City> cities;
 
     @Builder(builderMethodName = "provinceBuilder")
-    public Province(int id, String locationName, int regionId, Set<City> cities) {
+    public Province(int id, String locationName, Region region, Set<City> cities) {
         super(id, locationName);
-        this.regionId = regionId;
+        this.region = region;
         this.cities = cities;
     }
 }

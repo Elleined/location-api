@@ -6,7 +6,10 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_city")
+@Table(
+        name = "tbl_city",
+        indexes = @Index(name = "location_name_idx", columnList = "location_name")
+)
 @NoArgsConstructor
 @Getter
 @Setter

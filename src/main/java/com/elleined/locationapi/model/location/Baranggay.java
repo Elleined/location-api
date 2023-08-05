@@ -1,16 +1,16 @@
 package com.elleined.locationapi.model.location;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tbl_baranggay")
+@Table(
+        name = "tbl_baranggay",
+        indexes = @Index(name = "location_name_idx", columnList = "location_name")
+)
 @NoArgsConstructor
 @Getter
 @Setter

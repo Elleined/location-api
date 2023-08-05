@@ -5,6 +5,7 @@ import com.elleined.locationapi.dto.ProvinceDTO;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.service.ProvinceService;
+import com.elleined.locationapi.service.RegionService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -18,10 +19,14 @@ import java.util.Set;
 public abstract class ProvinceMapper {
 
     @Autowired @Lazy
+    protected RegionService regionService;
+
+    @Autowired @Lazy
     protected ProvinceService provinceService;
 
     @Mappings({
             @Mapping(target = "name", source = "province.locationName"),
+            @Mapping(target = "regionId", source = "province.region.id"),
             @Mapping(target = "cityCount", expression = "java(provinceService.getCityCount(province))"),
             @Mapping(target = "baranggayCount", expression = "java(provinceService.getBaranggayCount(province))")
     })
@@ -30,9 +35,9 @@ public abstract class ProvinceMapper {
 
     @Mappings({
             @Mapping(target = "id", ignore = true),
-            @Mapping(target = "regionId", source = "provinceDTO.regionId"),
             @Mapping(target = "locationName", source = "provinceDTO.name"),
-            @Mapping(target = "cities", expression = "java(initializeCities())")
+            @Mapping(target = "cities", expression = "java(initializeCities())"),
+            @Mapping(target = "region", expression = "java(regionService.getById(provinceDTO.getRegionId()))")
     })
     public abstract Province toEntity(ProvinceDTO provinceDTO);
 

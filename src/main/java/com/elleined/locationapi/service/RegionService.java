@@ -1,0 +1,51 @@
+package com.elleined.locationapi.service;
+
+import com.elleined.locationapi.exception.ResourceNotFoundException;
+import com.elleined.locationapi.mapper.RegionMapper;
+import com.elleined.locationapi.model.location.City;
+import com.elleined.locationapi.model.location.Province;
+import com.elleined.locationapi.model.location.Region;
+import com.elleined.locationapi.repository.RegionRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Set;
+
+@Service
+@Transactional
+@RequiredArgsConstructor
+@Slf4j
+public class RegionService {
+
+    private final RegionRepository regionRepository;
+    private final RegionMapper regionMapper;
+
+    void save(Region region) {
+        regionRepository.save(region);
+        log.debug("Region with id of {} saved successfully", region.getId());
+    }
+
+    void saveAll(Set<Region> regions) {
+        regionRepository.saveAll(regions);
+    }
+
+    public Region getById(int id) throws ResourceNotFoundException {
+        return regionRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Region with id of " + id + " does not exists!"));
+    }
+
+    public int getCityCount(Region region) {
+        return (int) region.getProvinces().stream()
+                .map(Province::getCities)
+                .count();
+    }
+
+    public int getBaranggayCount(Region region) {
+        return (int) region.getProvinces().stream()
+                .map(Province::getCities)
+                .flatMap(cities -> cities.stream()
+                        .map(City::getBaranggays))
+                .count();
+    }
+}

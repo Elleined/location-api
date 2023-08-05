@@ -12,6 +12,7 @@ import com.elleined.locationapi.model.address.UserAddress;
 import com.elleined.locationapi.model.location.Baranggay;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
+import com.elleined.locationapi.model.location.Region;
 import com.elleined.locationapi.utility.StringValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -25,12 +26,14 @@ import java.util.stream.Collectors;
 @Transactional
 @RequiredArgsConstructor
 public class LocationService {
+    private final RegionService regionService;
     private final ProvinceService provinceService;
     private final CityService cityService;
     private final BaranggayService baranggayService;
     private final UserService userService;
     private final AddressService addressService;
 
+    private final RegionMapper regionMapper;
     private final ProvinceMapper provinceMapper;
     private final CityMapper cityMapper;
     private final BaranggayMapper baranggayMapper;
@@ -102,6 +105,7 @@ public class LocationService {
         User user = userService.getByUUID(UUID);
         return userMapper.toDTO(user);
     }
+    
 
     public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
         Province province = provinceMapper.toEntity(provinceDTO);
@@ -125,26 +129,11 @@ public class LocationService {
         return provinceMapper.toDTO(province);
     }
 
-    public List<ProvinceDTO> getAllByRegionId(int regionId) {
-        return provinceService.getAllByRegionId(regionId).stream()
+    public List<ProvinceDTO> getAllByRegion(int regionId) {
+        Region region = regionService.getById(regionId);
+        return region.getProvinces().stream()
                 .map(provinceMapper::toDTO)
                 .toList();
-    }
-
-    public List<ProvinceDTO> getAllProvince() {
-        return provinceService.getAll().stream()
-                .map(provinceMapper::toDTO)
-                .toList();
-    }
-
-    public void deleteProvince(int provinceId) {
-        provinceService.delete(provinceId);
-    }
-
-    public ProvinceDTO updateProvince(int provinceId, ProvinceDTO provinceDTO) throws ResourceNotFoundException {
-        Province province = provinceService.getById(provinceId);
-        provinceService.update(province, provinceDTO.getName(), provinceDTO.getRegionId());
-        return provinceMapper.toDTO(province);
     }
 
     public CityDTO saveCity(CityDTO cityDTO)
@@ -180,20 +169,9 @@ public class LocationService {
 
     public List<CityDTO> getAllByProvince(int provinceId) throws ResourceNotFoundException {
         Province province = provinceService.getById(provinceId);
-        return cityService.getAllByProvince(province).stream()
+        return province.getCities().stream()
                 .map(cityMapper::toDTO)
                 .toList();
-    }
-
-    public void deleteCity(int cityId) {
-        cityService.delete(cityId);
-    }
-
-    public CityDTO updateCity(int cityId, CityDTO cityDTO) throws ResourceNotFoundException {
-        Province province = provinceService.getById(cityDTO.getProvinceId());
-        City city = cityService.getById(cityId);
-        cityService.update(city, province, cityDTO.getName());
-        return cityMapper.toDTO(city);
     }
 
     public BaranggayDTO saveBaranggay(BaranggayDTO baranggayDTO) throws ResourceNotFoundException {
@@ -220,19 +198,8 @@ public class LocationService {
 
     public List<BaranggayDTO> getAllByCity(int cityId) throws ResourceNotFoundException {
         City city = cityService.getById(cityId);
-        return baranggayService.getAllByCity(city).stream()
+        return city.getBaranggays().stream()
                 .map(baranggayMapper::toDTO)
                 .toList();
-    }
-
-    public void deleteBaranggay(int baranggayId) {
-        baranggayService.delete(baranggayId);
-    }
-
-    public BaranggayDTO updateBaranggay(int baranggayId, BaranggayDTO baranggayDTO) {
-        City city = cityService.getById(baranggayDTO.getCityId());
-        Baranggay baranggay = baranggayService.getById(baranggayId);
-        baranggayService.update(baranggay, city, baranggayDTO.getName());
-        return baranggayMapper.toDTO(baranggay);
     }
 }

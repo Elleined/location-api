@@ -3,7 +3,6 @@ package com.elleined.locationapi.service;
 
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.City;
-import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.repository.CityRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -34,23 +33,6 @@ public class CityService {
 
     City getByZipCode(int zipCode) throws ResourceNotFoundException {
         return cityRepository.findByZipCode(zipCode).orElseThrow(() -> new ResourceNotFoundException("City with zipCode of " + zipCode + " does not exists!"));
-    }
-
-    Set<City> getAllByProvince(Province province) {
-       return province.getCities();
-    }
-
-    void delete(int id) {
-        cityRepository.deleteById(id);
-        log.debug("City with id of {} deleted successfully!", id);
-    }
-
-    void update(City city, Province province, String name) {
-        city.setProvince(province);
-        city.setLocationName(name);
-
-        cityRepository.save(city);
-        log.debug("City with id of {} updated with new province of {} and new name of {}", city.getId(), province.getLocationName(), name);
     }
 
     public int getBaranggayCount(City city) {

@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Set;
 
 @Service
@@ -31,29 +30,6 @@ public class ProvinceService {
 
     public Province getById(int id) throws ResourceNotFoundException {
         return provinceRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Province with id of " + id + " does not exists"));
-    }
-
-    List<Province> getAllByRegionId(int regionId) {
-        return provinceRepository.findAll().stream()
-                .filter(province -> province.getRegionId() == regionId)
-                .toList();
-    }
-
-    List<Province> getAll() {
-        return provinceRepository.findAll();
-    }
-
-    void delete(int id) {
-        provinceRepository.deleteById(id);
-        log.debug("Province with id of {} deleted successfully!", id);
-    }
-
-    void update(Province province, String name, int regionId) {
-        province.setLocationName(name);
-        province.setRegionId(regionId);
-
-        provinceRepository.save(province);
-        log.debug("Province with id of {} updated with new name of {} and new region id of {}", province.getId(), name, regionId);
     }
 
     public int getCityCount(Province province) {

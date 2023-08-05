@@ -35,16 +35,4 @@ public class BaranggayController {
     public List<BaranggayDTO> getAllByCity(@PathVariable("cityId") int cityId) {
         return locationService.getAllByCity(cityId);
     }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<BaranggayDTO> delete(@PathVariable("id") int id) {
-        locationService.deleteBaranggay(id);
-        return ResponseEntity.noContent().build();
-    }
-
-    @PutMapping("/{id}")
-    public BaranggayDTO update(@PathVariable("id") int id,
-                               @Valid @RequestBody BaranggayDTO baranggayDTO) {
-        return locationService.updateBaranggay(id, baranggayDTO);
-    }
 }

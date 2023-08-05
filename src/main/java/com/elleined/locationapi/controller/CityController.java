@@ -40,17 +40,4 @@ public class CityController {
     public List<CityDTO> getAllByProvince(@PathVariable("provinceId") int provinceId) {
         return locationService.getAllByProvince(provinceId);
     }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<CityDTO> delete(@PathVariable("id") int id) {
-        locationService.deleteCity(id);
-        return ResponseEntity.noContent().build();
-    }
-
-    @PutMapping("/{id}")
-    public CityDTO update(@PathVariable("id") int id,
-                          @Valid @RequestBody CityDTO cityDTO) {
-
-        return locationService.updateCity(id, cityDTO);
-    }
 }

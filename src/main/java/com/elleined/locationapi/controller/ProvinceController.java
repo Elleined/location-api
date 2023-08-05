@@ -17,14 +17,9 @@ public class ProvinceController {
 
     private final LocationService locationService;
 
-    @GetMapping
-    public List<ProvinceDTO> getAll() {
-        return locationService.getAllProvince();
-    }
-
     @GetMapping("/getAllByRegionId/{regionId}")
     public List<ProvinceDTO> getAllByRegionId(@PathVariable("regionId") int regionId) {
-        return locationService.getAllByRegionId(regionId);
+        return locationService.getAllByRegion(regionId);
     }
 
     @GetMapping("/{id}")
@@ -41,17 +36,4 @@ public class ProvinceController {
     public Set<ProvinceDTO> saveAll(@Valid @RequestBody Set<ProvinceDTO> provinceDTOs) {
         return locationService.saveAllProvince(provinceDTOs);
     }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<ProvinceDTO> delete(@PathVariable("id") int id) {
-        locationService.deleteProvince(id);
-        return ResponseEntity.noContent().build();
-    }
-
-    @PutMapping("/{id}")
-    public ProvinceDTO update(@PathVariable("id") int id,
-                              @Valid @RequestBody ProvinceDTO provinceDTO) {
-        return locationService.updateProvince(id, provinceDTO);
-    }
-
 }
