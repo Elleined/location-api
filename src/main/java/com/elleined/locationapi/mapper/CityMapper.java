@@ -35,7 +35,6 @@ public abstract class CityMapper {
     public abstract CityDTO toDTO(City city);
 
     @Mappings({
-            @Mapping(target = "id", ignore = true),
             @Mapping(target = "province", expression = "java(provinceService.getById(cityDTO.getProvinceId()))"),
             @Mapping(target = "locationName", source = "cityDTO.name"),
             @Mapping(target = "baranggays", expression = "java(initializeBaranggays())")

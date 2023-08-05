@@ -11,13 +11,12 @@ import java.util.Set;
 })
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
 public class Region {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "location_id")
     private int id;
 

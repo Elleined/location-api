@@ -17,7 +17,6 @@ public class Baranggay {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "location_id")
     private int id;
 

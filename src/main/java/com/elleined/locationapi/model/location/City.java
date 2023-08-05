@@ -18,7 +18,6 @@ import java.util.Set;
 public class City {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "location_id")
     private int id;
 

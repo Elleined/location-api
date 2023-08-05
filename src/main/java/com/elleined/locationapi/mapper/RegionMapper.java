@@ -28,7 +28,6 @@ public abstract class RegionMapper {
     public abstract RegionDTO toDTO(Region region);
 
     @Mappings({
-            @Mapping(target = "id", ignore = true),
             @Mapping(target = "locationName", source = "regionDTO.name"),
             @Mapping(target = "provinces", expression = "java(initializeProvince())")
     })

@@ -37,7 +37,6 @@ public abstract class ProvinceMapper {
 
 
     @Mappings({
-            @Mapping(target = "id", ignore = true),
             @Mapping(target = "locationName", source = "provinceDTO.name"),
             @Mapping(target = "cities", expression = "java(initializeCities())"),
             @Mapping(target = "region", expression = "java(regionService.getById(provinceDTO.getRegionId()))")

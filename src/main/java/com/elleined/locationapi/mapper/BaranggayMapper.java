@@ -29,7 +29,6 @@ public abstract class BaranggayMapper {
     public abstract BaranggayDTO toDTO(Baranggay baranggay);
 
     @Mappings({
-            @Mapping(target = "id", ignore = true),
             @Mapping(target = "city", expression = "java(cityService.getById(baranggayDTO.getCityId()))"),
             @Mapping(target = "locationName", source = "baranggayDTO.name")
     })
