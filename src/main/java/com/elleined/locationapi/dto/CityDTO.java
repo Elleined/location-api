@@ -13,13 +13,12 @@ public class CityDTO {
     @NotBlank(message = "City name must not be blank")
     private String name;
 
-    @Positive(message = "Zip code must be positive!")
-    private int zipCode;
-
     @Positive(message = "Province id must be positive!")
     private int provinceId;
-
     private String provinceName;
+
+    private int regionId;
+    private String regionName;
 
     private int baranggayCount;
 }

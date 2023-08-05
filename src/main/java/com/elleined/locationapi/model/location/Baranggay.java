@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(
-        name = "tbl_baranggay",
-        indexes = @Index(name = "location_name_idx", columnList = "location_name")
-)
+@Table(name = "tbl_baranggay")
 @NoArgsConstructor
 @Getter
 @Setter

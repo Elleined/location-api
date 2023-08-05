@@ -27,7 +27,7 @@ public class BaranggayService {
         baranggayRepository.saveAll(baranggays);
     }
 
-    Baranggay getById(int id) throws ResourceNotFoundException {
+    public Baranggay getById(int id) throws ResourceNotFoundException {
         return baranggayRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Baranggay with id of " + id + " does not exists!"));
     }
 }

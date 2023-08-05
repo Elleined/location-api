@@ -16,10 +16,15 @@ public abstract class BaranggayMapper {
 
     @Mappings({
             @Mapping(target = "name", source = "baranggay.locationName"),
+
             @Mapping(target = "cityId", source = "baranggay.city.id"),
             @Mapping(target = "cityName", source = "baranggay.city.locationName"),
+
             @Mapping(target = "provinceId", source = "baranggay.city.province.id"),
-            @Mapping(target = "provinceName", source = "baranggay.city.province.locationName")
+            @Mapping(target = "provinceName", source = "baranggay.city.province.locationName"),
+
+            @Mapping(target = "regionId", source = "baranggay.city.province.region.id"),
+            @Mapping(target = "regionName", source = "baranggay.city.province.region.locationName")
     })
     public abstract BaranggayDTO toDTO(Baranggay baranggay);
 

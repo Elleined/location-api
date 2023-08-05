@@ -26,6 +26,10 @@ public abstract class CityMapper {
             @Mapping(target = "name", source = "city.locationName"),
             @Mapping(target = "provinceName", source = "city.province.locationName"),
             @Mapping(target = "provinceId", source = "city.province.id"),
+
+            @Mapping(target = "regionId", source = "city.province.region.id"),
+            @Mapping(target = "regionName", source = "city.province.region.locationName"),
+
             @Mapping(target = "baranggayCount", expression = "java(city.getBaranggays().size())")
     })
     public abstract CityDTO toDTO(City city);
@@ -34,7 +38,6 @@ public abstract class CityMapper {
             @Mapping(target = "id", ignore = true),
             @Mapping(target = "province", expression = "java(provinceService.getById(cityDTO.getProvinceId()))"),
             @Mapping(target = "locationName", source = "cityDTO.name"),
-            @Mapping(target = "zipCode", source = "cityDTO.zipCode"),
             @Mapping(target = "baranggays", expression = "java(initializeBaranggays())")
     })
     public abstract City toEntity(CityDTO cityDTO);

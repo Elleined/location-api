@@ -15,8 +15,8 @@ public class ProvinceDTO {
 
     @Positive(message = "Region id must be positive")
     private int regionId;
+    private String regionName;
 
     private int cityCount;
     private int baranggayCount;
-
 }

@@ -6,10 +6,7 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(
-        name = "tbl_region",
-        indexes = @Index(name = "location_name_idx", columnList = "location_name")
-)
+@Table(name = "tbl_region")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter

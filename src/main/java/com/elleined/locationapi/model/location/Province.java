@@ -7,10 +7,7 @@ import lombok.*;
 import java.util.Set;
 
 @Entity
-@Table(
-        name = "tbl_province",
-        indexes = @Index(name = "location_name_idx", columnList = "location_name")
-)
+@Table(name = "tbl_province")
 @NoArgsConstructor
 @Getter
 @Setter

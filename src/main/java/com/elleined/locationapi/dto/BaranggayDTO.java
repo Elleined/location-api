@@ -19,4 +19,7 @@ public class BaranggayDTO {
 
     private int provinceId;
     private String provinceName;
+
+    private int regionId;
+    private String regionName;
 }

@@ -26,7 +26,10 @@ public abstract class ProvinceMapper {
 
     @Mappings({
             @Mapping(target = "name", source = "province.locationName"),
+
             @Mapping(target = "regionId", source = "province.region.id"),
+            @Mapping(target = "regionName", source = "province.region.locationName"),
+
             @Mapping(target = "cityCount", expression = "java(province.getCities().size())"),
             @Mapping(target = "baranggayCount", expression = "java(provinceService.getBaranggayCount(province))")
     })

@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(
-        name = "tbl_location",
-        indexes = @Index(name = "location_name_idx", columnList = "location_name")
-)
+@Table(name = "tbl_location")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Getter
 @Setter
@@ -19,14 +16,7 @@ import lombok.Setter;
 public abstract class Location {
 
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.TABLE,
-            generator = "autoIncrement")
-    @SequenceGenerator(
-            allocationSize = 1,
-            name = "autoIncrement",
-            sequenceName = "autoIncrement"
-    )
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "location_id")
     private int id;
 

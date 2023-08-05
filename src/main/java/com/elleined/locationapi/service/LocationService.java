@@ -44,12 +44,9 @@ public class LocationService {
 
         if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
 
-        User user = userService.getByUUID(UUID);
-        Province province = provinceService.getById(addressDTO.getProvinceId());
-        City city = cityService.getById(addressDTO.getCityId());
-        Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
-
-        UserAddress userAddress = addressService.saveUserAddress(user, addressDTO.getDetails(), province, city, baranggay);
+        User registeringUser = userService.getByUUID(UUID);
+        UserAddress userAddress = addressMapper.toUserAddressEntity(addressDTO, registeringUser);
+        addressService.saveUserAddress(userAddress);
         return addressMapper.toDTO(userAddress);
     }
 
@@ -59,11 +56,8 @@ public class LocationService {
         if (StringValidator.isNotValidBody(UUID)) throw new EmptyUUIDException("UUID cannot be blank, empty, or null!");
 
         User user = userService.getByUUID(UUID);
-        Province province = provinceService.getById(addressDTO.getProvinceId());
-        City city = cityService.getById(addressDTO.getCityId());
-        Baranggay baranggay = baranggayService.getById(addressDTO.getBaranggayId());
-
-        DeliveryAddress deliveryAddress = addressService.saveDeliveryAddress(user, addressDTO.getDetails(), province, city, baranggay);
+        DeliveryAddress deliveryAddress = addressMapper.toDeliveryAddressEntity(addressDTO, user);
+        addressService.saveDeliveryAddress(deliveryAddress);
         return addressMapper.toDTO(deliveryAddress);
     }
 
