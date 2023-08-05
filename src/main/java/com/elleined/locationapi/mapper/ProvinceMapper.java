@@ -27,7 +27,7 @@ public abstract class ProvinceMapper {
     @Mappings({
             @Mapping(target = "name", source = "province.locationName"),
             @Mapping(target = "regionId", source = "province.region.id"),
-            @Mapping(target = "cityCount", expression = "java(provinceService.getCityCount(province))"),
+            @Mapping(target = "cityCount", expression = "java(province.getCities().size())"),
             @Mapping(target = "baranggayCount", expression = "java(provinceService.getBaranggayCount(province))")
     })
     public abstract ProvinceDTO toDTO(Province province);

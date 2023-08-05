@@ -35,10 +35,6 @@ public class CityService {
         return cityRepository.findByZipCode(zipCode).orElseThrow(() -> new ResourceNotFoundException("City with zipCode of " + zipCode + " does not exists!"));
     }
 
-    public int getBaranggayCount(City city) {
-        return city.getBaranggays().size();
-    }
-
     boolean isZipCodeAlreadyExists(int zipCode) {
         return cityRepository.fetchAllZipCode().stream().anyMatch(code -> zipCode == code);
     }

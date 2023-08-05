@@ -26,7 +26,7 @@ public abstract class CityMapper {
             @Mapping(target = "name", source = "city.locationName"),
             @Mapping(target = "provinceName", source = "city.province.locationName"),
             @Mapping(target = "provinceId", source = "city.province.id"),
-            @Mapping(target = "baranggayCount", expression = "java(cityService.getBaranggayCount(city))")
+            @Mapping(target = "baranggayCount", expression = "java(city.getBaranggays().size())")
     })
     public abstract CityDTO toDTO(City city);
 

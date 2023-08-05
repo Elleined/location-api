@@ -1,0 +1,70 @@
+[
+ {
+   "name": "NCR",
+   "description": "National Capital Region"
+ },
+ {
+   "name": "CAR",
+   "description": "Cordillera Administrative Region"
+ },
+ {
+   "name": "Region I",
+   "description": "Ilocos Region"
+ },
+ {
+   "name": "Region II",
+   "description": "Cagayan Valley"
+ },
+ {
+   "name": "Region III",
+   "description": "Central Luzon"
+ },
+ {
+   "name": "Region IV-A",
+   "description": "CALABARZON"
+ },
+ {
+   "name": "Region IV-B",
+   "description": "MIMAROPA"
+ },
+ {
+   "name": "Region V",
+   "description": "Bicol Region"
+ },
+ {
+   "name": "Region VI",
+   "description": "Western Visayas"
+ },
+ {
+   "name": "Region VII",
+   "description": "Central Visayas"
+ },
+ {
+   "name": "Region VIII",
+   "description": "Eastern Visayas"
+ },
+ {
+   "name": "Region IX",
+   "description": "Zamboanga Peninsula"
+ },
+ {
+   "name": "Region X",
+   "description": "Northern Mindanao"
+ },
+ {
+   "name": "Region XI",
+   "description": "Davao Region"
+ },
+ {
+   "name": "Region XII",
+   "description": "SOCCSKSARGEN"
+ },
+ {
+   "name": "Region XIII",
+   "description": "CARAGA"
+ },
+ {
+   "name": "ARMM",
+   "description": "Autonomous Region in Muslim Mindanao"
+ }
+]

@@ -105,7 +105,34 @@ public class LocationService {
         User user = userService.getByUUID(UUID);
         return userMapper.toDTO(user);
     }
-    
+
+    public RegionDTO saveRegion(RegionDTO regionDTO) {
+        Region region = regionMapper.toEntity(regionDTO);
+        regionService.save(region);
+        return regionMapper.toDTO(region);
+    }
+
+    public Set<RegionDTO> saveAllRegion(Set<RegionDTO> regionDTOs) {
+        Set<Region> regions = regionDTOs.stream()
+                .map(regionMapper::toEntity)
+                .collect(Collectors.toSet());
+        regionService.saveAll(regions);
+
+        return regions.stream()
+                .map(regionMapper::toDTO)
+                .collect(Collectors.toSet());
+    }
+
+    public RegionDTO getRegionById(int regionId) {
+        Region region = regionService.getById(regionId);
+        return regionMapper.toDTO(region);
+    }
+
+    public Set<RegionDTO> getAllRegion() {
+        return regionService.getAll().stream()
+                .map(regionMapper::toDTO)
+                .collect(Collectors.toSet());
+    }
 
     public ProvinceDTO saveProvince(ProvinceDTO provinceDTO) {
         Province province = provinceMapper.toEntity(provinceDTO);

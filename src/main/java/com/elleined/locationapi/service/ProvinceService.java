@@ -32,10 +32,6 @@ public class ProvinceService {
         return provinceRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Province with id of " + id + " does not exists"));
     }
 
-    public int getCityCount(Province province) {
-        return province.getCities().size();
-    }
-
     public int getBaranggayCount(Province province) {
         return (int) province.getCities().stream()
                 .map(City::getBaranggays)

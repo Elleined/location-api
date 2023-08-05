@@ -1,7 +1,6 @@
 package com.elleined.locationapi.service;
 
 import com.elleined.locationapi.exception.ResourceNotFoundException;
-import com.elleined.locationapi.mapper.RegionMapper;
 import com.elleined.locationapi.model.location.City;
 import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.model.location.Region;
@@ -11,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -20,7 +20,6 @@ import java.util.Set;
 public class RegionService {
 
     private final RegionRepository regionRepository;
-    private final RegionMapper regionMapper;
 
     void save(Region region) {
         regionRepository.save(region);
@@ -33,6 +32,10 @@ public class RegionService {
 
     public Region getById(int id) throws ResourceNotFoundException {
         return regionRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Region with id of " + id + " does not exists!"));
+    }
+
+    public List<Region> getAll() {
+        return regionRepository.findAll();
     }
 
     public int getCityCount(Region region) {
