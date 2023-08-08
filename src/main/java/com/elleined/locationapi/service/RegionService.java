@@ -30,6 +30,7 @@ public class RegionService {
 
     void saveAll(Set<Region> regions) {
         regionRepository.saveAll(regions);
+        log.debug("Saving all regions success");
     }
 
     public Region getById(int id) throws ResourceNotFoundException {

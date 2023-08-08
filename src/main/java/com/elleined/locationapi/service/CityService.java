@@ -4,7 +4,6 @@ package com.elleined.locationapi.service;
 import com.elleined.locationapi.dto.CityDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 import com.elleined.locationapi.model.location.City;
-import com.elleined.locationapi.model.location.Province;
 import com.elleined.locationapi.repository.CityRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +28,7 @@ public class CityService {
 
     void saveAll(Set<City> cities) {
         cityRepository.saveAll(cities);
+        log.debug("Saving all cities success!");
     }
 
     public City getById(int id) throws ResourceNotFoundException {

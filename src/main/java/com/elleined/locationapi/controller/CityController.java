@@ -31,7 +31,7 @@ public class CityController {
     }
 
     @GetMapping("/getAllByProvince/{provinceId}")
-    public List<CityDTO> getAllByProvince(@PathVariable("provinceId") int provinceId) {
+    public Set<CityDTO> getAllByProvince(@PathVariable("provinceId") int provinceId) {
         return locationService.getAllByProvince(provinceId);
     }
 

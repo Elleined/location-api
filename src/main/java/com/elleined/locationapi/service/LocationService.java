@@ -78,7 +78,7 @@ public class LocationService {
         User user = userService.getByUUID(currentUserUUID);
         return user.getDeliveryAddresses().stream()
                 .map(addressMapper::toDTO)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public UserDTO saveUser(String UUID) throws EmptyUUIDException {
@@ -117,12 +117,12 @@ public class LocationService {
 
         Set<Region> regions = regionDTOs.stream()
                 .map(regionMapper::toEntity)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
         regionService.saveAll(regions);
 
         return regions.stream()
                 .map(regionMapper::toDTO)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public RegionDTO getRegionById(int regionId) throws ResourceNotFoundException {
@@ -133,7 +133,7 @@ public class LocationService {
     public Set<RegionDTO> getAllRegion() throws ResourceNotFoundException {
         return regionService.getAll().stream()
                 .map(regionMapper::toDTO)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public ProvinceDTO saveProvince(ProvinceDTO provinceDTO)
@@ -152,12 +152,12 @@ public class LocationService {
 
         Set<Province> provinces = provinceDTOs.stream()
                 .map(provinceMapper::toEntity)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
         provinceService.saveAll(provinces);
 
         return provinces.stream()
                 .map(provinceMapper::toDTO)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public ProvinceDTO getProvinceById(int provinceId) throws ResourceNotFoundException {
@@ -165,11 +165,11 @@ public class LocationService {
         return provinceMapper.toDTO(province);
     }
 
-    public List<ProvinceDTO> getAllByRegion(int regionId) throws ResourceNotFoundException {
+    public Set<ProvinceDTO> getAllByRegion(int regionId) throws ResourceNotFoundException {
         Region region = regionService.getById(regionId);
         return region.getProvinces().stream()
                 .map(provinceMapper::toDTO)
-                .toList();
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public CityDTO saveCity(CityDTO cityDTO)
@@ -187,12 +187,12 @@ public class LocationService {
 
         Set<City> cities = cityDTOS.stream()
                 .map(cityMapper::toEntity)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
         cityService.saveAll(cities);
 
         return cities.stream()
                 .map(cityMapper::toDTO)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public CityDTO getCityById(int cityId) throws ResourceNotFoundException {
@@ -200,11 +200,11 @@ public class LocationService {
         return cityMapper.toDTO(city);
     }
 
-    public List<CityDTO> getAllByProvince(int provinceId) throws ResourceNotFoundException {
+    public Set<CityDTO> getAllByProvince(int provinceId) throws ResourceNotFoundException {
         Province province = provinceService.getById(provinceId);
         return province.getCities().stream()
                 .map(cityMapper::toDTO)
-                .toList();
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public BaranggayDTO saveBaranggay(BaranggayDTO baranggayDTO)
@@ -222,12 +222,12 @@ public class LocationService {
         if (baranggayService.isAlreadyExists(baranggayDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
         Set<Baranggay> baranggays = baranggayDTOS.stream()
                 .map(baranggayMapper::toEntity)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
         baranggayService.saveAll(baranggays);
 
         return baranggays.stream()
                 .map(baranggayMapper::toDTO)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public BaranggayDTO getBaranggayById(int baranggayId) throws ResourceNotFoundException {
@@ -235,11 +235,11 @@ public class LocationService {
         return baranggayMapper.toDTO(baranggay);
     }
 
-    public List<BaranggayDTO> getAllByCity(int cityId) throws ResourceNotFoundException {
+    public Set<BaranggayDTO> getAllByCity(int cityId) throws ResourceNotFoundException {
         City city = cityService.getById(cityId);
         return city.getBaranggays().stream()
                 .map(baranggayMapper::toDTO)
-                .toList();
+                .collect(Collectors.toUnmodifiableSet());
     }
 
     public List<RegionDTO> searchByRegionName(String locationName) {

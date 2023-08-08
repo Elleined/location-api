@@ -28,6 +28,7 @@ public class BaranggayService {
 
     void saveAll(Set<Baranggay> baranggays) {
         baranggayRepository.saveAll(baranggays);
+        log.debug("Saving all baranggays success");
     }
 
     public Baranggay getById(int id) throws ResourceNotFoundException {

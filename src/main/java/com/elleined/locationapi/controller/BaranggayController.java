@@ -31,7 +31,7 @@ public class BaranggayController {
     }
 
     @GetMapping("/getAllByCity/{cityId}")
-    public List<BaranggayDTO> getAllByCity(@PathVariable("cityId") int cityId) {
+    public Set<BaranggayDTO> getAllByCity(@PathVariable("cityId") int cityId) {
         return locationService.getAllByCity(cityId);
     }
 

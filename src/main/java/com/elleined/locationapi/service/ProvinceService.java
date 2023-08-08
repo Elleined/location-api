@@ -29,6 +29,7 @@ public class ProvinceService {
 
     void saveAll(Set<Province> provinces) {
         provinceRepository.saveAll(provinces);
+        log.debug("Saving all province success");
     }
 
     public Province getById(int id) throws ResourceNotFoundException {
