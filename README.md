@@ -4,7 +4,7 @@ Creating Location API for user address and delivery address registration
 # Configuration
  - Create a db named location_db
    ```
-     CREATE DATABASE location_db
+     CREATE DATABASE location_db;
    ```
  - Change application.properties
    ```
@@ -20,6 +20,7 @@ Creating Location API for user address and delivery address registration
    
 # Features
  - Save and save all region, province, city, baranggay
+ - Get region, province, city, baranggay by id
  - Get all region
  - Get all province based on region
  - Get all city based on province
@@ -29,6 +30,9 @@ Creating Location API for user address and delivery address registration
  - Spring boot
  - Spring mvc
  - Spring data jpa
- - Mapstruct
+ - Softwares used
+   - MySQL
+   - Postman
+   - IntelliJ
  
 # Access all endpoints in Postman easily
