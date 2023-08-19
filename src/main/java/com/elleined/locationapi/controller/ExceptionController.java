@@ -11,12 +11,13 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.io.IOException;
 import java.util.List;
 
 @ControllerAdvice
 public class ExceptionController {
 
-    @ExceptionHandler({ResourceNotFoundException.class, AlreadyExistsException.class})
+    @ExceptionHandler({ResourceNotFoundException.class, AlreadyExistsException.class, IOException.class})
     public ResponseEntity<Response> handleResourceNotFoundException(RuntimeException ex) {
         var response = new Response(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);

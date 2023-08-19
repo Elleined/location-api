@@ -11,8 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.IOException;
 import java.util.Set;
 
-@Primary
 @Component
+@Primary
 @Transactional
 public class RegionPopulator extends Populator {
 

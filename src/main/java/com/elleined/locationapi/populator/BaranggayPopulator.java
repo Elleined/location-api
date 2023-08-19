@@ -3,6 +3,7 @@ package com.elleined.locationapi.populator;
 import com.elleined.locationapi.dto.BaranggayDTO;
 import com.elleined.locationapi.service.LocationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.util.Set;
 
 @Component
+@Qualifier("baranggayPopulator")
 @Transactional
 public class BaranggayPopulator extends Populator {
     public BaranggayPopulator(ObjectMapper objectMapper, LocationService locationService) {
