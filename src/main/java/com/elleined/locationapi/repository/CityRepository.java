@@ -1,6 +1,6 @@
 package com.elleined.locationapi.repository;
 
-import com.elleined.locationapi.model.location.City;
+import com.elleined.locationapi.model.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

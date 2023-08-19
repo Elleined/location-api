@@ -2,8 +2,8 @@ package com.elleined.locationapi.mapper;
 
 
 import com.elleined.locationapi.dto.ProvinceDTO;
-import com.elleined.locationapi.model.location.City;
-import com.elleined.locationapi.model.location.Province;
+import com.elleined.locationapi.model.City;
+import com.elleined.locationapi.model.Province;
 import com.elleined.locationapi.service.ProvinceService;
 import com.elleined.locationapi.service.RegionService;
 import org.mapstruct.Mapper;

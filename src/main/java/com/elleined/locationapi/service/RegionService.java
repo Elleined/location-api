@@ -2,9 +2,9 @@ package com.elleined.locationapi.service;
 
 import com.elleined.locationapi.dto.RegionDTO;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
-import com.elleined.locationapi.model.location.City;
-import com.elleined.locationapi.model.location.Province;
-import com.elleined.locationapi.model.location.Region;
+import com.elleined.locationapi.model.City;
+import com.elleined.locationapi.model.Province;
+import com.elleined.locationapi.model.Region;
 import com.elleined.locationapi.repository.RegionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

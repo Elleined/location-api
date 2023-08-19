@@ -1,5 +1,4 @@
-package com.elleined.locationapi.model.location;
-
+package com.elleined.locationapi.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,7 +7,7 @@ import java.util.Set;
 
 @Entity
 @Table(
-        name = "tbl_province",
+        name = "tbl_city",
         indexes = @Index(name = "location_name_idx", columnList = "location_name")
 )
 @Builder
@@ -16,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Province {
+public class City {
 
     @Id
     @Column(name = "location_id")
@@ -27,17 +26,17 @@ public class Province {
 
     @ManyToOne
     @JoinColumn(
-            name = "region_id",
+            name = "province_id",
             referencedColumnName = "location_id"
     )
-    private Region region;
+    private Province province;
 
-    // province id reference is in tbl city table
+    // city id reference is in tbl baraggay table
     @OneToMany(
-            mappedBy = "province",
+            mappedBy = "city",
             cascade = CascadeType.REMOVE,
             orphanRemoval = true
     )
     @Setter(AccessLevel.NONE)
-    private Set<City> cities;
+    private Set<Baranggay> baranggays;
 }

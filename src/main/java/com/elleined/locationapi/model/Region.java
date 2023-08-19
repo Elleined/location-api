@@ -1,4 +1,4 @@
-package com.elleined.locationapi.model.location;
+package com.elleined.locationapi.model;
 
 import jakarta.persistence.*;
 import lombok.*;
