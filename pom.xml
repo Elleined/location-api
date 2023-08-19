@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.elleined</groupId>
-	<artifactId>location-api</artifactId>
+	<artifactId>philippines-location-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>location-api</name>
 	<description>Location API for regions, provinces, cities, and baranggays of Philippines</description>
