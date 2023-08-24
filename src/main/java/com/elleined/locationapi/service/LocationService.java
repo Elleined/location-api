@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -68,6 +69,7 @@ public class LocationService {
 
     public Set<RegionDTO> getAllRegion() throws ResourceNotFoundException {
         return regionService.getAll().stream()
+                .sorted(Comparator.comparing(Region::getLocationName))
                 .map(regionMapper::toDTO)
                 .collect(Collectors.toUnmodifiableSet());
     }
@@ -87,6 +89,7 @@ public class LocationService {
         if (provinceService.isAlreadyExists(provinceDTOs)) throw new AlreadyExistsException("One of the provided id already exists!");
 
         Set<Province> provinces = provinceDTOs.stream()
+                .sorted()
                 .map(provinceMapper::toEntity)
                 .collect(Collectors.toUnmodifiableSet());
         provinceService.saveAll(provinces);
@@ -104,6 +107,7 @@ public class LocationService {
     public Set<ProvinceDTO> getAllByRegion(int regionId) throws ResourceNotFoundException {
         Region region = regionService.getById(regionId);
         return region.getProvinces().stream()
+                .sorted(Comparator.comparing(Province::getLocationName))
                 .map(provinceMapper::toDTO)
                 .collect(Collectors.toUnmodifiableSet());
     }
@@ -139,6 +143,7 @@ public class LocationService {
     public Set<CityDTO> getAllByProvince(int provinceId) throws ResourceNotFoundException {
         Province province = provinceService.getById(provinceId);
         return province.getCities().stream()
+                .sorted(Comparator.comparing(City::getLocationName))
                 .map(cityMapper::toDTO)
                 .collect(Collectors.toUnmodifiableSet());
     }
@@ -174,6 +179,7 @@ public class LocationService {
     public Set<BaranggayDTO> getAllByCity(int cityId) throws ResourceNotFoundException {
         City city = cityService.getById(cityId);
         return city.getBaranggays().stream()
+                .sorted(Comparator.comparing(Baranggay::getLocationName))
                 .map(baranggayMapper::toDTO)
                 .collect(Collectors.toUnmodifiableSet());
     }
@@ -186,18 +192,21 @@ public class LocationService {
 
     public List<ProvinceDTO> searchByProvinceName(String locationName) {
         return provinceService.searchByLocationName(locationName).stream()
+                .sorted(Comparator.comparing(Province::getLocationName))
                 .map(provinceMapper::toDTO)
                 .toList();
     }
 
     public List<CityDTO> searchByCityName(String locationName) {
         return cityService.searchByLocationName(locationName).stream()
+                .sorted(Comparator.comparing(City::getLocationName))
                 .map(cityMapper::toDTO)
                 .toList();
     }
 
     public List<BaranggayDTO> searchByBaranggayName(String locationName) {
         return baranggayService.searchByLocationName(locationName).stream()
+                .sorted(Comparator.comparing(Baranggay::getLocationName))
                 .map(baranggayMapper::toDTO)
                 .toList();
     }

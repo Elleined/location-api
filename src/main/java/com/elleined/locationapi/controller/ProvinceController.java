@@ -11,6 +11,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/provinces")
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class ProvinceController {
 
