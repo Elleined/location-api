@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableTransactionManagement
 public class LocationApiApplication {
 
