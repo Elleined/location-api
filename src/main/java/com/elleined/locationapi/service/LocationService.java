@@ -89,7 +89,6 @@ public class LocationService {
         if (provinceService.isAlreadyExists(provinceDTOs)) throw new AlreadyExistsException("One of the provided id already exists!");
 
         Set<Province> provinces = provinceDTOs.stream()
-                .sorted()
                 .map(provinceMapper::toEntity)
                 .collect(Collectors.toUnmodifiableSet());
         provinceService.saveAll(provinces);
