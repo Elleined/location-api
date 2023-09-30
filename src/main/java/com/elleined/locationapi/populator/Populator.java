@@ -8,11 +8,9 @@ import java.io.IOException;
 @Component
 public abstract class Populator {
     protected final ObjectMapper objectMapper;
-    protected final LocationService locationService;
 
-    public Populator(ObjectMapper objectMapper, LocationService locationService) {
+    protected Populator(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
-        this.locationService = locationService;
     }
 
     public abstract void populate(final String jsonFile) throws IOException;

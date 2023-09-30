@@ -1,6 +1,7 @@
 package com.elleined.locationapi;
 
 import com.elleined.locationapi.populator.Populator;
+import com.elleined.locationapi.service.region.RegionService;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,19 +18,20 @@ public class AfterStartUp {
     private final Populator provincePopulator;
     private final Populator cityPopulator;
     private final Populator baranggayPopulator;
-    private final LocationService locationService;
+    private final RegionService regionService;
 
     public AfterStartUp(Populator regionPopulator,
                         @Qualifier("provincePopulator") Populator provincePopulator,
                         @Qualifier("cityPopulator") Populator cityPopulator,
                         @Qualifier("baranggayPopulator") Populator baranggayPopulator,
-                        LocationService locationService) {
+                        RegionService regionService) {
 
         this.regionPopulator = regionPopulator;
         this.provincePopulator = provincePopulator;
         this.cityPopulator = cityPopulator;
         this.baranggayPopulator = baranggayPopulator;
-        this.locationService = locationService;
+        this.regionService = regionService;
+
     }
 
     private static final String regionsJSONFilePath = "/json/regions.json";
@@ -40,7 +42,7 @@ public class AfterStartUp {
     @PostConstruct
     @Transactional
     void init() throws IOException {
-        if (!locationService.getAllRegion().isEmpty()) {
+        if (!regionService.getAll().isEmpty()) {
             log.debug("Returning because location values already been saved!");
             return;
         }
