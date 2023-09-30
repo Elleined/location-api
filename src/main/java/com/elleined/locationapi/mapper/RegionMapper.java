@@ -3,7 +3,6 @@ package com.elleined.locationapi.mapper;
 import com.elleined.locationapi.dto.RegionDTO;
 import com.elleined.locationapi.model.Province;
 import com.elleined.locationapi.model.Region;
-import com.elleined.locationapi.service.RegionService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

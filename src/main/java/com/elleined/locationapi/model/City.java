@@ -39,4 +39,8 @@ public class City {
     )
     @Setter(AccessLevel.NONE)
     private Set<Baranggay> baranggays;
+
+    public int getBaranggayCount() {
+        return this.getBaranggays().size();
+    }
 }

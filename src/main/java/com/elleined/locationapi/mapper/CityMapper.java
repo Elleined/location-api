@@ -3,8 +3,6 @@ package com.elleined.locationapi.mapper;
 import com.elleined.locationapi.dto.CityDTO;
 import com.elleined.locationapi.model.Baranggay;
 import com.elleined.locationapi.model.City;
-import com.elleined.locationapi.service.CityService;
-import com.elleined.locationapi.service.ProvinceService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

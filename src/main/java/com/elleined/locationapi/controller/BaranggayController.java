@@ -1,7 +1,6 @@
 package com.elleined.locationapi.controller;
 
 import com.elleined.locationapi.dto.BaranggayDTO;
-import com.elleined.locationapi.service.LocationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

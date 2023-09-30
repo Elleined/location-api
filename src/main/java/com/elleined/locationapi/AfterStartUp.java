@@ -1,7 +1,6 @@
 package com.elleined.locationapi;
 
 import com.elleined.locationapi.populator.Populator;
-import com.elleined.locationapi.service.LocationService;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -40,4 +40,14 @@ public class Province {
     )
     @Setter(AccessLevel.NONE)
     private Set<City> cities;
+
+    public int getCityCount() {
+        return this.getCities().size();
+    }
+
+    public int getBaranggayCount() {
+        return (int) this.getCities().stream()
+                .map(City::getBaranggays)
+                .count();
+    }
 }

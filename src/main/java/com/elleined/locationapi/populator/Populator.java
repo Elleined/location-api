@@ -1,6 +1,5 @@
 package com.elleined.locationapi.populator;
 
-import com.elleined.locationapi.service.LocationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
 

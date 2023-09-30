@@ -3,6 +3,8 @@ package com.elleined.locationapi.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -34,4 +36,22 @@ public class Region {
     )
     @Setter(AccessLevel.NONE)
     private Set<Province> provinces;
+
+    public int getProvinceCount() {
+        return this.getProvinces().size();
+    }
+
+    public int getCityCount() {
+        return (int) this.getProvinces().stream()
+                .map(Province::getCities)
+                .count();
+    }
+
+    public int getBaranggayCount(Region region) {
+        return (int) region.getProvinces().stream()
+                .map(Province::getCities)
+                .flatMap(Collection::stream)
+                .map(City::getBaranggays)
+                .count();
+    }
 }
