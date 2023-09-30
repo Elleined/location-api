@@ -32,13 +32,9 @@ public class RegionServiceImpl implements RegionService {
 
     @Override
     public List<Region> saveAll(List<RegionDTO> regionDTOS) {
-        if (this.isAlreadyExists(regionDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
-        List<Region> regions = regionDTOS.stream()
-                .map(regionMapper::toEntity)
+        return regionDTOS.stream()
+                .map(this::save)
                 .toList();
-        regionRepository.saveAll(regions);
-        log.debug("Saving all regions success");
-        return regions;
     }
 
     @Override
@@ -56,11 +52,6 @@ public class RegionServiceImpl implements RegionService {
     @Override
     public boolean isAlreadyExists(RegionDTO regionDTO) {
         return regionRepository.existsById(regionDTO.getId());
-    }
-
-    @Override
-    public boolean isAlreadyExists(List<RegionDTO> regionDTOS) {
-        return regionDTOS.stream().anyMatch(this::isAlreadyExists);
     }
 
     @Override

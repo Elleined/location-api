@@ -9,6 +9,5 @@ public interface LocationService<ENTITY, DTO> {
     List<ENTITY> saveAll(List<DTO> dtos);
     ENTITY getById(int id) throws ResourceNotFoundException;
     boolean isAlreadyExists(DTO dto);
-    boolean isAlreadyExists(List<DTO> dtos);
     List<ENTITY> searchByLocationName(String locationName);
 }

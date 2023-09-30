@@ -46,8 +46,8 @@ public class Region {
                 .count();
     }
 
-    public int getBaranggayCount(Region region) {
-        return (int) region.getProvinces().stream()
+    public int getBaranggayCount() {
+        return (int) this.getProvinces().stream()
                 .map(Province::getCities)
                 .flatMap(Collection::stream)
                 .map(City::getBaranggays)

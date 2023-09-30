@@ -7,6 +7,7 @@ import com.elleined.locationapi.mapper.ProvinceMapper;
 import com.elleined.locationapi.model.Province;
 import com.elleined.locationapi.model.Region;
 import com.elleined.locationapi.repository.ProvinceRepository;
+import com.elleined.locationapi.service.region.RegionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,10 +24,12 @@ public class ProvinceServiceImpl implements ProvinceService {
     private final ProvinceRepository provinceRepository;
     private final ProvinceMapper provinceMapper;
 
+    private final RegionService regionService;
     @Override
     public Province save(ProvinceDTO provinceDTO) {
         if (isAlreadyExists(provinceDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
-        Province province = provinceMapper.toEntity(provinceDTO);
+        Region region = regionService.getById(provinceDTO.getRegionId());
+        Province province = provinceMapper.toEntity(provinceDTO, region);
         provinceRepository.save(province);
         log.debug("Province with id of {} and with name of {} saved successfully", province.getId(), province.getLocationName());
         return province;
@@ -34,13 +37,9 @@ public class ProvinceServiceImpl implements ProvinceService {
 
     @Override
     public List<Province> saveAll(List<ProvinceDTO> provinceDTOS) {
-        if (isAlreadyExists(provinceDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
-        List<Province> provinces = provinceDTOS.stream()
-                .map(provinceMapper::toEntity)
+        return provinceDTOS.stream()
+                .map(this::save)
                 .toList();
-        provinceRepository.saveAll(provinces);
-        log.debug("Saving all province success");
-        return provinces;
     }
 
     @Override
@@ -51,11 +50,6 @@ public class ProvinceServiceImpl implements ProvinceService {
     @Override
     public boolean isAlreadyExists(ProvinceDTO provinceDTO) {
         return provinceRepository.existsById(provinceDTO.getId());
-    }
-
-    @Override
-    public boolean isAlreadyExists(List<ProvinceDTO> provinceDTOS) {
-        return provinceDTOS.stream().anyMatch(this::isAlreadyExists);
     }
 
     @Override

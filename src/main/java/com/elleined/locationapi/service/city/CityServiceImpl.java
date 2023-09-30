@@ -7,6 +7,7 @@ import com.elleined.locationapi.mapper.CityMapper;
 import com.elleined.locationapi.model.City;
 import com.elleined.locationapi.model.Province;
 import com.elleined.locationapi.repository.CityRepository;
+import com.elleined.locationapi.service.province.ProvinceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,10 +24,12 @@ public class CityServiceImpl implements CityService {
     private final CityRepository cityRepository;
     private final CityMapper cityMapper;
 
+    private final ProvinceService provinceService;
     @Override
     public City save(CityDTO cityDTO) {
         if (isAlreadyExists(cityDTO)) throw new AlreadyExistsException("City with id of " + cityDTO.getId() + " already exists!");
-        City city = cityMapper.toEntity(cityDTO);
+        Province province = provinceService.getById(cityDTO.getProvinceId());
+        City city = cityMapper.toEntity(cityDTO, province);
         cityRepository.save(city);
         log.debug("City with id of {} and with name of {} saved successfully!", city.getId(), city.getLocationName());
         return city;
@@ -34,13 +37,9 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public List<City> saveAll(List<CityDTO> cityDTOS) {
-        if (isAlreadyExists(cityDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
-        List<City> cities = cityDTOS.stream()
-                .map(cityMapper::toEntity)
+        return cityDTOS.stream()
+                .map(this::save)
                 .toList();
-        cityRepository.saveAll(cities);
-        log.debug("Saving all cities success!");
-        return cities;
     }
 
     @Override
@@ -51,11 +50,6 @@ public class CityServiceImpl implements CityService {
     @Override
     public boolean isAlreadyExists(CityDTO cityDTO) {
         return cityRepository.existsById(cityDTO.getId());
-    }
-
-    @Override
-    public boolean isAlreadyExists(List<CityDTO> cityDTOS) {
-        return cityDTOS.stream().anyMatch(this::isAlreadyExists);
     }
 
     @Override

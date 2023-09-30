@@ -7,6 +7,7 @@ import com.elleined.locationapi.mapper.BaranggayMapper;
 import com.elleined.locationapi.model.Baranggay;
 import com.elleined.locationapi.model.City;
 import com.elleined.locationapi.repository.BaranggayRepository;
+import com.elleined.locationapi.service.city.CityService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,10 +24,13 @@ public class BaranggayServiceImpl implements BaranggayService {
     private final BaranggayRepository baranggayRepository;
     private final BaranggayMapper baranggayMapper;
 
+    private final CityService cityService;
+
     @Override
     public Baranggay save(BaranggayDTO baranggayDTO) {
         if (isAlreadyExists(baranggayDTO)) throw new AlreadyExistsException("Baranggay with id of " + baranggayDTO.getId() + " already exists!");
-        Baranggay baranggay = baranggayMapper.toEntity(baranggayDTO);
+        City city = cityService.getById(baranggayDTO.getCityId());
+        Baranggay baranggay = baranggayMapper.toEntity(baranggayDTO, city);
         baranggayRepository.save(baranggay);
         log.debug("Baranggay with id of {} and with name of {} saved successfully", baranggay.getId(), baranggay.getLocationName());
         return baranggay;
@@ -34,13 +38,9 @@ public class BaranggayServiceImpl implements BaranggayService {
 
     @Override
     public List<Baranggay> saveAll(List<BaranggayDTO> baranggayDTOS) {
-        if (isAlreadyExists(baranggayDTOS)) throw new AlreadyExistsException("One of the provided id already exists!");
-        List<Baranggay> baranggays = baranggayDTOS.stream()
-                .map(baranggayMapper::toEntity)
+        return baranggayDTOS.stream()
+                .map(this::save)
                 .toList();
-        baranggayRepository.saveAll(baranggays);
-        log.debug("Saving all baranggays success");
-        return baranggays;
     }
 
     @Override
@@ -51,11 +51,6 @@ public class BaranggayServiceImpl implements BaranggayService {
     @Override
     public boolean isAlreadyExists(BaranggayDTO baranggayDTO) {
         return baranggayRepository.existsById(baranggayDTO.getId());
-    }
-
-    @Override
-    public boolean isAlreadyExists(List<BaranggayDTO> baranggayDTOS) {
-        return baranggayDTOS.stream().anyMatch(this::isAlreadyExists);
     }
 
     @Override
