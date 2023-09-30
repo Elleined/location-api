@@ -26,6 +26,7 @@ public class RegionServiceImpl implements RegionService {
     public Region save(RegionDTO regionDTO) {
         if (this.isAlreadyExists(regionDTO)) throw new AlreadyExistsException("Region with id of " + regionDTO.getId() + " already exists!");
         Region region = regionMapper.toEntity(regionDTO);
+        regionRepository.save(region);
         log.debug("Region with id of {} saved successfully", region.getId());
         return region;
     }
