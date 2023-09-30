@@ -11,7 +11,6 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/baranggays")
-@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class BaranggayController {
     private final LocationService locationService;
