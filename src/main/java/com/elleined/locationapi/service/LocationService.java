@@ -1,12 +1,13 @@
 package com.elleined.locationapi.service;
 
+import com.elleined.locationapi.exception.AlreadyExistsException;
 import com.elleined.locationapi.exception.ResourceNotFoundException;
 
 import java.util.List;
 
 public interface LocationService<ENTITY, DTO> {
-    ENTITY save(DTO dto);
-    List<ENTITY> saveAll(List<DTO> dtos);
+    ENTITY save(DTO dto) throws AlreadyExistsException;
+    List<ENTITY> saveAll(List<DTO> dtos) throws AlreadyExistsException;
     ENTITY getById(int id) throws ResourceNotFoundException;
     boolean isAlreadyExists(DTO dto);
     List<ENTITY> searchByLocationName(String locationName);

@@ -18,13 +18,13 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class RegionServiceImpl implements RegionService {
+class RegionServiceImpl implements RegionService {
     private final RegionRepository regionRepository;
     private final RegionMapper regionMapper;
 
     @Override
-    public Region save(RegionDTO regionDTO) {
-        if (this.isAlreadyExists(regionDTO)) throw new AlreadyExistsException("Region with id of " + regionDTO.getId() + " already exists!");
+    public Region save(RegionDTO regionDTO) throws AlreadyExistsException {
+        if (isAlreadyExists(regionDTO)) throw new AlreadyExistsException("Region with id of " + regionDTO.getId() + " already exists!");
         Region region = regionMapper.toEntity(regionDTO);
         regionRepository.save(region);
         log.debug("Region with id of {} saved successfully", region.getId());
@@ -32,10 +32,15 @@ public class RegionServiceImpl implements RegionService {
     }
 
     @Override
-    public List<Region> saveAll(List<RegionDTO> regionDTOS) {
-        return regionDTOS.stream()
-                .map(this::save)
+    public List<Region> saveAll(List<RegionDTO> regionDTOS) throws AlreadyExistsException {
+        if (regionDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all regions! because one of the provided region id already exists!");
+
+        List<Region> regions = regionDTOS.stream()
+                .map(regionMapper::toEntity)
                 .toList();
+        regionRepository.saveAll(regions);
+        log.debug("Saving all regions success...");
+        return regions;
     }
 
     @Override

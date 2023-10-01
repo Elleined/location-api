@@ -20,13 +20,13 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class ProvinceServiceImpl implements ProvinceService {
+class ProvinceServiceImpl implements ProvinceService {
     private final ProvinceRepository provinceRepository;
     private final ProvinceMapper provinceMapper;
 
     private final RegionService regionService;
     @Override
-    public Province save(ProvinceDTO provinceDTO) {
+    public Province save(ProvinceDTO provinceDTO) throws AlreadyExistsException {
         if (isAlreadyExists(provinceDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
         Region region = regionService.getById(provinceDTO.getRegionId());
         Province province = provinceMapper.toEntity(provinceDTO, region);
@@ -36,10 +36,18 @@ public class ProvinceServiceImpl implements ProvinceService {
     }
 
     @Override
-    public List<Province> saveAll(List<ProvinceDTO> provinceDTOS) {
-        return provinceDTOS.stream()
-                .map(this::save)
+    public List<Province> saveAll(List<ProvinceDTO> provinceDTOS) throws AlreadyExistsException {
+        if (provinceDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all provinces! because one of the provided provinces id already exists!");
+        List<Province> provinces = provinceDTOS.stream()
+                .map(provinceDTO -> {
+                    Region region = regionService.getById(provinceDTO.getRegionId());
+                    return provinceMapper.toEntity(provinceDTO, region);
+                })
                 .toList();
+
+        provinceRepository.saveAll(provinces);
+        log.debug("Saving all provinces success...");
+        return provinces;
     }
 
     @Override

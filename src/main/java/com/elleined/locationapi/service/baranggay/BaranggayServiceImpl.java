@@ -20,14 +20,14 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class BaranggayServiceImpl implements BaranggayService {
+class BaranggayServiceImpl implements BaranggayService {
     private final BaranggayRepository baranggayRepository;
     private final BaranggayMapper baranggayMapper;
 
     private final CityService cityService;
 
     @Override
-    public Baranggay save(BaranggayDTO baranggayDTO) {
+    public Baranggay save(BaranggayDTO baranggayDTO) throws AlreadyExistsException {
         if (isAlreadyExists(baranggayDTO)) throw new AlreadyExistsException("Baranggay with id of " + baranggayDTO.getId() + " already exists!");
         City city = cityService.getById(baranggayDTO.getCityId());
         Baranggay baranggay = baranggayMapper.toEntity(baranggayDTO, city);
@@ -37,10 +37,18 @@ public class BaranggayServiceImpl implements BaranggayService {
     }
 
     @Override
-    public List<Baranggay> saveAll(List<BaranggayDTO> baranggayDTOS) {
-        return baranggayDTOS.stream()
-                .map(this::save)
-                .toList();
+    public List<Baranggay> saveAll(List<BaranggayDTO> baranggayDTOS) throws AlreadyExistsException {
+        if (baranggayDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all baranggays! because onr of the provided id already exists!");
+
+        List<Baranggay> baranggays = baranggayDTOS.stream()
+                .map(baranggayDTO -> {
+                        City city = cityService.getById(baranggayDTO.getCityId());
+                        return baranggayMapper.toEntity(baranggayDTO, city);
+                }).toList();
+
+        baranggayRepository.saveAll(baranggays);
+        log.debug("Saving all baranggays success...");
+        return baranggays;
     }
 
     @Override
