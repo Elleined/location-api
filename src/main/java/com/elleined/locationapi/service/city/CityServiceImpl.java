@@ -25,15 +25,6 @@ class CityServiceImpl implements CityService {
     private final CityMapper cityMapper;
 
     private final ProvinceService provinceService;
-    @Override
-    public City save(CityDTO cityDTO) throws AlreadyExistsException {
-        if (isAlreadyExists(cityDTO)) throw new AlreadyExistsException("City with id of " + cityDTO.getId() + " already exists!");
-        Province province = provinceService.getById(cityDTO.getProvinceId());
-        City city = cityMapper.toEntity(cityDTO, province);
-        cityRepository.save(city);
-        log.debug("City with id of {} and with name of {} saved successfully!", city.getId(), city.getLocationName());
-        return city;
-    }
 
     @Override
     public List<City> saveAll(List<CityDTO> cityDTOS) throws AlreadyExistsException {

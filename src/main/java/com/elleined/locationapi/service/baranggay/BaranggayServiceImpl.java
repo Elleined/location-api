@@ -27,16 +27,6 @@ class BaranggayServiceImpl implements BaranggayService {
     private final CityService cityService;
 
     @Override
-    public Baranggay save(BaranggayDTO baranggayDTO) throws AlreadyExistsException {
-        if (isAlreadyExists(baranggayDTO)) throw new AlreadyExistsException("Baranggay with id of " + baranggayDTO.getId() + " already exists!");
-        City city = cityService.getById(baranggayDTO.getCityId());
-        Baranggay baranggay = baranggayMapper.toEntity(baranggayDTO, city);
-        baranggayRepository.save(baranggay);
-        log.debug("Baranggay with id of {} and with name of {} saved successfully", baranggay.getId(), baranggay.getLocationName());
-        return baranggay;
-    }
-
-    @Override
     public List<Baranggay> saveAll(List<BaranggayDTO> baranggayDTOS) throws AlreadyExistsException {
         if (baranggayDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all baranggays! because onr of the provided id already exists!");
 

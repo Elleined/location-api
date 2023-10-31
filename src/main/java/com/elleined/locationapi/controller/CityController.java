@@ -21,19 +21,6 @@ public class CityController {
 
     private final ProvinceService provinceService;
 
-    @PostMapping
-    public CityDTO save(@Valid @RequestBody CityDTO cityDTO) {
-        City city = cityService.save(cityDTO);
-        return cityMapper.toDTO(city);
-    }
-
-    @PostMapping("/saveAll")
-    public List<CityDTO> saveAll(@Valid @RequestBody List<CityDTO> cityDTOS) {
-        return cityService.saveAll(cityDTOS).stream()
-                .map(cityMapper::toDTO)
-                .toList();
-    }
-
     @GetMapping("/{id}")
     public CityDTO getById(@PathVariable("id") int id) {
         City city = cityService.getById(id);

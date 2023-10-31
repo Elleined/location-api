@@ -25,15 +25,6 @@ class ProvinceServiceImpl implements ProvinceService {
     private final ProvinceMapper provinceMapper;
 
     private final RegionService regionService;
-    @Override
-    public Province save(ProvinceDTO provinceDTO) throws AlreadyExistsException {
-        if (isAlreadyExists(provinceDTO)) throw new AlreadyExistsException("One of the provided id already exists!");
-        Region region = regionService.getById(provinceDTO.getRegionId());
-        Province province = provinceMapper.toEntity(provinceDTO, region);
-        provinceRepository.save(province);
-        log.debug("Province with id of {} and with name of {} saved successfully", province.getId(), province.getLocationName());
-        return province;
-    }
 
     @Override
     public List<Province> saveAll(List<ProvinceDTO> provinceDTOS) throws AlreadyExistsException {

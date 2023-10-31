@@ -21,19 +21,6 @@ public class BaranggayController {
 
     private final CityService cityService;
 
-    @PostMapping
-    public BaranggayDTO save(@Valid @RequestBody BaranggayDTO baranggayDTO) {
-        Baranggay baranggay = baranggayService.save(baranggayDTO);
-        return baranggayMapper.toDTO(baranggay);
-    }
-
-    @PostMapping("/saveAll")
-    public List<BaranggayDTO> saveAll(@Valid @RequestBody List<BaranggayDTO> baranggayDTOS) {
-         return baranggayService.saveAll(baranggayDTOS).stream()
-                 .map(baranggayMapper::toDTO)
-                 .toList();
-    }
-
     @GetMapping("/{id}")
     public BaranggayDTO getById(@PathVariable("id") int id) {
         Baranggay baranggay = baranggayService.getById(id);

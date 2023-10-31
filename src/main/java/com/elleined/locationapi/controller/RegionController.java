@@ -17,19 +17,6 @@ public class RegionController {
     private final RegionService regionService;
     private final RegionMapper regionMapper;
 
-    @PostMapping
-    public RegionDTO save(@Valid @RequestBody RegionDTO regionDTO) {
-        Region region = regionService.save(regionDTO);
-        return regionMapper.toDTO(region);
-    }
-
-    @PostMapping("/saveAll")
-    public List<RegionDTO> saveAll(@RequestBody List<RegionDTO> regionDTOs) {
-        return regionService.saveAll(regionDTOs).stream()
-                .map(regionMapper::toDTO)
-                .toList();
-    }
-
     @GetMapping
     public List<RegionDTO> getAll() {
         return regionService.getAll().stream()

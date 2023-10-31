@@ -21,19 +21,6 @@ public class ProvinceController {
 
     private final RegionService regionService;
 
-    @PostMapping
-    public ProvinceDTO save(@Valid @RequestBody ProvinceDTO provinceDTO) {
-        Province province = provinceService.save(provinceDTO);
-        return provinceMapper.toDTO(province);
-    }
-
-    @PostMapping("/saveAll")
-    public List<ProvinceDTO> saveAll(@Valid @RequestBody List<ProvinceDTO> provinceDTOs) {
-        return provinceService.saveAll(provinceDTOs).stream()
-                .map(provinceMapper::toDTO)
-                .toList();
-    }
-
     @GetMapping("/getAllByRegion/{regionId}")
     public List<ProvinceDTO> getAllBy(@PathVariable("regionId") int regionId) {
         Region region = regionService.getById(regionId);
