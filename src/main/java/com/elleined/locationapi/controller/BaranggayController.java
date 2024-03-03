@@ -6,7 +6,6 @@ import com.elleined.locationapi.model.Baranggay;
 import com.elleined.locationapi.model.City;
 import com.elleined.locationapi.service.baranggay.BaranggayService;
 import com.elleined.locationapi.service.city.CityService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
