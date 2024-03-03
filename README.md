@@ -31,8 +31,19 @@ Location API for regions, provinces, cities, and baranggay of philippines
    - IntelliJ
 
 # Run with Docker
+## 1. Create Network
 ```
-docker run -itd --rm -p 8082:8082 --name pla_app pla
+docker network create pla-network
+```
+
+## 2. Docker Run MySQL Server
+```
+docker run -itd --rm -p 3307:3306 --network pla-network --name pla_mysql_server -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=pla_db mysql:8.0.32
+```
+
+## 3. Docker Run Philippine Location API
+```
+docker run -itd --rm -p 8082:8082 --network pla-network --name pla_app pla
 ```
 
 # Access all endpoints in Postman easily
