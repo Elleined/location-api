@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.FileCopyUtils;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Component
@@ -25,9 +27,10 @@ public class CityPopulator extends Populator {
     @Override
     public void populate(final String jsonFile) throws IOException {
         var resource = new ClassPathResource(jsonFile);
+        byte[] dataBytes = FileCopyUtils.copyToByteArray(resource.getInputStream());
         var type = objectMapper.getTypeFactory().constructCollectionType(List.class, CityDTO.class);
 
-        List<CityDTO> cities = objectMapper.readValue(resource.getFile(), type);
+        List<CityDTO> cities = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
         cityService.saveAll(cities);
     }
 }
