@@ -29,7 +29,12 @@ Location API for regions, provinces, cities, and baranggay of philippines
    - MySQL
    - Postman
    - IntelliJ
- 
+
+# Run with Docker
+```
+docker run -itd --rm -p 8082:8082 --name pla_app pla
+```
+
 # Access all endpoints in Postman easily
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/26932885-6be305a4-8400-4128-aff3-6da8e9440320?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D26932885-6be305a4-8400-4128-aff3-6da8e9440320%26entityType%3Dcollection%26workspaceId%3D0e6edea3-3d68-40e8-ae27-886affdb537b)
 
