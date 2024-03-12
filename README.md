@@ -1,5 +1,5 @@
 # philippines-location-api
-Location API for regions, provinces, cities, and baranggay of philippines
+API for philippines regions, provinces, cities, and baranggays
 
 # Configuration
  - Make sure to run first this repo [discovery-service-server](
