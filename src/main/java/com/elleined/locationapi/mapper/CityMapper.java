@@ -1,17 +1,12 @@
 package com.elleined.locationapi.mapper;
 
 import com.elleined.locationapi.dto.CityDTO;
-import com.elleined.locationapi.model.Baranggay;
 import com.elleined.locationapi.model.City;
 import com.elleined.locationapi.model.Province;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Mapper(componentModel = "spring")
 public abstract class CityMapper {

@@ -2,18 +2,12 @@ package com.elleined.locationapi.mapper;
 
 
 import com.elleined.locationapi.dto.ProvinceDTO;
-import com.elleined.locationapi.model.City;
 import com.elleined.locationapi.model.Province;
 import com.elleined.locationapi.model.Region;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Mapper(componentModel = "spring")
 public abstract class ProvinceMapper {
