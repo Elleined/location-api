@@ -6,7 +6,6 @@ import com.elleined.locationapi.model.Province;
 import com.elleined.locationapi.model.Region;
 import com.elleined.locationapi.service.province.ProvinceService;
 import com.elleined.locationapi.service.region.RegionService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

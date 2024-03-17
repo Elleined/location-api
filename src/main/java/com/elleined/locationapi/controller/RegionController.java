@@ -4,7 +4,6 @@ import com.elleined.locationapi.dto.RegionDTO;
 import com.elleined.locationapi.mapper.RegionMapper;
 import com.elleined.locationapi.model.Region;
 import com.elleined.locationapi.service.region.RegionService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
