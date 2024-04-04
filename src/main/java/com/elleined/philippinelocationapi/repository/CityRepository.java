@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.repository;
 
-import com.elleined.philippinelocationapi.model.City;
+import com.elleined.philippinelocationapi.model.city.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

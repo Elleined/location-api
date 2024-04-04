@@ -2,8 +2,8 @@ package com.elleined.philippinelocationapi.controller;
 
 import com.elleined.philippinelocationapi.dto.BaranggayDTO;
 import com.elleined.philippinelocationapi.mapper.BaranggayMapper;
-import com.elleined.philippinelocationapi.model.Baranggay;
-import com.elleined.philippinelocationapi.model.City;
+import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
+import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.service.baranggay.BaranggayService;
 import com.elleined.philippinelocationapi.service.city.CityService;
 import lombok.RequiredArgsConstructor;

@@ -4,7 +4,7 @@ import com.elleined.philippinelocationapi.dto.RegionDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.mapper.RegionMapper;
-import com.elleined.philippinelocationapi.model.Region;
+import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.RegionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

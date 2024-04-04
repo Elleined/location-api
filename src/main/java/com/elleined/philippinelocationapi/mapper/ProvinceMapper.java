@@ -2,8 +2,8 @@ package com.elleined.philippinelocationapi.mapper;
 
 
 import com.elleined.philippinelocationapi.dto.ProvinceDTO;
-import com.elleined.philippinelocationapi.model.Province;
-import com.elleined.philippinelocationapi.model.Region;
+import com.elleined.philippinelocationapi.model.province.Province;
+import com.elleined.philippinelocationapi.model.region.Region;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -1,8 +1,9 @@
 package com.elleined.philippinelocationapi;
 
-import com.elleined.philippinelocationapi.populator.Populator;
+import com.elleined.philippinelocationapi.populator.*;
 import com.elleined.philippinelocationapi.service.region.RegionService;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -12,27 +13,14 @@ import java.io.IOException;
 
 @Component
 @Slf4j
+@RequiredArgsConstructor
 public class AfterStartUp {
 
-    private final Populator regionPopulator;
-    private final Populator provincePopulator;
-    private final Populator cityPopulator;
-    private final Populator baranggayPopulator;
+    private final RegionPopulator regionPopulator;
+    private final ProvincePopulator provincePopulator;
+    private final CityPopulator cityPopulator;
+    private final BaranggayPopulator baranggayPopulator;
     private final RegionService regionService;
-
-    public AfterStartUp(Populator regionPopulator,
-                        @Qualifier("provincePopulator") Populator provincePopulator,
-                        @Qualifier("cityPopulator") Populator cityPopulator,
-                        @Qualifier("baranggayPopulator") Populator baranggayPopulator,
-                        RegionService regionService) {
-
-        this.regionPopulator = regionPopulator;
-        this.provincePopulator = provincePopulator;
-        this.cityPopulator = cityPopulator;
-        this.baranggayPopulator = baranggayPopulator;
-        this.regionService = regionService;
-
-    }
 
     private static final String regionsJSONFilePath = "/json/regions.json";
     private static final String provincesJSONFilePath = "/json/provinces.json";

@@ -2,7 +2,7 @@ package com.elleined.philippinelocationapi.controller;
 
 import com.elleined.philippinelocationapi.dto.RegionDTO;
 import com.elleined.philippinelocationapi.mapper.RegionMapper;
-import com.elleined.philippinelocationapi.model.Region;
+import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.service.region.RegionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

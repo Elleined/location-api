@@ -2,8 +2,8 @@ package com.elleined.philippinelocationapi.controller;
 
 import com.elleined.philippinelocationapi.dto.CityDTO;
 import com.elleined.philippinelocationapi.mapper.CityMapper;
-import com.elleined.philippinelocationapi.model.City;
-import com.elleined.philippinelocationapi.model.Province;
+import com.elleined.philippinelocationapi.model.city.City;
+import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.service.city.CityService;
 import com.elleined.philippinelocationapi.service.province.ProvinceService;
 import lombok.RequiredArgsConstructor;

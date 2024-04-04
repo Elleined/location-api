@@ -1,7 +1,7 @@
 package com.elleined.philippinelocationapi.service.region;
 
 import com.elleined.philippinelocationapi.dto.RegionDTO;
-import com.elleined.philippinelocationapi.model.Region;
+import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.service.LocationService;
 
 import java.util.List;
