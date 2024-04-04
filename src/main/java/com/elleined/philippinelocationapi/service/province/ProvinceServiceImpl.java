@@ -6,7 +6,7 @@ import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.mapper.ProvinceMapper;
 import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.model.region.Region;
-import com.elleined.philippinelocationapi.repository.ProvinceRepository;
+import com.elleined.philippinelocationapi.repository.province.ProvinceRepository;
 import com.elleined.philippinelocationapi.service.region.RegionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

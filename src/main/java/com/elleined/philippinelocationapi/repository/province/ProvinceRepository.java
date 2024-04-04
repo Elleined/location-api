@@ -1,4 +1,4 @@
-package com.elleined.philippinelocationapi.repository;
+package com.elleined.philippinelocationapi.repository.province;
 
 import com.elleined.philippinelocationapi.model.province.Province;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface ProvinceRepository extends JpaRepository<Province, Integer> {
 
-    @Query("SELECT p FROM Province p WHERE p.locationName LIKE CONCAT('%', :locationName, '%') ORDER BY p.id")
-    List<Province> searchByLocationName(@Param("locationName") String locationName);
+    @Query("SELECT p FROM Province p WHERE p.name LIKE CONCAT('%', :name, '%') ORDER BY p.id")
+    List<Province> searchByLocationName(@Param("name") String locationName);
 }

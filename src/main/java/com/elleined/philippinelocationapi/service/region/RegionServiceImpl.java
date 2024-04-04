@@ -5,7 +5,7 @@ import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.mapper.RegionMapper;
 import com.elleined.philippinelocationapi.model.region.Region;
-import com.elleined.philippinelocationapi.repository.RegionRepository;
+import com.elleined.philippinelocationapi.repository.region.RegionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
