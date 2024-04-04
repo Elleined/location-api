@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.service.baranggay;
 
-import com.elleined.philippinelocationapi.dto.BaranggayDTO;
+import com.elleined.philippinelocationapi.dto.baranggay.BaranggayDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.mapper.BaranggayMapper;

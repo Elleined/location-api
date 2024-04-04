@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.service.region;
 
-import com.elleined.philippinelocationapi.dto.RegionDTO;
+import com.elleined.philippinelocationapi.dto.region.RegionDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.mapper.RegionMapper;

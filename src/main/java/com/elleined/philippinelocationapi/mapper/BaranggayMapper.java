@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.mapper;
 
-import com.elleined.philippinelocationapi.dto.BaranggayDTO;
+import com.elleined.philippinelocationapi.dto.baranggay.BaranggayDTO;
 import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
 import com.elleined.philippinelocationapi.model.city.City;
 import org.mapstruct.Context;

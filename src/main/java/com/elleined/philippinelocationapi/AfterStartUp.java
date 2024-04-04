@@ -1,11 +1,13 @@
 package com.elleined.philippinelocationapi;
 
-import com.elleined.philippinelocationapi.populator.*;
+import com.elleined.philippinelocationapi.populator.BaranggayPopulator;
+import com.elleined.philippinelocationapi.populator.CityPopulator;
+import com.elleined.philippinelocationapi.populator.ProvincePopulator;
+import com.elleined.philippinelocationapi.populator.RegionPopulator;
 import com.elleined.philippinelocationapi.service.region.RegionService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 

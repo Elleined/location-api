@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.populator;
 
-import com.elleined.philippinelocationapi.dto.BaranggayDTO;
+import com.elleined.philippinelocationapi.dto.baranggay.BaranggayDTO;
 import com.elleined.philippinelocationapi.service.baranggay.BaranggayService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.service.province;
 
-import com.elleined.philippinelocationapi.dto.ProvinceDTO;
+import com.elleined.philippinelocationapi.dto.province.ProvinceDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.mapper.ProvinceMapper;

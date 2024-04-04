@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.controller;
 
-import com.elleined.philippinelocationapi.dto.Response;
+import com.elleined.philippinelocationapi.dto.APIResponse;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.EmptyUUIDException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
@@ -18,22 +18,22 @@ import java.util.List;
 public class ExceptionController {
 
     @ExceptionHandler({ResourceNotFoundException.class, AlreadyExistsException.class, IOException.class})
-    public ResponseEntity<Response> handleResourceNotFoundException(RuntimeException ex) {
-        var response = new Response(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    public ResponseEntity<APIResponse> handleResourceNotFoundException(RuntimeException ex) {
+        var response = new APIResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(EmptyUUIDException.class)
-    public ResponseEntity<Response> handleEmptyUUIDException(EmptyUUIDException ex) {
-        var response = new Response(ex.getMessage(), HttpStatus.FORBIDDEN);
+    public ResponseEntity<APIResponse> handleEmptyUUIDException(EmptyUUIDException ex) {
+        var response = new APIResponse(ex.getMessage(), HttpStatus.FORBIDDEN);
         return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(BindException.class)
-    public ResponseEntity<List<Response>> handleBindException(BindException ex) {
-        List<Response> errors = ex.getBindingResult().getAllErrors().stream()
+    public ResponseEntity<List<APIResponse>> handleBindException(BindException ex) {
+        List<APIResponse> errors = ex.getBindingResult().getAllErrors().stream()
                 .map(ObjectError::getDefaultMessage)
-                .map(errorMessage -> new Response(errorMessage, HttpStatus.BAD_REQUEST))
+                .map(errorMessage -> new APIResponse(errorMessage, HttpStatus.BAD_REQUEST))
                 .toList();
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
