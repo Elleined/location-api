@@ -51,8 +51,8 @@ class ProvinceServiceImpl implements ProvinceService {
     }
 
     @Override
-    public List<Province> searchByLocationName(String locationName) {
-        return provinceRepository.searchByLocationName(locationName).stream()
+    public List<Province> searchByName(String name) {
+        return provinceRepository.searchByLocationName(name).stream()
                 .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }

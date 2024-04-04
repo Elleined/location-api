@@ -13,20 +13,14 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/cities")
+@RequestMapping("/regions/provinces/{provinceId}/cities")
 public class CityController {
     private final CityService cityService;
     private final CityMapper cityMapper;
 
     private final ProvinceService provinceService;
 
-    @GetMapping("/{id}")
-    public CityDTO getById(@PathVariable("id") int id) {
-        City city = cityService.getById(id);
-        return cityMapper.toDTO(city);
-    }
-
-    @GetMapping("/getAllByProvince/{provinceId}")
+    @GetMapping
     public List<CityDTO> getAllByProvince(@PathVariable("provinceId") int provinceId) {
         Province province = provinceService.getById(provinceId);
         return cityService.getAllBy(province).stream()
@@ -34,9 +28,15 @@ public class CityController {
                 .toList();
     }
 
-    @GetMapping("/searchByLocationName")
-    public List<CityDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
-        return cityService.searchByLocationName(locationName).stream()
+    @GetMapping("/{id}")
+    public CityDTO getById(@PathVariable("id") int id) {
+        City city = cityService.getById(id);
+        return cityMapper.toDTO(city);
+    }
+
+    @GetMapping("/search")
+    public List<CityDTO> searchByLocationName(@RequestParam("name") String name) {
+        return cityService.searchByName(name).stream()
                 .map(cityMapper::toDTO)
                 .toList();
     }

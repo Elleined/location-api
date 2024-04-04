@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/provinces")
+@RequestMapping("/regions/{regionId}/provinces")
 @RequiredArgsConstructor
 public class ProvinceController {
     private final ProvinceService provinceService;
@@ -20,7 +20,7 @@ public class ProvinceController {
 
     private final RegionService regionService;
 
-    @GetMapping("/getAllByRegion/{regionId}")
+    @GetMapping
     public List<ProvinceDTO> getAllBy(@PathVariable("regionId") int regionId) {
         Region region = regionService.getById(regionId);
         return provinceService.getAllBy(region).stream()
@@ -34,9 +34,9 @@ public class ProvinceController {
         return provinceMapper.toDTO(province);
     }
 
-    @GetMapping("/searchByLocationName")
-    public List<ProvinceDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
-        return provinceService.searchByLocationName(locationName).stream()
+    @GetMapping("/search")
+    public List<ProvinceDTO> searchByLocationName(@RequestParam("name") String name) {
+        return provinceService.searchByName(name).stream()
                 .map(provinceMapper::toDTO)
                 .toList();
     }

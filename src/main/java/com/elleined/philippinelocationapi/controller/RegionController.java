@@ -29,9 +29,9 @@ public class RegionController {
         return regionMapper.toDTO(region);
     }
 
-    @GetMapping("/searchByLocationName")
-    public List<RegionDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
-        return regionService.searchByLocationName(locationName).stream()
+    @GetMapping("/search")
+    public List<RegionDTO> searchByLocationName(@RequestParam("name") String name) {
+        return regionService.searchByName(name).stream()
                 .map(regionMapper::toDTO)
                 .toList();
     }

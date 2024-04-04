@@ -51,8 +51,8 @@ class CityServiceImpl implements CityService {
     }
 
     @Override
-    public List<City> searchByLocationName(String locationName) {
-        return cityRepository.searchByLocationName(locationName).stream()
+    public List<City> searchByName(String name) {
+        return cityRepository.searchByLocationName(name).stream()
                 .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }

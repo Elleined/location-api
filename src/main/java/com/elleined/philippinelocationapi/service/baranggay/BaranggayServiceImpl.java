@@ -51,8 +51,8 @@ public class BaranggayServiceImpl implements BaranggayService {
     }
 
     @Override
-    public List<Baranggay> searchByLocationName(String locationName) {
-        return baranggayRepository.searchByLocationName(locationName).stream()
+    public List<Baranggay> searchByName(String name) {
+        return baranggayRepository.searchByLocationName(name).stream()
                 .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }

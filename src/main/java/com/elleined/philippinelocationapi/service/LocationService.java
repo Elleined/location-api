@@ -12,5 +12,5 @@ public interface LocationService<ENTITY extends Location> {
     List<ENTITY> getAll();
     ENTITY getById(int id) throws ResourceNotFoundException;
     List<ENTITY> getAllById(List<Integer> ids);
-    List<ENTITY> searchByLocationName(String locationName);
+    List<ENTITY> searchByName(String name);
 }

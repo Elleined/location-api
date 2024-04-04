@@ -50,8 +50,8 @@ class RegionServiceImpl implements RegionService {
     }
 
     @Override
-    public List<Region> searchByLocationName(String locationName) {
-        return regionRepository.searchByLocationName(locationName).stream()
+    public List<Region> searchByName(String name) {
+        return regionRepository.searchByLocationName(name).stream()
                 .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }

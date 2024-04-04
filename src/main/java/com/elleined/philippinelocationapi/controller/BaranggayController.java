@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/baranggays")
+@RequestMapping("/regions/provinces/cities/{cityId}/baranggays")
 @RequiredArgsConstructor
 public class BaranggayController {
     private final BaranggayService baranggayService;
@@ -20,13 +20,7 @@ public class BaranggayController {
 
     private final CityService cityService;
 
-    @GetMapping("/{id}")
-    public BaranggayDTO getById(@PathVariable("id") int id) {
-        Baranggay baranggay = baranggayService.getById(id);
-        return baranggayMapper.toDTO(baranggay);
-    }
-
-    @GetMapping("/getAllByCity/{cityId}")
+    @GetMapping
     public List<BaranggayDTO> getAllByCity(@PathVariable("cityId") int cityId) {
         City city = cityService.getById(cityId);
         return baranggayService.getAllBy(city).stream()
@@ -34,9 +28,15 @@ public class BaranggayController {
                 .toList();
     }
 
-    @GetMapping("/searchByLocationName")
-    public List<BaranggayDTO> searchByLocationName(@RequestParam("locationName") String locationName) {
-        return baranggayService.searchByLocationName(locationName).stream()
+    @GetMapping("/{id}")
+    public BaranggayDTO getById(@PathVariable("id") int id) {
+        Baranggay baranggay = baranggayService.getById(id);
+        return baranggayMapper.toDTO(baranggay);
+    }
+
+    @GetMapping("/search")
+    public List<BaranggayDTO> searchByLocationName(@RequestParam("name") String name) {
+        return baranggayService.searchByName(name).stream()
                 .map(baranggayMapper::toDTO)
                 .toList();
     }
