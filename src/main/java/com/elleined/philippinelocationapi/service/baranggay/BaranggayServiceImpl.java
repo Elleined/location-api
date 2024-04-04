@@ -1,13 +1,10 @@
 package com.elleined.philippinelocationapi.service.baranggay;
 
-import com.elleined.philippinelocationapi.dto.baranggay.BaranggayDTO;
-import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.mapper.baranggay.BaranggayMapper;
+import com.elleined.philippinelocationapi.model.Location;
 import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.repository.baranggay.BaranggayRepository;
-import com.elleined.philippinelocationapi.service.city.CityService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,25 +17,27 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-class BaranggayServiceImpl implements BaranggayService {
+public class BaranggayServiceImpl implements BaranggayService {
     private final BaranggayRepository baranggayRepository;
-    private final BaranggayMapper baranggayMapper;
-
-    private final CityService cityService;
 
     @Override
-    public List<Baranggay> saveAll(List<BaranggayDTO> baranggayDTOS) throws AlreadyExistsException {
-        if (baranggayDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all baranggays! because onr of the provided id already exists!");
+    public Baranggay save(Baranggay baranggay) {
+        return baranggayRepository.save(baranggay);
+    }
 
-        List<Baranggay> baranggays = baranggayDTOS.stream()
-                .map(baranggayDTO -> {
-                        City city = cityService.getById(baranggayDTO.getCityId());
-                        return baranggayMapper.toEntity(baranggayDTO, city);
-                }).toList();
+    @Override
+    public List<Baranggay> saveAll(List<Baranggay> baranggays) {
+        return baranggayRepository.saveAll(baranggays);
+    }
 
-        baranggayRepository.saveAll(baranggays);
-        log.debug("Saving all baranggays success...");
-        return baranggays;
+    @Override
+    public boolean existsById(int id) {
+        return baranggayRepository.existsById(id);
+    }
+
+    @Override
+    public List<Baranggay> getAll() {
+        return baranggayRepository.findAll();
     }
 
     @Override
@@ -47,21 +46,21 @@ class BaranggayServiceImpl implements BaranggayService {
     }
 
     @Override
-    public boolean isAlreadyExists(BaranggayDTO baranggayDTO) {
-        return baranggayRepository.existsById(baranggayDTO.getId());
+    public List<Baranggay> getAllById(List<Integer> ids) {
+        return baranggayRepository.findAllById(ids);
     }
 
     @Override
     public List<Baranggay> searchByLocationName(String locationName) {
         return baranggayRepository.searchByLocationName(locationName).stream()
-                .sorted(Comparator.comparing(Baranggay::getLocationName))
+                .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }
 
     @Override
     public List<Baranggay> getAllBy(City city) {
         return city.getBaranggays().stream()
-                .sorted(Comparator.comparing(Baranggay::getLocationName))
+                .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }
 }

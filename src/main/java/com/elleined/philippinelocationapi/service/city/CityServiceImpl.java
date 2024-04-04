@@ -1,13 +1,10 @@
 package com.elleined.philippinelocationapi.service.city;
 
-import com.elleined.philippinelocationapi.dto.city.CityDTO;
-import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.mapper.city.CityMapper;
+import com.elleined.philippinelocationapi.model.Location;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.repository.city.CityRepository;
-import com.elleined.philippinelocationapi.service.province.ProvinceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,23 +19,25 @@ import java.util.List;
 @Slf4j
 class CityServiceImpl implements CityService {
     private final CityRepository cityRepository;
-    private final CityMapper cityMapper;
-
-    private final ProvinceService provinceService;
 
     @Override
-    public List<City> saveAll(List<CityDTO> cityDTOS) throws AlreadyExistsException {
-        if (cityDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all cities! because one of the provided city id already exists!");
+    public City save(City city) {
+        return cityRepository.save(city);
+    }
 
-        List<City> cities = cityDTOS.stream()
-                .map(cityDTO -> {
-                    Province province = provinceService.getById(cityDTO.getProvinceId());
-                    return cityMapper.toEntity(cityDTO, province);
-                }).toList();
+    @Override
+    public List<City> saveAll(List<City> cities) {
+        return cityRepository.saveAll(cities);
+    }
 
-        cityRepository.saveAll(cities);
-        log.debug("Saving all cities success...");
-        return cities;
+    @Override
+    public boolean existsById(int id) {
+        return cityRepository.existsById(id);
+    }
+
+    @Override
+    public List<City> getAll() {
+        return cityRepository.findAll();
     }
 
     @Override
@@ -47,21 +46,21 @@ class CityServiceImpl implements CityService {
     }
 
     @Override
-    public boolean isAlreadyExists(CityDTO cityDTO) {
-        return cityRepository.existsById(cityDTO.getId());
+    public List<City> getAllById(List<Integer> ids) {
+        return cityRepository.findAllById(ids);
     }
 
     @Override
     public List<City> searchByLocationName(String locationName) {
         return cityRepository.searchByLocationName(locationName).stream()
-                .sorted(Comparator.comparing(City::getLocationName))
+                .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }
 
     @Override
     public List<City> getAllBy(Province province) {
         return province.getCities().stream()
-                .sorted(Comparator.comparing(City::getLocationName))
+                .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }
 }

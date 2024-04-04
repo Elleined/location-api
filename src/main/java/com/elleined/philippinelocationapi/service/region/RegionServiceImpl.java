@@ -1,9 +1,7 @@
 package com.elleined.philippinelocationapi.service.region;
 
-import com.elleined.philippinelocationapi.dto.region.RegionDTO;
-import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.mapper.region.RegionMapper;
+import com.elleined.philippinelocationapi.model.Location;
 import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.region.RegionRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,18 +18,25 @@ import java.util.List;
 @Slf4j
 class RegionServiceImpl implements RegionService {
     private final RegionRepository regionRepository;
-    private final RegionMapper regionMapper;
 
     @Override
-    public List<Region> saveAll(List<RegionDTO> regionDTOS) throws AlreadyExistsException {
-        if (regionDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all regions! because one of the provided region id already exists!");
+    public Region save(Region region) {
+        return regionRepository.save(region);
+    }
 
-        List<Region> regions = regionDTOS.stream()
-                .map(regionDTO -> regionMapper.toEntity(regionDTO))
-                .toList();
-        regionRepository.saveAll(regions);
-        log.debug("Saving all regions success...");
-        return regions;
+    @Override
+    public List<Region> saveAll(List<Region> regions) {
+        return regionRepository.saveAll(regions);
+    }
+
+    @Override
+    public boolean existsById(int id) {
+        return regionRepository.existsById(id);
+    }
+
+    @Override
+    public List<Region> getAll() {
+        return regionRepository.findAll();
     }
 
     @Override
@@ -40,21 +45,14 @@ class RegionServiceImpl implements RegionService {
     }
 
     @Override
-    public List<Region> getAll() {
-        return regionRepository.findAll().stream()
-                .sorted(Comparator.comparing(Region::getLocationName))
-                .toList();
-    }
-
-    @Override
-    public boolean isAlreadyExists(RegionDTO regionDTO) {
-        return regionRepository.existsById(regionDTO.getId());
+    public List<Region> getAllById(List<Integer> ids) {
+        return regionRepository.findAllById(ids);
     }
 
     @Override
     public List<Region> searchByLocationName(String locationName) {
         return regionRepository.searchByLocationName(locationName).stream()
-                .sorted(Comparator.comparing(Region::getLocationName))
+                .sorted(Comparator.comparing(Location::getName))
                 .toList();
     }
 }

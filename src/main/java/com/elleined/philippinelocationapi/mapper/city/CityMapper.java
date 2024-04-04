@@ -5,6 +5,7 @@ import com.elleined.philippinelocationapi.mapper.CustomMapper;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.request.city.CityRequest;
 import com.elleined.philippinelocationapi.service.city.CityService;
+import com.elleined.philippinelocationapi.service.province.ProvinceService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -13,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Mapper(componentModel = "spring")
 public abstract class CityMapper implements CustomMapper<City, CityDTO, CityRequest> {
 
-    protected CityService cityService;
+    protected ProvinceService provinceService;
 
     @Mappings({
             @Mapping(target = "id", source = "id"),
@@ -33,7 +34,7 @@ public abstract class CityMapper implements CustomMapper<City, CityDTO, CityRequ
     public abstract City toEntity(CityRequest cityRequest);
 
     @Autowired
-    public void setCityService(CityService cityService) {
-        this.cityService = cityService;
+    public void setProvinceService(ProvinceService provinceService) {
+        this.provinceService = provinceService;
     }
 }
