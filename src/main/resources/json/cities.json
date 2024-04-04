@@ -1,8171 +1,6537 @@
 [
   {
-    "id": 1,
     "provinceId": 2,
     "name": "Adams"
   },
   {
-    "id": 2,
     "provinceId": 2,
     "name": "Bacarra"
   },
   {
-    "id": 3,
     "provinceId": 2,
     "name": "Badoc"
   },
   {
-    "id": 4,
     "provinceId": 2,
     "name": "Bangui"
   },
   {
-    "id": 5,
     "provinceId": 2,
     "name": "City of Batac"
   },
   {
-    "id": 6,
     "provinceId": 2,
     "name": "Burgos"
   },
   {
-    "id": 7,
     "provinceId": 2,
     "name": "Carasi"
   },
   {
-    "id": 8,
     "provinceId": 2,
     "name": "Currimao"
   },
   {
-    "id": 9,
     "provinceId": 2,
     "name": "Dingras"
   },
   {
-    "id": 10,
     "provinceId": 2,
     "name": "Dumalneg"
   },
   {
-    "id": 11,
     "provinceId": 2,
     "name": "Banna"
   },
   {
-    "id": 12,
     "provinceId": 2,
     "name": "City of Laoag"
   },
   {
-    "id": 13,
     "provinceId": 2,
     "name": "Marcos"
   },
   {
-    "id": 14,
     "provinceId": 2,
     "name": "Nueva Era"
   },
   {
-    "id": 15,
     "provinceId": 2,
     "name": "Pagudpud"
   },
   {
-    "id": 16,
     "provinceId": 2,
     "name": "Paoay"
   },
   {
-    "id": 17,
     "provinceId": 2,
     "name": "Pasuquin"
   },
   {
-    "id": 18,
     "provinceId": 2,
     "name": "Piddig"
   },
   {
-    "id": 19,
     "provinceId": 2,
     "name": "Pinili"
   },
   {
-    "id": 20,
     "provinceId": 2,
     "name": "San Nicolas"
   },
   {
-    "id": 21,
     "provinceId": 2,
     "name": "Sarrat"
   },
   {
-    "id": 22,
     "provinceId": 2,
     "name": "Solsona"
   },
   {
-    "id": 23,
     "provinceId": 2,
     "name": "Vintar"
   },
   {
-    "id": 24,
     "provinceId": 3,
     "name": "Alilem"
   },
   {
-    "id": 25,
     "provinceId": 3,
     "name": "Banayoyo"
   },
   {
-    "id": 26,
     "provinceId": 3,
     "name": "Bantay"
   },
   {
-    "id": 27,
     "provinceId": 3,
     "name": "Burgos"
   },
   {
-    "id": 28,
     "provinceId": 3,
     "name": "Cabugao"
   },
   {
-    "id": 29,
     "provinceId": 3,
     "name": "City of Candon"
   },
   {
-    "id": 30,
     "provinceId": 3,
     "name": "Caoayan"
   },
   {
-    "id": 31,
     "provinceId": 3,
     "name": "Cervantes"
   },
   {
-    "id": 32,
     "provinceId": 3,
     "name": "Galimuyod"
   },
   {
-    "id": 33,
     "provinceId": 3,
     "name": "Gregorio del Pilar"
   },
   {
-    "id": 34,
     "provinceId": 3,
     "name": "Lidlidda"
   },
   {
-    "id": 35,
     "provinceId": 3,
     "name": "Magsingal"
   },
   {
-    "id": 36,
     "provinceId": 3,
     "name": "Nagbukel"
   },
   {
-    "id": 37,
     "provinceId": 3,
     "name": "Narvacan"
   },
   {
-    "id": 38,
     "provinceId": 3,
     "name": "Quirino"
   },
   {
-    "id": 39,
     "provinceId": 3,
     "name": "Salcedo"
   },
   {
-    "id": 40,
     "provinceId": 3,
     "name": "San Emilio"
   },
   {
-    "id": 41,
     "provinceId": 3,
     "name": "San Esteban"
   },
   {
-    "id": 42,
     "provinceId": 3,
     "name": "San Ildefonso"
   },
   {
-    "id": 43,
     "provinceId": 3,
     "name": "San Juan"
   },
   {
-    "id": 44,
     "provinceId": 3,
     "name": "San Vicente"
   },
   {
-    "id": 45,
     "provinceId": 3,
     "name": "Santa"
   },
   {
-    "id": 46,
     "provinceId": 3,
     "name": "Santa Catalina"
   },
   {
-    "id": 47,
     "provinceId": 3,
     "name": "Santa Cruz"
   },
   {
-    "id": 48,
     "provinceId": 3,
     "name": "Santa Lucia"
   },
   {
-    "id": 49,
     "provinceId": 3,
     "name": "Santa Maria"
   },
   {
-    "id": 50,
     "provinceId": 3,
     "name": "Santiago"
   },
   {
-    "id": 51,
     "provinceId": 3,
     "name": "Santo Domingo"
   },
   {
-    "id": 52,
     "provinceId": 3,
     "name": "Sigay"
   },
   {
-    "id": 53,
     "provinceId": 3,
     "name": "Sinait"
   },
   {
-    "id": 54,
     "provinceId": 3,
     "name": "Sugpon"
   },
   {
-    "id": 55,
     "provinceId": 3,
     "name": "Suyo"
   },
   {
-    "id": 56,
     "provinceId": 3,
     "name": "Tagudin"
   },
   {
-    "id": 57,
     "provinceId": 3,
     "name": "City of Vigan"
   },
   {
-    "id": 58,
     "provinceId": 4,
     "name": "Agoo"
   },
   {
-    "id": 59,
     "provinceId": 4,
     "name": "Aringay"
   },
   {
-    "id": 60,
     "provinceId": 4,
     "name": "Bacnotan"
   },
   {
-    "id": 61,
     "provinceId": 4,
     "name": "Bagulin"
   },
   {
-    "id": 62,
     "provinceId": 4,
     "name": "Balaoan"
   },
   {
-    "id": 63,
     "provinceId": 4,
     "name": "Bangar"
   },
   {
-    "id": 64,
     "provinceId": 4,
     "name": "Bauang"
   },
   {
-    "id": 65,
     "provinceId": 4,
     "name": "Burgos"
   },
   {
-    "id": 66,
     "provinceId": 4,
     "name": "Caba"
   },
   {
-    "id": 67,
     "provinceId": 4,
     "name": "Luna"
   },
   {
-    "id": 68,
     "provinceId": 4,
     "name": "Naguilian"
   },
   {
-    "id": 69,
     "provinceId": 4,
     "name": "Pugo"
   },
   {
-    "id": 70,
     "provinceId": 4,
     "name": "Rosario"
   },
   {
-    "id": 71,
     "provinceId": 4,
     "name": "City of San Fernando"
   },
   {
-    "id": 72,
     "provinceId": 4,
     "name": "San Gabriel"
   },
   {
-    "id": 73,
     "provinceId": 4,
     "name": "San Juan"
   },
   {
-    "id": 74,
     "provinceId": 4,
     "name": "Santo Tomas"
   },
   {
-    "id": 75,
     "provinceId": 4,
     "name": "Santol"
   },
   {
-    "id": 76,
     "provinceId": 4,
     "name": "Sudipen"
   },
   {
-    "id": 77,
     "provinceId": 4,
     "name": "Tubao"
   },
   {
-    "id": 78,
     "provinceId": 5,
     "name": "Agno"
   },
   {
-    "id": 79,
     "provinceId": 5,
     "name": "Aguilar"
   },
   {
-    "id": 80,
     "provinceId": 5,
     "name": "City of Alaminos"
   },
   {
-    "id": 81,
     "provinceId": 5,
     "name": "Alcala"
   },
   {
-    "id": 82,
     "provinceId": 5,
     "name": "Anda"
   },
   {
-    "id": 83,
     "provinceId": 5,
     "name": "Asingan"
   },
   {
-    "id": 84,
     "provinceId": 5,
     "name": "Balungao"
   },
   {
-    "id": 85,
     "provinceId": 5,
     "name": "Bani"
   },
   {
-    "id": 86,
     "provinceId": 5,
     "name": "Basista"
   },
   {
-    "id": 87,
     "provinceId": 5,
     "name": "Bautista"
   },
   {
-    "id": 88,
     "provinceId": 5,
     "name": "Bayambang"
   },
   {
-    "id": 89,
     "provinceId": 5,
     "name": "Binalonan"
   },
   {
-    "id": 90,
     "provinceId": 5,
     "name": "Binmaley"
   },
   {
-    "id": 91,
     "provinceId": 5,
     "name": "Bolinao"
   },
   {
-    "id": 92,
     "provinceId": 5,
     "name": "Bugallon"
   },
   {
-    "id": 93,
     "provinceId": 5,
     "name": "Burgos"
   },
   {
-    "id": 94,
     "provinceId": 5,
     "name": "Calasiao"
   },
   {
-    "id": 95,
     "provinceId": 5,
     "name": "City of Dagupan"
   },
   {
-    "id": 96,
     "provinceId": 5,
     "name": "Dasol"
   },
   {
-    "id": 97,
     "provinceId": 5,
     "name": "Infanta"
   },
   {
-    "id": 98,
     "provinceId": 5,
     "name": "Labrador"
   },
   {
-    "id": 99,
     "provinceId": 5,
     "name": "Lingayen"
   },
   {
-    "id": 100,
     "provinceId": 5,
     "name": "Mabini"
   },
   {
-    "id": 101,
     "provinceId": 5,
     "name": "Malasiqui"
   },
   {
-    "id": 102,
     "provinceId": 5,
     "name": "Manaoag"
   },
   {
-    "id": 103,
     "provinceId": 5,
     "name": "Mangaldan"
   },
   {
-    "id": 104,
     "provinceId": 5,
     "name": "Mangatarem"
   },
   {
-    "id": 105,
     "provinceId": 5,
     "name": "Mapandan"
   },
   {
-    "id": 106,
     "provinceId": 5,
     "name": "Natividad"
   },
   {
-    "id": 107,
     "provinceId": 5,
     "name": "Pozorrubio"
   },
   {
-    "id": 108,
     "provinceId": 5,
     "name": "Rosales"
   },
   {
-    "id": 109,
     "provinceId": 5,
     "name": "City of San Carlos"
   },
   {
-    "id": 110,
     "provinceId": 5,
     "name": "San Fabian"
   },
   {
-    "id": 111,
     "provinceId": 5,
     "name": "San Jacinto"
   },
   {
-    "id": 112,
     "provinceId": 5,
     "name": "San Manuel"
   },
   {
-    "id": 113,
     "provinceId": 5,
     "name": "San Nicolas"
   },
   {
-    "id": 114,
     "provinceId": 5,
     "name": "San Quintin"
   },
   {
-    "id": 115,
     "provinceId": 5,
     "name": "Santa Barbara"
   },
   {
-    "id": 116,
     "provinceId": 5,
     "name": "Santa Maria"
   },
   {
-    "id": 117,
     "provinceId": 5,
     "name": "Santo Tomas"
   },
   {
-    "id": 118,
     "provinceId": 5,
     "name": "Sison"
   },
   {
-    "id": 119,
     "provinceId": 5,
     "name": "Sual"
   },
   {
-    "id": 120,
     "provinceId": 5,
     "name": "Tayug"
   },
   {
-    "id": 121,
     "provinceId": 5,
     "name": "Umingan"
   },
   {
-    "id": 122,
     "provinceId": 5,
     "name": "Urbiztondo"
   },
   {
-    "id": 123,
     "provinceId": 5,
     "name": "City of Urdaneta"
   },
   {
-    "id": 124,
     "provinceId": 5,
     "name": "Villasis"
   },
   {
-    "id": 125,
     "provinceId": 5,
     "name": "Laoac"
   },
   {
-    "id": 126,
     "provinceId": 6,
     "name": "Basco"
   },
   {
-    "id": 127,
     "provinceId": 6,
     "name": "Itbayat"
   },
   {
-    "id": 128,
     "provinceId": 6,
     "name": "Ivana"
   },
   {
-    "id": 129,
     "provinceId": 6,
     "name": "Mahatao"
   },
   {
-    "id": 130,
     "provinceId": 6,
     "name": "Sabtang"
   },
   {
-    "id": 131,
     "provinceId": 6,
     "name": "Uyugan"
   },
   {
-    "id": 132,
     "provinceId": 7,
     "name": "Abulug"
   },
   {
-    "id": 133,
     "provinceId": 7,
     "name": "Alcala"
   },
   {
-    "id": 134,
     "provinceId": 7,
     "name": "Allacapan"
   },
   {
-    "id": 135,
     "provinceId": 7,
     "name": "Amulung"
   },
   {
-    "id": 136,
     "provinceId": 7,
     "name": "Aparri"
   },
   {
-    "id": 137,
     "provinceId": 7,
     "name": "Baggao"
   },
   {
-    "id": 138,
     "provinceId": 7,
     "name": "Ballesteros"
   },
   {
-    "id": 139,
     "provinceId": 7,
     "name": "Buguey"
   },
   {
-    "id": 140,
     "provinceId": 7,
     "name": "Calayan"
   },
   {
-    "id": 141,
     "provinceId": 7,
     "name": "Camalaniugan"
   },
   {
-    "id": 142,
     "provinceId": 7,
     "name": "Claveria"
   },
   {
-    "id": 143,
     "provinceId": 7,
     "name": "Enrile"
   },
   {
-    "id": 144,
     "provinceId": 7,
     "name": "Gattaran"
   },
   {
-    "id": 145,
     "provinceId": 7,
     "name": "Gonzaga"
   },
   {
-    "id": 146,
     "provinceId": 7,
     "name": "Iguig"
   },
   {
-    "id": 147,
     "provinceId": 7,
     "name": "Lal-Lo"
   },
   {
-    "id": 148,
     "provinceId": 7,
     "name": "Lasam"
   },
   {
-    "id": 149,
     "provinceId": 7,
     "name": "Pamplona"
   },
   {
-    "id": 150,
     "provinceId": 7,
     "name": "Peñablanca"
   },
   {
-    "id": 151,
     "provinceId": 7,
     "name": "Piat"
   },
   {
-    "id": 152,
     "provinceId": 7,
     "name": "Rizal"
   },
   {
-    "id": 153,
     "provinceId": 7,
     "name": "Sanchez-Mira"
   },
   {
-    "id": 154,
     "provinceId": 7,
     "name": "Santa Ana"
   },
   {
-    "id": 155,
     "provinceId": 7,
     "name": "Santa Praxedes"
   },
   {
-    "id": 156,
     "provinceId": 7,
     "name": "Santa Teresita"
   },
   {
-    "id": 157,
     "provinceId": 7,
     "name": "Santo Niño"
   },
   {
-    "id": 158,
     "provinceId": 7,
     "name": "Solana"
   },
   {
-    "id": 159,
     "provinceId": 7,
     "name": "Tuao"
   },
   {
-    "id": 160,
     "provinceId": 7,
     "name": "Tuguegarao City"
   },
   {
-    "id": 161,
     "provinceId": 8,
     "name": "Alicia"
   },
   {
-    "id": 162,
     "provinceId": 8,
     "name": "Angadanan"
   },
   {
-    "id": 163,
     "provinceId": 8,
     "name": "Aurora"
   },
   {
-    "id": 164,
     "provinceId": 8,
     "name": "Benito Soliven"
   },
   {
-    "id": 165,
     "provinceId": 8,
     "name": "Burgos"
   },
   {
-    "id": 166,
     "provinceId": 8,
     "name": "Cabagan"
   },
   {
-    "id": 167,
     "provinceId": 8,
     "name": "Cabatuan"
   },
   {
-    "id": 168,
     "provinceId": 8,
     "name": "City of Cauayan"
   },
   {
-    "id": 169,
     "provinceId": 8,
     "name": "Cordon"
   },
   {
-    "id": 170,
     "provinceId": 8,
     "name": "Dinapigue"
   },
   {
-    "id": 171,
     "provinceId": 8,
     "name": "Divilacan"
   },
   {
-    "id": 172,
     "provinceId": 8,
     "name": "Echague"
   },
   {
-    "id": 173,
     "provinceId": 8,
     "name": "Gamu"
   },
   {
-    "id": 174,
     "provinceId": 8,
     "name": "City of Ilagan"
   },
   {
-    "id": 175,
     "provinceId": 8,
     "name": "Jones"
   },
   {
-    "id": 176,
     "provinceId": 8,
     "name": "Luna"
   },
   {
-    "id": 177,
     "provinceId": 8,
     "name": "Maconacon"
   },
   {
-    "id": 178,
     "provinceId": 8,
     "name": "Delfin Albano"
   },
   {
-    "id": 179,
     "provinceId": 8,
     "name": "Mallig"
   },
   {
-    "id": 180,
     "provinceId": 8,
     "name": "Naguilian"
   },
   {
-    "id": 181,
     "provinceId": 8,
     "name": "Palanan"
   },
   {
-    "id": 182,
     "provinceId": 8,
     "name": "Quezon"
   },
   {
-    "id": 183,
     "provinceId": 8,
     "name": "Quirino"
   },
   {
-    "id": 184,
     "provinceId": 8,
     "name": "Ramon"
   },
   {
-    "id": 185,
     "provinceId": 8,
     "name": "Reina Mercedes"
   },
   {
-    "id": 186,
     "provinceId": 8,
     "name": "Roxas"
   },
   {
-    "id": 187,
     "provinceId": 8,
     "name": "San Agustin"
   },
   {
-    "id": 188,
     "provinceId": 8,
     "name": "San Guillermo"
   },
   {
-    "id": 189,
     "provinceId": 8,
     "name": "San Isidro"
   },
   {
-    "id": 190,
     "provinceId": 8,
     "name": "San Manuel"
   },
   {
-    "id": 191,
     "provinceId": 8,
     "name": "San Mariano"
   },
   {
-    "id": 192,
     "provinceId": 8,
     "name": "San Mateo"
   },
   {
-    "id": 193,
     "provinceId": 8,
     "name": "San Pablo"
   },
   {
-    "id": 194,
     "provinceId": 8,
     "name": "Santa Maria"
   },
   {
-    "id": 195,
     "provinceId": 8,
     "name": "City of Santiago"
   },
   {
-    "id": 196,
     "provinceId": 8,
     "name": "Santo Tomas"
   },
   {
-    "id": 197,
     "provinceId": 8,
     "name": "Tumauini"
   },
   {
-    "id": 198,
     "provinceId": 9,
     "name": "Ambaguio"
   },
   {
-    "id": 199,
     "provinceId": 9,
     "name": "Aritao"
   },
   {
-    "id": 200,
     "provinceId": 9,
     "name": "Bagabag"
   },
   {
-    "id": 201,
     "provinceId": 9,
     "name": "Bambang"
   },
   {
-    "id": 202,
     "provinceId": 9,
     "name": "Bayombong"
   },
   {
-    "id": 203,
     "provinceId": 9,
     "name": "Diadi"
   },
   {
-    "id": 204,
     "provinceId": 9,
     "name": "Dupax del Norte"
   },
   {
-    "id": 205,
     "provinceId": 9,
     "name": "Dupax del Sur"
   },
   {
-    "id": 206,
     "provinceId": 9,
     "name": "Kasibu"
   },
   {
-    "id": 207,
     "provinceId": 9,
     "name": "Kayapa"
   },
   {
-    "id": 208,
     "provinceId": 9,
     "name": "Quezon"
   },
   {
-    "id": 209,
     "provinceId": 9,
     "name": "Santa Fe"
   },
   {
-    "id": 210,
     "provinceId": 9,
     "name": "Solano"
   },
   {
-    "id": 211,
     "provinceId": 9,
     "name": "Villaverde"
   },
   {
-    "id": 212,
     "provinceId": 9,
     "name": "Alfonso Castaneda"
   },
   {
-    "id": 213,
     "provinceId": 10,
     "name": "Aglipay"
   },
   {
-    "id": 214,
     "provinceId": 10,
     "name": "Cabarroguis"
   },
   {
-    "id": 215,
     "provinceId": 10,
     "name": "Diffun"
   },
   {
-    "id": 216,
     "provinceId": 10,
     "name": "Maddela"
   },
   {
-    "id": 217,
     "provinceId": 10,
     "name": "Saguday"
   },
   {
-    "id": 218,
     "provinceId": 10,
     "name": "Nagtipunan"
   },
   {
-    "id": 219,
     "provinceId": 11,
     "name": "Abucay"
   },
   {
-    "id": 220,
     "provinceId": 11,
     "name": "Bagac"
   },
   {
-    "id": 221,
     "provinceId": 11,
     "name": "City of Balanga"
   },
   {
-    "id": 222,
     "provinceId": 11,
     "name": "Dinalupihan"
   },
   {
-    "id": 223,
     "provinceId": 11,
     "name": "Hermosa"
   },
   {
-    "id": 224,
     "provinceId": 11,
     "name": "Limay"
   },
   {
-    "id": 225,
     "provinceId": 11,
     "name": "Mariveles"
   },
   {
-    "id": 226,
     "provinceId": 11,
     "name": "Morong"
   },
   {
-    "id": 227,
     "provinceId": 11,
     "name": "Orani"
   },
   {
-    "id": 228,
     "provinceId": 11,
     "name": "Orion"
   },
   {
-    "id": 229,
     "provinceId": 11,
     "name": "Pilar"
   },
   {
-    "id": 230,
     "provinceId": 11,
     "name": "Samal"
   },
   {
-    "id": 231,
     "provinceId": 12,
     "name": "Angat"
   },
   {
-    "id": 232,
     "provinceId": 12,
     "name": "Balagtas"
   },
   {
-    "id": 233,
     "provinceId": 12,
     "name": "Baliuag"
   },
   {
-    "id": 234,
     "provinceId": 12,
     "name": "Bocaue"
   },
   {
-    "id": 235,
     "provinceId": 12,
     "name": "Bulacan"
   },
   {
-    "id": 236,
     "provinceId": 12,
     "name": "Bustos"
   },
   {
-    "id": 237,
     "provinceId": 12,
     "name": "Calumpit"
   },
   {
-    "id": 238,
     "provinceId": 12,
     "name": "Guiguinto"
   },
   {
-    "id": 239,
     "provinceId": 12,
     "name": "Hagonoy"
   },
   {
-    "id": 240,
     "provinceId": 12,
     "name": "City of Malolos"
   },
   {
-    "id": 241,
     "provinceId": 12,
     "name": "Marilao"
   },
   {
-    "id": 242,
     "provinceId": 12,
     "name": "City of Meycauayan"
   },
   {
-    "id": 243,
     "provinceId": 12,
     "name": "Norzagaray"
   },
   {
-    "id": 244,
     "provinceId": 12,
     "name": "Obando"
   },
   {
-    "id": 245,
     "provinceId": 12,
     "name": "Pandi"
   },
   {
-    "id": 246,
     "provinceId": 12,
     "name": "Paombong"
   },
   {
-    "id": 247,
     "provinceId": 12,
     "name": "Plaridel"
   },
   {
-    "id": 248,
     "provinceId": 12,
     "name": "Pulilan"
   },
   {
-    "id": 249,
     "provinceId": 12,
     "name": "San Ildefonso"
   },
   {
-    "id": 250,
     "provinceId": 12,
     "name": "City of San Jose Del Monte"
   },
   {
-    "id": 251,
     "provinceId": 12,
     "name": "San Miguel"
   },
   {
-    "id": 252,
     "provinceId": 12,
     "name": "San Rafael"
   },
   {
-    "id": 253,
     "provinceId": 12,
     "name": "Santa Maria"
   },
   {
-    "id": 254,
     "provinceId": 12,
     "name": "Doña Remedios Trinidad"
   },
   {
-    "id": 255,
     "provinceId": 13,
     "name": "Aliaga"
   },
   {
-    "id": 256,
     "provinceId": 13,
     "name": "Bongabon"
   },
   {
-    "id": 257,
     "provinceId": 13,
     "name": "City of Cabanatuan"
   },
   {
-    "id": 258,
     "provinceId": 13,
     "name": "Cabiao"
   },
   {
-    "id": 259,
     "provinceId": 13,
     "name": "Carranglan"
   },
   {
-    "id": 260,
     "provinceId": 13,
     "name": "Cuyapo"
   },
   {
-    "id": 261,
     "provinceId": 13,
     "name": "Gabaldon"
   },
   {
-    "id": 262,
     "provinceId": 13,
     "name": "City of Gapan"
   },
   {
-    "id": 263,
     "provinceId": 13,
     "name": "General Mamerto Natividad"
   },
   {
-    "id": 264,
     "provinceId": 13,
     "name": "General Tinio"
   },
   {
-    "id": 265,
     "provinceId": 13,
     "name": "Guimba"
   },
   {
-    "id": 266,
     "provinceId": 13,
     "name": "Jaen"
   },
   {
-    "id": 267,
     "provinceId": 13,
     "name": "Laur"
   },
   {
-    "id": 268,
     "provinceId": 13,
     "name": "Licab"
   },
   {
-    "id": 269,
     "provinceId": 13,
     "name": "Llanera"
   },
   {
-    "id": 270,
     "provinceId": 13,
     "name": "Lupao"
   },
   {
-    "id": 271,
     "provinceId": 13,
     "name": "Science City of Muñoz"
   },
   {
-    "id": 272,
     "provinceId": 13,
     "name": "Nampicuan"
   },
   {
-    "id": 273,
     "provinceId": 13,
     "name": "City of Palayan"
   },
   {
-    "id": 274,
     "provinceId": 13,
     "name": "Pantabangan"
   },
   {
-    "id": 275,
     "provinceId": 13,
     "name": "Peñaranda"
   },
   {
-    "id": 276,
     "provinceId": 13,
     "name": "Quezon"
   },
   {
-    "id": 277,
     "provinceId": 13,
     "name": "Rizal"
   },
   {
-    "id": 278,
     "provinceId": 13,
     "name": "San Antonio"
   },
   {
-    "id": 279,
     "provinceId": 13,
     "name": "San Isidro"
   },
   {
-    "id": 280,
     "provinceId": 13,
     "name": "San Jose City"
   },
   {
-    "id": 281,
     "provinceId": 13,
     "name": "San Leonardo"
   },
   {
-    "id": 282,
     "provinceId": 13,
     "name": "Santa Rosa"
   },
   {
-    "id": 283,
     "provinceId": 13,
     "name": "Santo Domingo"
   },
   {
-    "id": 284,
     "provinceId": 13,
     "name": "Talavera"
   },
   {
-    "id": 285,
     "provinceId": 13,
     "name": "Talugtug"
   },
   {
-    "id": 286,
     "provinceId": 13,
     "name": "Zaragoza"
   },
   {
-    "id": 287,
     "provinceId": 14,
     "name": "City of Angeles"
   },
   {
-    "id": 288,
     "provinceId": 14,
     "name": "Apalit"
   },
   {
-    "id": 289,
     "provinceId": 14,
     "name": "Arayat"
   },
   {
-    "id": 290,
     "provinceId": 14,
     "name": "Bacolor"
   },
   {
-    "id": 291,
     "provinceId": 14,
     "name": "Candaba"
   },
   {
-    "id": 292,
     "provinceId": 14,
     "name": "Floridablanca"
   },
   {
-    "id": 293,
     "provinceId": 14,
     "name": "Guagua"
   },
   {
-    "id": 294,
     "provinceId": 14,
     "name": "Lubao"
   },
   {
-    "id": 295,
     "provinceId": 14,
     "name": "Mabalacat City"
   },
   {
-    "id": 296,
     "provinceId": 14,
     "name": "Macabebe"
   },
   {
-    "id": 297,
     "provinceId": 14,
     "name": "Magalang"
   },
   {
-    "id": 298,
     "provinceId": 14,
     "name": "Masantol"
   },
   {
-    "id": 299,
     "provinceId": 14,
     "name": "Mexico"
   },
   {
-    "id": 300,
     "provinceId": 14,
     "name": "Minalin"
   },
   {
-    "id": 301,
     "provinceId": 14,
     "name": "Porac"
   },
   {
-    "id": 302,
     "provinceId": 14,
     "name": "City of San Fernando"
   },
   {
-    "id": 303,
     "provinceId": 14,
     "name": "San Luis"
   },
   {
-    "id": 304,
     "provinceId": 14,
     "name": "San Simon"
   },
   {
-    "id": 305,
     "provinceId": 14,
     "name": "Santa Ana"
   },
   {
-    "id": 306,
     "provinceId": 14,
     "name": "Santa Rita"
   },
   {
-    "id": 307,
     "provinceId": 14,
     "name": "Santo Tomas"
   },
   {
-    "id": 308,
     "provinceId": 14,
     "name": "Sasmuan"
   },
   {
-    "id": 309,
     "provinceId": 15,
     "name": "Anao"
   },
   {
-    "id": 310,
     "provinceId": 15,
     "name": "Bamban"
   },
   {
-    "id": 311,
     "provinceId": 15,
     "name": "Camiling"
   },
   {
-    "id": 312,
     "provinceId": 15,
     "name": "Capas"
   },
   {
-    "id": 313,
     "provinceId": 15,
     "name": "Concepcion"
   },
   {
-    "id": 314,
     "provinceId": 15,
     "name": "Gerona"
   },
   {
-    "id": 315,
     "provinceId": 15,
     "name": "La Paz"
   },
   {
-    "id": 316,
     "provinceId": 15,
     "name": "Mayantoc"
   },
   {
-    "id": 317,
     "provinceId": 15,
     "name": "Moncada"
   },
   {
-    "id": 318,
     "provinceId": 15,
     "name": "Paniqui"
   },
   {
-    "id": 319,
     "provinceId": 15,
     "name": "Pura"
   },
   {
-    "id": 320,
     "provinceId": 15,
     "name": "Ramos"
   },
   {
-    "id": 321,
     "provinceId": 15,
     "name": "San Clemente"
   },
   {
-    "id": 322,
     "provinceId": 15,
     "name": "San Manuel"
   },
   {
-    "id": 323,
     "provinceId": 15,
     "name": "Santa Ignacia"
   },
   {
-    "id": 324,
     "provinceId": 15,
     "name": "City of Tarlac"
   },
   {
-    "id": 325,
     "provinceId": 15,
     "name": "Victoria"
   },
   {
-    "id": 326,
     "provinceId": 15,
     "name": "San Jose"
   },
   {
-    "id": 327,
     "provinceId": 16,
     "name": "Botolan"
   },
   {
-    "id": 328,
     "provinceId": 16,
     "name": "Cabangan"
   },
   {
-    "id": 329,
     "provinceId": 16,
     "name": "Candelaria"
   },
   {
-    "id": 330,
     "provinceId": 16,
     "name": "Castillejos"
   },
   {
-    "id": 331,
     "provinceId": 16,
     "name": "Iba"
   },
   {
-    "id": 332,
     "provinceId": 16,
     "name": "Masinloc"
   },
   {
-    "id": 333,
     "provinceId": 16,
     "name": "City of Olongapo"
   },
   {
-    "id": 334,
     "provinceId": 16,
     "name": "Palauig"
   },
   {
-    "id": 335,
     "provinceId": 16,
     "name": "San Antonio"
   },
   {
-    "id": 336,
     "provinceId": 16,
     "name": "San Felipe"
   },
   {
-    "id": 337,
     "provinceId": 16,
     "name": "San Marcelino"
   },
   {
-    "id": 338,
     "provinceId": 16,
     "name": "San Narciso"
   },
   {
-    "id": 339,
     "provinceId": 16,
     "name": "Santa Cruz"
   },
   {
-    "id": 340,
     "provinceId": 16,
     "name": "Subic"
   },
   {
-    "id": 341,
     "provinceId": 17,
     "name": "Baler"
   },
   {
-    "id": 342,
     "provinceId": 17,
     "name": "Casiguran"
   },
   {
-    "id": 343,
     "provinceId": 17,
     "name": "Dilasag"
   },
   {
-    "id": 344,
     "provinceId": 17,
     "name": "Dinalungan"
   },
   {
-    "id": 345,
     "provinceId": 17,
     "name": "Dingalan"
   },
   {
-    "id": 346,
     "provinceId": 17,
     "name": "Dipaculao"
   },
   {
-    "id": 347,
     "provinceId": 17,
     "name": "Maria Aurora"
   },
   {
-    "id": 348,
     "provinceId": 17,
     "name": "San Luis"
   },
   {
-    "id": 349,
     "provinceId": 18,
     "name": "Agoncillo"
   },
   {
-    "id": 350,
     "provinceId": 18,
     "name": "Alitagtag"
   },
   {
-    "id": 351,
     "provinceId": 18,
     "name": "Balayan"
   },
   {
-    "id": 352,
     "provinceId": 18,
     "name": "Balete"
   },
   {
-    "id": 353,
     "provinceId": 18,
     "name": "Batangas City"
   },
   {
-    "id": 354,
     "provinceId": 18,
     "name": "Bauan"
   },
   {
-    "id": 355,
     "provinceId": 18,
     "name": "Calaca"
   },
   {
-    "id": 356,
     "provinceId": 18,
     "name": "Calatagan"
   },
   {
-    "id": 357,
     "provinceId": 18,
     "name": "Cuenca"
   },
   {
-    "id": 358,
     "provinceId": 18,
     "name": "Ibaan"
   },
   {
-    "id": 359,
     "provinceId": 18,
     "name": "Laurel"
   },
   {
-    "id": 360,
     "provinceId": 18,
     "name": "Lemery"
   },
   {
-    "id": 361,
     "provinceId": 18,
     "name": "Lian"
   },
   {
-    "id": 362,
     "provinceId": 18,
     "name": "City of Lipa"
   },
   {
-    "id": 363,
     "provinceId": 18,
     "name": "Lobo"
   },
   {
-    "id": 364,
     "provinceId": 18,
     "name": "Mabini"
   },
   {
-    "id": 365,
     "provinceId": 18,
     "name": "Malvar"
   },
   {
-    "id": 366,
     "provinceId": 18,
     "name": "Mataasnakahoy"
   },
   {
-    "id": 367,
     "provinceId": 18,
     "name": "Nasugbu"
   },
   {
-    "id": 368,
     "provinceId": 18,
     "name": "Padre Garcia"
   },
   {
-    "id": 369,
     "provinceId": 18,
     "name": "Rosario"
   },
   {
-    "id": 370,
     "provinceId": 18,
     "name": "San Jose"
   },
   {
-    "id": 371,
     "provinceId": 18,
     "name": "San Juan"
   },
   {
-    "id": 372,
     "provinceId": 18,
     "name": "San Luis"
   },
   {
-    "id": 373,
     "provinceId": 18,
     "name": "San Nicolas"
   },
   {
-    "id": 374,
     "provinceId": 18,
     "name": "San Pascual"
   },
   {
-    "id": 375,
     "provinceId": 18,
     "name": "Santa Teresita"
   },
   {
-    "id": 376,
     "provinceId": 18,
     "name": "City of Sto. Tomas"
   },
   {
-    "id": 377,
     "provinceId": 18,
     "name": "Taal"
   },
   {
-    "id": 378,
     "provinceId": 18,
     "name": "Talisay"
   },
   {
-    "id": 379,
     "provinceId": 18,
     "name": "City of Tanauan"
   },
   {
-    "id": 380,
     "provinceId": 18,
     "name": "Taysan"
   },
   {
-    "id": 381,
     "provinceId": 18,
     "name": "Tingloy"
   },
   {
-    "id": 382,
     "provinceId": 18,
     "name": "Tuy"
   },
   {
-    "id": 383,
     "provinceId": 19,
     "name": "Alfonso"
   },
   {
-    "id": 384,
     "provinceId": 19,
     "name": "Amadeo"
   },
   {
-    "id": 385,
     "provinceId": 19,
     "name": "City of Bacoor"
   },
   {
-    "id": 386,
     "provinceId": 19,
     "name": "Carmona"
   },
   {
-    "id": 387,
     "provinceId": 19,
     "name": "City of Cavite"
   },
   {
-    "id": 388,
     "provinceId": 19,
     "name": "City of Dasmariñas"
   },
   {
-    "id": 389,
     "provinceId": 19,
     "name": "General Emilio Aguinaldo"
   },
   {
-    "id": 390,
     "provinceId": 19,
     "name": "City of General Trias"
   },
   {
-    "id": 391,
     "provinceId": 19,
     "name": "City of Imus"
   },
   {
-    "id": 392,
     "provinceId": 19,
     "name": "Indang"
   },
   {
-    "id": 393,
     "provinceId": 19,
     "name": "Kawit"
   },
   {
-    "id": 394,
     "provinceId": 19,
     "name": "Magallanes"
   },
   {
-    "id": 395,
     "provinceId": 19,
     "name": "Maragondon"
   },
   {
-    "id": 396,
     "provinceId": 19,
     "name": "Mendez"
   },
   {
-    "id": 397,
     "provinceId": 19,
     "name": "Naic"
   },
   {
-    "id": 398,
     "provinceId": 19,
     "name": "Noveleta"
   },
   {
-    "id": 399,
     "provinceId": 19,
     "name": "Rosario"
   },
   {
-    "id": 400,
     "provinceId": 19,
     "name": "Silang"
   },
   {
-    "id": 401,
     "provinceId": 19,
     "name": "City of Tagaytay"
   },
   {
-    "id": 402,
     "provinceId": 19,
     "name": "Tanza"
   },
   {
-    "id": 403,
     "provinceId": 19,
     "name": "Ternate"
   },
   {
-    "id": 404,
     "provinceId": 19,
     "name": "City of Trece Martires"
   },
   {
-    "id": 405,
     "provinceId": 19,
     "name": "Gen. Mariano Alvarez"
   },
   {
-    "id": 406,
     "provinceId": 20,
     "name": "Alaminos"
   },
   {
-    "id": 407,
     "provinceId": 20,
     "name": "Bay"
   },
   {
-    "id": 408,
     "provinceId": 20,
     "name": "City of Biñan"
   },
   {
-    "id": 409,
     "provinceId": 20,
     "name": "City of Cabuyao"
   },
   {
-    "id": 410,
     "provinceId": 20,
     "name": "City of Calamba"
   },
   {
-    "id": 411,
     "provinceId": 20,
     "name": "Calauan"
   },
   {
-    "id": 412,
     "provinceId": 20,
     "name": "Cavinti"
   },
   {
-    "id": 413,
     "provinceId": 20,
     "name": "Famy"
   },
   {
-    "id": 414,
     "provinceId": 20,
     "name": "Kalayaan"
   },
   {
-    "id": 415,
     "provinceId": 20,
     "name": "Liliw"
   },
   {
-    "id": 416,
     "provinceId": 20,
     "name": "Los Baños"
   },
   {
-    "id": 417,
     "provinceId": 20,
     "name": "Luisiana"
   },
   {
-    "id": 418,
     "provinceId": 20,
     "name": "Lumban"
   },
   {
-    "id": 419,
     "provinceId": 20,
     "name": "Mabitac"
   },
   {
-    "id": 420,
     "provinceId": 20,
     "name": "Magdalena"
   },
   {
-    "id": 421,
     "provinceId": 20,
     "name": "Majayjay"
   },
   {
-    "id": 422,
     "provinceId": 20,
     "name": "Nagcarlan"
   },
   {
-    "id": 423,
     "provinceId": 20,
     "name": "Paete"
   },
   {
-    "id": 424,
     "provinceId": 20,
     "name": "Pagsanjan"
   },
   {
-    "id": 425,
     "provinceId": 20,
     "name": "Pakil"
   },
   {
-    "id": 426,
     "provinceId": 20,
     "name": "Pangil"
   },
   {
-    "id": 427,
     "provinceId": 20,
     "name": "Pila"
   },
   {
-    "id": 428,
     "provinceId": 20,
     "name": "Rizal"
   },
   {
-    "id": 429,
     "provinceId": 20,
     "name": "City of San Pablo"
   },
   {
-    "id": 430,
     "provinceId": 20,
     "name": "City of San Pedro"
   },
   {
-    "id": 431,
     "provinceId": 20,
     "name": "Santa Cruz"
   },
   {
-    "id": 432,
     "provinceId": 20,
     "name": "Santa Maria"
   },
   {
-    "id": 433,
     "provinceId": 20,
     "name": "City of Santa Rosa"
   },
   {
-    "id": 434,
     "provinceId": 20,
     "name": "Siniloan"
   },
   {
-    "id": 435,
     "provinceId": 20,
     "name": "Victoria"
   },
   {
-    "id": 436,
     "provinceId": 21,
     "name": "Agdangan"
   },
   {
-    "id": 437,
     "provinceId": 21,
     "name": "Alabat"
   },
   {
-    "id": 438,
     "provinceId": 21,
     "name": "Atimonan"
   },
   {
-    "id": 439,
     "provinceId": 21,
     "name": "Buenavista"
   },
   {
-    "id": 440,
     "provinceId": 21,
     "name": "Burdeos"
   },
   {
-    "id": 441,
     "provinceId": 21,
     "name": "Calauag"
   },
   {
-    "id": 442,
     "provinceId": 21,
     "name": "Candelaria"
   },
   {
-    "id": 443,
     "provinceId": 21,
     "name": "Catanauan"
   },
   {
-    "id": 444,
     "provinceId": 21,
     "name": "Dolores"
   },
   {
-    "id": 445,
     "provinceId": 21,
     "name": "General Luna"
   },
   {
-    "id": 446,
     "provinceId": 21,
     "name": "General Nakar"
   },
   {
-    "id": 447,
     "provinceId": 21,
     "name": "Guinayangan"
   },
   {
-    "id": 448,
     "provinceId": 21,
     "name": "Gumaca"
   },
   {
-    "id": 449,
     "provinceId": 21,
     "name": "Infanta"
   },
   {
-    "id": 450,
     "provinceId": 21,
     "name": "Jomalig"
   },
   {
-    "id": 451,
     "provinceId": 21,
     "name": "Lopez"
   },
   {
-    "id": 452,
     "provinceId": 21,
     "name": "Lucban"
   },
   {
-    "id": 453,
     "provinceId": 21,
     "name": "City of Lucena"
   },
   {
-    "id": 454,
     "provinceId": 21,
     "name": "Macalelon"
   },
   {
-    "id": 455,
     "provinceId": 21,
     "name": "Mauban"
   },
   {
-    "id": 456,
     "provinceId": 21,
     "name": "Mulanay"
   },
   {
-    "id": 457,
     "provinceId": 21,
     "name": "Padre Burgos"
   },
   {
-    "id": 458,
     "provinceId": 21,
     "name": "Pagbilao"
   },
   {
-    "id": 459,
     "provinceId": 21,
     "name": "Panukulan"
   },
   {
-    "id": 460,
     "provinceId": 21,
     "name": "Patnanungan"
   },
   {
-    "id": 461,
     "provinceId": 21,
     "name": "Perez"
   },
   {
-    "id": 462,
     "provinceId": 21,
     "name": "Pitogo"
   },
   {
-    "id": 463,
     "provinceId": 21,
     "name": "Plaridel"
   },
   {
-    "id": 464,
     "provinceId": 21,
     "name": "Polillo"
   },
   {
-    "id": 465,
     "provinceId": 21,
     "name": "Quezon"
   },
   {
-    "id": 466,
     "provinceId": 21,
     "name": "Real"
   },
   {
-    "id": 467,
     "provinceId": 21,
     "name": "Sampaloc"
   },
   {
-    "id": 468,
     "provinceId": 21,
     "name": "San Andres"
   },
   {
-    "id": 469,
     "provinceId": 21,
     "name": "San Antonio"
   },
   {
-    "id": 470,
     "provinceId": 21,
     "name": "San Francisco"
   },
   {
-    "id": 471,
     "provinceId": 21,
     "name": "San Narciso"
   },
   {
-    "id": 472,
     "provinceId": 21,
     "name": "Sariaya"
   },
   {
-    "id": 473,
     "provinceId": 21,
     "name": "Tagkawayan"
   },
   {
-    "id": 474,
     "provinceId": 21,
     "name": "City of Tayabas"
   },
   {
-    "id": 475,
     "provinceId": 21,
     "name": "Tiaong"
   },
   {
-    "id": 476,
     "provinceId": 21,
     "name": "Unisan"
   },
   {
-    "id": 477,
     "provinceId": 22,
     "name": "Angono"
   },
   {
-    "id": 478,
     "provinceId": 22,
     "name": "City of Antipolo"
   },
   {
-    "id": 479,
     "provinceId": 22,
     "name": "Baras"
   },
   {
-    "id": 480,
     "provinceId": 22,
     "name": "Binangonan"
   },
   {
-    "id": 481,
     "provinceId": 22,
     "name": "Cainta"
   },
   {
-    "id": 482,
     "provinceId": 22,
     "name": "Cardona"
   },
   {
-    "id": 483,
     "provinceId": 22,
     "name": "Jala-Jala"
   },
   {
-    "id": 484,
     "provinceId": 22,
     "name": "Rodriguez"
   },
   {
-    "id": 485,
     "provinceId": 22,
     "name": "Morong"
   },
   {
-    "id": 486,
     "provinceId": 22,
     "name": "Pililla"
   },
   {
-    "id": 487,
     "provinceId": 22,
     "name": "San Mateo"
   },
   {
-    "id": 488,
     "provinceId": 22,
     "name": "Tanay"
   },
   {
-    "id": 489,
     "provinceId": 22,
     "name": "Taytay"
   },
   {
-    "id": 490,
     "provinceId": 22,
     "name": "Teresa"
   },
   {
-    "id": 491,
     "provinceId": 23,
     "name": "Boac"
   },
   {
-    "id": 492,
     "provinceId": 23,
     "name": "Buenavista"
   },
   {
-    "id": 493,
     "provinceId": 23,
     "name": "Gasan"
   },
   {
-    "id": 494,
     "provinceId": 23,
     "name": "Mogpog"
   },
   {
-    "id": 495,
     "provinceId": 23,
     "name": "Santa Cruz"
   },
   {
-    "id": 496,
     "provinceId": 23,
     "name": "Torrijos"
   },
   {
-    "id": 497,
     "provinceId": 24,
     "name": "Abra De Ilog"
   },
   {
-    "id": 498,
     "provinceId": 24,
     "name": "Calintaan"
   },
   {
-    "id": 499,
     "provinceId": 24,
     "name": "Looc"
   },
   {
-    "id": 500,
     "provinceId": 24,
     "name": "Lubang"
   },
   {
-    "id": 501,
     "provinceId": 24,
     "name": "Magsaysay"
   },
   {
-    "id": 502,
     "provinceId": 24,
     "name": "Mamburao"
   },
   {
-    "id": 503,
     "provinceId": 24,
     "name": "Paluan"
   },
   {
-    "id": 504,
     "provinceId": 24,
     "name": "Rizal"
   },
   {
-    "id": 505,
     "provinceId": 24,
     "name": "Sablayan"
   },
   {
-    "id": 506,
     "provinceId": 24,
     "name": "San Jose"
   },
   {
-    "id": 507,
     "provinceId": 24,
     "name": "Santa Cruz"
   },
   {
-    "id": 508,
     "provinceId": 25,
     "name": "Baco"
   },
   {
-    "id": 509,
     "provinceId": 25,
     "name": "Bansud"
   },
   {
-    "id": 510,
     "provinceId": 25,
     "name": "Bongabong"
   },
   {
-    "id": 511,
     "provinceId": 25,
     "name": "Bulalacao"
   },
   {
-    "id": 512,
     "provinceId": 25,
     "name": "City of Calapan"
   },
   {
-    "id": 513,
     "provinceId": 25,
     "name": "Gloria"
   },
   {
-    "id": 514,
     "provinceId": 25,
     "name": "Mansalay"
   },
   {
-    "id": 515,
     "provinceId": 25,
     "name": "Naujan"
   },
   {
-    "id": 516,
     "provinceId": 25,
     "name": "Pinamalayan"
   },
   {
-    "id": 517,
     "provinceId": 25,
     "name": "Pola"
   },
   {
-    "id": 518,
     "provinceId": 25,
     "name": "Puerto Galera"
   },
   {
-    "id": 519,
     "provinceId": 25,
     "name": "Roxas"
   },
   {
-    "id": 520,
     "provinceId": 25,
     "name": "San Teodoro"
   },
   {
-    "id": 521,
     "provinceId": 25,
     "name": "Socorro"
   },
   {
-    "id": 522,
     "provinceId": 25,
     "name": "Victoria"
   },
   {
-    "id": 523,
     "provinceId": 26,
     "name": "Aborlan"
   },
   {
-    "id": 524,
     "provinceId": 26,
     "name": "Agutaya"
   },
   {
-    "id": 525,
     "provinceId": 26,
     "name": "Araceli"
   },
   {
-    "id": 526,
     "provinceId": 26,
     "name": "Balabac"
   },
   {
-    "id": 527,
     "provinceId": 26,
     "name": "Bataraza"
   },
   {
-    "id": 528,
     "provinceId": 26,
     "name": "Brooke'S Point"
   },
   {
-    "id": 529,
     "provinceId": 26,
     "name": "Busuanga"
   },
   {
-    "id": 530,
     "provinceId": 26,
     "name": "Cagayancillo"
   },
   {
-    "id": 531,
     "provinceId": 26,
     "name": "Coron"
   },
   {
-    "id": 532,
     "provinceId": 26,
     "name": "Cuyo"
   },
   {
-    "id": 533,
     "provinceId": 26,
     "name": "Dumaran"
   },
   {
-    "id": 534,
     "provinceId": 26,
     "name": "El Nido"
   },
   {
-    "id": 535,
     "provinceId": 26,
     "name": "Linapacan"
   },
   {
-    "id": 536,
     "provinceId": 26,
     "name": "Magsaysay"
   },
   {
-    "id": 537,
     "provinceId": 26,
     "name": "Narra"
   },
   {
-    "id": 538,
     "provinceId": 26,
     "name": "City of Puerto Princesa"
   },
   {
-    "id": 539,
     "provinceId": 26,
     "name": "Quezon"
   },
   {
-    "id": 540,
     "provinceId": 26,
     "name": "Roxas"
   },
   {
-    "id": 541,
     "provinceId": 26,
     "name": "San Vicente"
   },
   {
-    "id": 542,
     "provinceId": 26,
     "name": "Taytay"
   },
   {
-    "id": 543,
     "provinceId": 26,
     "name": "Kalayaan"
   },
   {
-    "id": 544,
     "provinceId": 26,
     "name": "Culion"
   },
   {
-    "id": 545,
     "provinceId": 26,
     "name": "Rizal"
   },
   {
-    "id": 546,
     "provinceId": 26,
     "name": "Sofronio Española"
   },
   {
-    "id": 547,
     "provinceId": 27,
     "name": "Alcantara"
   },
   {
-    "id": 548,
     "provinceId": 27,
     "name": "Banton"
   },
   {
-    "id": 549,
     "provinceId": 27,
     "name": "Cajidiocan"
   },
   {
-    "id": 550,
     "provinceId": 27,
     "name": "Calatrava"
   },
   {
-    "id": 551,
     "provinceId": 27,
     "name": "Concepcion"
   },
   {
-    "id": 552,
     "provinceId": 27,
     "name": "Corcuera"
   },
   {
-    "id": 553,
     "provinceId": 27,
     "name": "Looc"
   },
   {
-    "id": 554,
     "provinceId": 27,
     "name": "Magdiwang"
   },
   {
-    "id": 555,
     "provinceId": 27,
     "name": "Odiongan"
   },
   {
-    "id": 556,
     "provinceId": 27,
     "name": "Romblon"
   },
   {
-    "id": 557,
     "provinceId": 27,
     "name": "San Agustin"
   },
   {
-    "id": 558,
     "provinceId": 27,
     "name": "San Andres"
   },
   {
-    "id": 559,
     "provinceId": 27,
     "name": "San Fernando"
   },
   {
-    "id": 560,
     "provinceId": 27,
     "name": "San Jose"
   },
   {
-    "id": 561,
     "provinceId": 27,
     "name": "Santa Fe"
   },
   {
-    "id": 562,
     "provinceId": 27,
     "name": "Ferrol"
   },
   {
-    "id": 563,
     "provinceId": 27,
     "name": "Santa Maria"
   },
   {
-    "id": 564,
     "provinceId": 28,
     "name": "Bacacay"
   },
   {
-    "id": 565,
     "provinceId": 28,
     "name": "Camalig"
   },
   {
-    "id": 566,
     "provinceId": 28,
     "name": "Daraga"
   },
   {
-    "id": 567,
     "provinceId": 28,
     "name": "Guinobatan"
   },
   {
-    "id": 568,
     "provinceId": 28,
     "name": "Jovellar"
   },
   {
-    "id": 569,
     "provinceId": 28,
     "name": "City of Legazpi"
   },
   {
-    "id": 570,
     "provinceId": 28,
     "name": "Libon"
   },
   {
-    "id": 571,
     "provinceId": 28,
     "name": "City of Ligao"
   },
   {
-    "id": 572,
     "provinceId": 28,
     "name": "Malilipot"
   },
   {
-    "id": 573,
     "provinceId": 28,
     "name": "Malinao"
   },
   {
-    "id": 574,
     "provinceId": 28,
     "name": "Manito"
   },
   {
-    "id": 575,
     "provinceId": 28,
     "name": "Oas"
   },
   {
-    "id": 576,
     "provinceId": 28,
     "name": "Pio Duran"
   },
   {
-    "id": 577,
     "provinceId": 28,
     "name": "Polangui"
   },
   {
-    "id": 578,
     "provinceId": 28,
     "name": "Rapu-Rapu"
   },
   {
-    "id": 579,
     "provinceId": 28,
     "name": "Santo Domingo"
   },
   {
-    "id": 580,
     "provinceId": 28,
     "name": "City of Tabaco"
   },
   {
-    "id": 581,
     "provinceId": 28,
     "name": "Tiwi"
   },
   {
-    "id": 582,
     "provinceId": 29,
     "name": "Basud"
   },
   {
-    "id": 583,
     "provinceId": 29,
     "name": "Capalonga"
   },
   {
-    "id": 584,
     "provinceId": 29,
     "name": "Daet"
   },
   {
-    "id": 585,
     "provinceId": 29,
     "name": "San Lorenzo Ruiz"
   },
   {
-    "id": 586,
     "provinceId": 29,
     "name": "Jose Panganiban"
   },
   {
-    "id": 587,
     "provinceId": 29,
     "name": "Labo"
   },
   {
-    "id": 588,
     "provinceId": 29,
     "name": "Mercedes"
   },
   {
-    "id": 589,
     "provinceId": 29,
     "name": "Paracale"
   },
   {
-    "id": 590,
     "provinceId": 29,
     "name": "San Vicente"
   },
   {
-    "id": 591,
     "provinceId": 29,
     "name": "Santa Elena"
   },
   {
-    "id": 592,
     "provinceId": 29,
     "name": "Talisay"
   },
   {
-    "id": 593,
     "provinceId": 29,
     "name": "Vinzons"
   },
   {
-    "id": 594,
     "provinceId": 30,
     "name": "Baao"
   },
   {
-    "id": 595,
     "provinceId": 30,
     "name": "Balatan"
   },
   {
-    "id": 596,
     "provinceId": 30,
     "name": "Bato"
   },
   {
-    "id": 597,
     "provinceId": 30,
     "name": "Bombon"
   },
   {
-    "id": 598,
     "provinceId": 30,
     "name": "Buhi"
   },
   {
-    "id": 599,
     "provinceId": 30,
     "name": "Bula"
   },
   {
-    "id": 600,
     "provinceId": 30,
     "name": "Cabusao"
   },
   {
-    "id": 601,
     "provinceId": 30,
     "name": "Calabanga"
   },
   {
-    "id": 602,
     "provinceId": 30,
     "name": "Camaligan"
   },
   {
-    "id": 603,
     "provinceId": 30,
     "name": "Canaman"
   },
   {
-    "id": 604,
     "provinceId": 30,
     "name": "Caramoan"
   },
   {
-    "id": 605,
     "provinceId": 30,
     "name": "Del Gallego"
   },
   {
-    "id": 606,
     "provinceId": 30,
     "name": "Gainza"
   },
   {
-    "id": 607,
     "provinceId": 30,
     "name": "Garchitorena"
   },
   {
-    "id": 608,
     "provinceId": 30,
     "name": "Goa"
   },
   {
-    "id": 609,
     "provinceId": 30,
     "name": "City of Iriga"
   },
   {
-    "id": 610,
     "provinceId": 30,
     "name": "Lagonoy"
   },
   {
-    "id": 611,
     "provinceId": 30,
     "name": "Libmanan"
   },
   {
-    "id": 612,
     "provinceId": 30,
     "name": "Lupi"
   },
   {
-    "id": 613,
     "provinceId": 30,
     "name": "Magarao"
   },
   {
-    "id": 614,
     "provinceId": 30,
     "name": "Milaor"
   },
   {
-    "id": 615,
     "provinceId": 30,
     "name": "Minalabac"
   },
   {
-    "id": 616,
     "provinceId": 30,
     "name": "Nabua"
   },
   {
-    "id": 617,
     "provinceId": 30,
     "name": "City of Naga"
   },
   {
-    "id": 618,
     "provinceId": 30,
     "name": "Ocampo"
   },
   {
-    "id": 619,
     "provinceId": 30,
     "name": "Pamplona"
   },
   {
-    "id": 620,
     "provinceId": 30,
     "name": "Pasacao"
   },
   {
-    "id": 621,
     "provinceId": 30,
     "name": "Pili"
   },
   {
-    "id": 622,
     "provinceId": 30,
     "name": "Presentacion"
   },
   {
-    "id": 623,
     "provinceId": 30,
     "name": "Ragay"
   },
   {
-    "id": 624,
     "provinceId": 30,
     "name": "Sagñay"
   },
   {
-    "id": 625,
     "provinceId": 30,
     "name": "San Fernando"
   },
   {
-    "id": 626,
     "provinceId": 30,
     "name": "San Jose"
   },
   {
-    "id": 627,
     "provinceId": 30,
     "name": "Sipocot"
   },
   {
-    "id": 628,
     "provinceId": 30,
     "name": "Siruma"
   },
   {
-    "id": 629,
     "provinceId": 30,
     "name": "Tigaon"
   },
   {
-    "id": 630,
     "provinceId": 30,
     "name": "Tinambac"
   },
   {
-    "id": 631,
     "provinceId": 31,
     "name": "Bagamanoc"
   },
   {
-    "id": 632,
     "provinceId": 31,
     "name": "Baras"
   },
   {
-    "id": 633,
     "provinceId": 31,
     "name": "Bato"
   },
   {
-    "id": 634,
     "provinceId": 31,
     "name": "Caramoran"
   },
   {
-    "id": 635,
     "provinceId": 31,
     "name": "Gigmoto"
   },
   {
-    "id": 636,
     "provinceId": 31,
     "name": "Pandan"
   },
   {
-    "id": 637,
     "provinceId": 31,
     "name": "Panganiban"
   },
   {
-    "id": 638,
     "provinceId": 31,
     "name": "San Andres"
   },
   {
-    "id": 639,
     "provinceId": 31,
     "name": "San Miguel"
   },
   {
-    "id": 640,
     "provinceId": 31,
     "name": "Viga"
   },
   {
-    "id": 641,
     "provinceId": 31,
     "name": "Virac"
   },
   {
-    "id": 642,
     "provinceId": 32,
     "name": "Aroroy"
   },
   {
-    "id": 643,
     "provinceId": 32,
     "name": "Baleno"
   },
   {
-    "id": 644,
     "provinceId": 32,
     "name": "Balud"
   },
   {
-    "id": 645,
     "provinceId": 32,
     "name": "Batuan"
   },
   {
-    "id": 646,
     "provinceId": 32,
     "name": "Cataingan"
   },
   {
-    "id": 647,
     "provinceId": 32,
     "name": "Cawayan"
   },
   {
-    "id": 648,
     "provinceId": 32,
     "name": "Claveria"
   },
   {
-    "id": 649,
     "provinceId": 32,
     "name": "Dimasalang"
   },
   {
-    "id": 650,
     "provinceId": 32,
     "name": "Esperanza"
   },
   {
-    "id": 651,
     "provinceId": 32,
     "name": "Mandaon"
   },
   {
-    "id": 652,
     "provinceId": 32,
     "name": "City of Masbate"
   },
   {
-    "id": 653,
     "provinceId": 32,
     "name": "Milagros"
   },
   {
-    "id": 654,
     "provinceId": 32,
     "name": "Mobo"
   },
   {
-    "id": 655,
     "provinceId": 32,
     "name": "Monreal"
   },
   {
-    "id": 656,
     "provinceId": 32,
     "name": "Palanas"
   },
   {
-    "id": 657,
     "provinceId": 32,
     "name": "Pio V. Corpuz"
   },
   {
-    "id": 658,
     "provinceId": 32,
     "name": "Placer"
   },
   {
-    "id": 659,
     "provinceId": 32,
     "name": "San Fernando"
   },
   {
-    "id": 660,
     "provinceId": 32,
     "name": "San Jacinto"
   },
   {
-    "id": 661,
     "provinceId": 32,
     "name": "San Pascual"
   },
   {
-    "id": 662,
     "provinceId": 32,
     "name": "Uson"
   },
   {
-    "id": 663,
     "provinceId": 33,
     "name": "Barcelona"
   },
   {
-    "id": 664,
     "provinceId": 33,
     "name": "Bulan"
   },
   {
-    "id": 665,
     "provinceId": 33,
     "name": "Bulusan"
   },
   {
-    "id": 666,
     "provinceId": 33,
     "name": "Casiguran"
   },
   {
-    "id": 667,
     "provinceId": 33,
     "name": "Castilla"
   },
   {
-    "id": 668,
     "provinceId": 33,
     "name": "Donsol"
   },
   {
-    "id": 669,
     "provinceId": 33,
     "name": "Gubat"
   },
   {
-    "id": 670,
     "provinceId": 33,
     "name": "Irosin"
   },
   {
-    "id": 671,
     "provinceId": 33,
     "name": "Juban"
   },
   {
-    "id": 672,
     "provinceId": 33,
     "name": "Magallanes"
   },
   {
-    "id": 673,
     "provinceId": 33,
     "name": "Matnog"
   },
   {
-    "id": 674,
     "provinceId": 33,
     "name": "Pilar"
   },
   {
-    "id": 675,
     "provinceId": 33,
     "name": "Prieto Diaz"
   },
   {
-    "id": 676,
     "provinceId": 33,
     "name": "Santa Magdalena"
   },
   {
-    "id": 677,
     "provinceId": 33,
     "name": "City of Sorsogon"
   },
   {
-    "id": 678,
     "provinceId": 34,
     "name": "Altavas"
   },
   {
-    "id": 679,
     "provinceId": 34,
     "name": "Balete"
   },
   {
-    "id": 680,
     "provinceId": 34,
     "name": "Banga"
   },
   {
-    "id": 681,
     "provinceId": 34,
     "name": "Batan"
   },
   {
-    "id": 682,
     "provinceId": 34,
     "name": "Buruanga"
   },
   {
-    "id": 683,
     "provinceId": 34,
     "name": "Ibajay"
   },
   {
-    "id": 684,
     "provinceId": 34,
     "name": "Kalibo"
   },
   {
-    "id": 685,
     "provinceId": 34,
     "name": "Lezo"
   },
   {
-    "id": 686,
     "provinceId": 34,
     "name": "Libacao"
   },
   {
-    "id": 687,
     "provinceId": 34,
     "name": "Madalag"
   },
   {
-    "id": 688,
     "provinceId": 34,
     "name": "Makato"
   },
   {
-    "id": 689,
     "provinceId": 34,
     "name": "Malay"
   },
   {
-    "id": 690,
     "provinceId": 34,
     "name": "Malinao"
   },
   {
-    "id": 691,
     "provinceId": 34,
     "name": "Nabas"
   },
   {
-    "id": 692,
     "provinceId": 34,
     "name": "New Washington"
   },
   {
-    "id": 693,
     "provinceId": 34,
     "name": "Numancia"
   },
   {
-    "id": 694,
     "provinceId": 34,
     "name": "Tangalan"
   },
   {
-    "id": 695,
     "provinceId": 35,
     "name": "Anini-Y"
   },
   {
-    "id": 696,
     "provinceId": 35,
     "name": "Barbaza"
   },
   {
-    "id": 697,
     "provinceId": 35,
     "name": "Belison"
   },
   {
-    "id": 698,
     "provinceId": 35,
     "name": "Bugasong"
   },
   {
-    "id": 699,
     "provinceId": 35,
     "name": "Caluya"
   },
   {
-    "id": 700,
     "provinceId": 35,
     "name": "Culasi"
   },
   {
-    "id": 701,
     "provinceId": 35,
     "name": "Tobias Fornier"
   },
   {
-    "id": 702,
     "provinceId": 35,
     "name": "Hamtic"
   },
   {
-    "id": 703,
     "provinceId": 35,
     "name": "Laua-An"
   },
   {
-    "id": 704,
     "provinceId": 35,
     "name": "Libertad"
   },
   {
-    "id": 705,
     "provinceId": 35,
     "name": "Pandan"
   },
   {
-    "id": 706,
     "provinceId": 35,
     "name": "Patnongon"
   },
   {
-    "id": 707,
     "provinceId": 35,
     "name": "San Jose"
   },
   {
-    "id": 708,
     "provinceId": 35,
     "name": "San Remigio"
   },
   {
-    "id": 709,
     "provinceId": 35,
     "name": "Sebaste"
   },
   {
-    "id": 710,
     "provinceId": 35,
     "name": "Sibalom"
   },
   {
-    "id": 711,
     "provinceId": 35,
     "name": "Tibiao"
   },
   {
-    "id": 712,
     "provinceId": 35,
     "name": "Valderrama"
   },
   {
-    "id": 713,
     "provinceId": 36,
     "name": "Cuartero"
   },
   {
-    "id": 714,
     "provinceId": 36,
     "name": "Dao"
   },
   {
-    "id": 715,
     "provinceId": 36,
     "name": "Dumalag"
   },
   {
-    "id": 716,
     "provinceId": 36,
     "name": "Dumarao"
   },
   {
-    "id": 717,
     "provinceId": 36,
     "name": "Ivisan"
   },
   {
-    "id": 718,
     "provinceId": 36,
     "name": "Jamindan"
   },
   {
-    "id": 719,
     "provinceId": 36,
     "name": "Ma-Ayon"
   },
   {
-    "id": 720,
     "provinceId": 36,
     "name": "Mambusao"
   },
   {
-    "id": 721,
     "provinceId": 36,
     "name": "Panay"
   },
   {
-    "id": 722,
     "provinceId": 36,
     "name": "Panitan"
   },
   {
-    "id": 723,
     "provinceId": 36,
     "name": "Pilar"
   },
   {
-    "id": 724,
     "provinceId": 36,
     "name": "Pontevedra"
   },
   {
-    "id": 725,
     "provinceId": 36,
     "name": "President Roxas"
   },
   {
-    "id": 726,
     "provinceId": 36,
     "name": "City of Roxas"
   },
   {
-    "id": 727,
     "provinceId": 36,
     "name": "Sapi-An"
   },
   {
-    "id": 728,
     "provinceId": 36,
     "name": "Sigma"
   },
   {
-    "id": 729,
     "provinceId": 36,
     "name": "Tapaz"
   },
   {
-    "id": 730,
     "provinceId": 37,
     "name": "Ajuy"
   },
   {
-    "id": 731,
     "provinceId": 37,
     "name": "Alimodian"
   },
   {
-    "id": 732,
     "provinceId": 37,
     "name": "Anilao"
   },
   {
-    "id": 733,
     "provinceId": 37,
     "name": "Badiangan"
   },
   {
-    "id": 734,
     "provinceId": 37,
     "name": "Balasan"
   },
   {
-    "id": 735,
     "provinceId": 37,
     "name": "Banate"
   },
   {
-    "id": 736,
     "provinceId": 37,
     "name": "Barotac Nuevo"
   },
   {
-    "id": 737,
     "provinceId": 37,
     "name": "Barotac Viejo"
   },
   {
-    "id": 738,
     "provinceId": 37,
     "name": "Batad"
   },
   {
-    "id": 739,
     "provinceId": 37,
     "name": "Bingawan"
   },
   {
-    "id": 740,
     "provinceId": 37,
     "name": "Cabatuan"
   },
   {
-    "id": 741,
     "provinceId": 37,
     "name": "Calinog"
   },
   {
-    "id": 742,
     "provinceId": 37,
     "name": "Carles"
   },
   {
-    "id": 743,
     "provinceId": 37,
     "name": "Concepcion"
   },
   {
-    "id": 744,
     "provinceId": 37,
     "name": "Dingle"
   },
   {
-    "id": 745,
     "provinceId": 37,
     "name": "Dueñas"
   },
   {
-    "id": 746,
     "provinceId": 37,
     "name": "Dumangas"
   },
   {
-    "id": 747,
     "provinceId": 37,
     "name": "Estancia"
   },
   {
-    "id": 748,
     "provinceId": 37,
     "name": "Guimbal"
   },
   {
-    "id": 749,
     "provinceId": 37,
     "name": "Igbaras"
   },
   {
-    "id": 750,
     "provinceId": 37,
     "name": "City of Iloilo"
   },
   {
-    "id": 751,
     "provinceId": 37,
     "name": "Janiuay"
   },
   {
-    "id": 752,
     "provinceId": 37,
     "name": "Lambunao"
   },
   {
-    "id": 753,
     "provinceId": 37,
     "name": "Leganes"
   },
   {
-    "id": 754,
     "provinceId": 37,
     "name": "Lemery"
   },
   {
-    "id": 755,
     "provinceId": 37,
     "name": "Leon"
   },
   {
-    "id": 756,
     "provinceId": 37,
     "name": "Maasin"
   },
   {
-    "id": 757,
     "provinceId": 37,
     "name": "Miagao"
   },
   {
-    "id": 758,
     "provinceId": 37,
     "name": "Mina"
   },
   {
-    "id": 759,
     "provinceId": 37,
     "name": "New Lucena"
   },
   {
-    "id": 760,
     "provinceId": 37,
     "name": "Oton"
   },
   {
-    "id": 761,
     "provinceId": 37,
     "name": "City of Passi"
   },
   {
-    "id": 762,
     "provinceId": 37,
     "name": "Pavia"
   },
   {
-    "id": 763,
     "provinceId": 37,
     "name": "Pototan"
   },
   {
-    "id": 764,
     "provinceId": 37,
     "name": "San Dionisio"
   },
   {
-    "id": 765,
     "provinceId": 37,
     "name": "San Enrique"
   },
   {
-    "id": 766,
     "provinceId": 37,
     "name": "San Joaquin"
   },
   {
-    "id": 767,
     "provinceId": 37,
     "name": "San Miguel"
   },
   {
-    "id": 768,
     "provinceId": 37,
     "name": "San Rafael"
   },
   {
-    "id": 769,
     "provinceId": 37,
     "name": "Santa Barbara"
   },
   {
-    "id": 770,
     "provinceId": 37,
     "name": "Sara"
   },
   {
-    "id": 771,
     "provinceId": 37,
     "name": "Tigbauan"
   },
   {
-    "id": 772,
     "provinceId": 37,
     "name": "Tubungan"
   },
   {
-    "id": 773,
     "provinceId": 37,
     "name": "Zarraga"
   },
   {
-    "id": 774,
     "provinceId": 38,
     "name": "City of Bacolod"
   },
   {
-    "id": 775,
     "provinceId": 38,
     "name": "City of Bago"
   },
   {
-    "id": 776,
     "provinceId": 38,
     "name": "Binalbagan"
   },
   {
-    "id": 777,
     "provinceId": 38,
     "name": "City of Cadiz"
   },
   {
-    "id": 778,
     "provinceId": 38,
     "name": "Calatrava"
   },
   {
-    "id": 779,
     "provinceId": 38,
     "name": "Candoni"
   },
   {
-    "id": 780,
     "provinceId": 38,
     "name": "Cauayan"
   },
   {
-    "id": 781,
     "provinceId": 38,
     "name": "Enrique B. Magalona"
   },
   {
-    "id": 782,
     "provinceId": 38,
     "name": "City of Escalante"
   },
   {
-    "id": 783,
     "provinceId": 38,
     "name": "City of Himamaylan"
   },
   {
-    "id": 784,
     "provinceId": 38,
     "name": "Hinigaran"
   },
   {
-    "id": 785,
     "provinceId": 38,
     "name": "Hinoba-an"
   },
   {
-    "id": 786,
     "provinceId": 38,
     "name": "Ilog"
   },
   {
-    "id": 787,
     "provinceId": 38,
     "name": "Isabela"
   },
   {
-    "id": 788,
     "provinceId": 38,
     "name": "City of Kabankalan"
   },
   {
-    "id": 789,
     "provinceId": 38,
     "name": "City of La Carlota"
   },
   {
-    "id": 790,
     "provinceId": 38,
     "name": "La Castellana"
   },
   {
-    "id": 791,
     "provinceId": 38,
     "name": "Manapla"
   },
   {
-    "id": 792,
     "provinceId": 38,
     "name": "Moises Padilla"
   },
   {
-    "id": 793,
     "provinceId": 38,
     "name": "Murcia"
   },
   {
-    "id": 794,
     "provinceId": 38,
     "name": "Pontevedra"
   },
   {
-    "id": 795,
     "provinceId": 38,
     "name": "Pulupandan"
   },
   {
-    "id": 796,
     "provinceId": 38,
     "name": "City of Sagay"
   },
   {
-    "id": 797,
     "provinceId": 38,
     "name": "City of San Carlos"
   },
   {
-    "id": 798,
     "provinceId": 38,
     "name": "San Enrique"
   },
   {
-    "id": 799,
     "provinceId": 38,
     "name": "City of Silay"
   },
   {
-    "id": 800,
     "provinceId": 38,
     "name": "City of Sipalay"
   },
   {
-    "id": 801,
     "provinceId": 38,
     "name": "City of Talisay"
   },
   {
-    "id": 802,
     "provinceId": 38,
     "name": "Toboso"
   },
   {
-    "id": 803,
     "provinceId": 38,
     "name": "Valladolid"
   },
   {
-    "id": 804,
     "provinceId": 38,
     "name": "City of Victorias"
   },
   {
-    "id": 805,
     "provinceId": 38,
     "name": "Salvador Benedicto"
   },
   {
-    "id": 806,
     "provinceId": 39,
     "name": "Buenavista"
   },
   {
-    "id": 807,
     "provinceId": 39,
     "name": "Jordan"
   },
   {
-    "id": 808,
     "provinceId": 39,
     "name": "Nueva Valencia"
   },
   {
-    "id": 809,
     "provinceId": 39,
     "name": "San Lorenzo"
   },
   {
-    "id": 810,
     "provinceId": 39,
     "name": "Sibunag"
   },
   {
-    "id": 811,
     "provinceId": 40,
     "name": "Alburquerque"
   },
   {
-    "id": 812,
     "provinceId": 40,
     "name": "Alicia"
   },
   {
-    "id": 813,
     "provinceId": 40,
     "name": "Anda"
   },
   {
-    "id": 814,
     "provinceId": 40,
     "name": "Antequera"
   },
   {
-    "id": 815,
     "provinceId": 40,
     "name": "Baclayon"
   },
   {
-    "id": 816,
     "provinceId": 40,
     "name": "Balilihan"
   },
   {
-    "id": 817,
     "provinceId": 40,
     "name": "Batuan"
   },
   {
-    "id": 818,
     "provinceId": 40,
     "name": "Bilar"
   },
   {
-    "id": 819,
     "provinceId": 40,
     "name": "Buenavista"
   },
   {
-    "id": 820,
     "provinceId": 40,
     "name": "Calape"
   },
   {
-    "id": 821,
     "provinceId": 40,
     "name": "Candijay"
   },
   {
-    "id": 822,
     "provinceId": 40,
     "name": "Carmen"
   },
   {
-    "id": 823,
     "provinceId": 40,
     "name": "Catigbian"
   },
   {
-    "id": 824,
     "provinceId": 40,
     "name": "Clarin"
   },
   {
-    "id": 825,
     "provinceId": 40,
     "name": "Corella"
   },
   {
-    "id": 826,
     "provinceId": 40,
     "name": "Cortes"
   },
   {
-    "id": 827,
     "provinceId": 40,
     "name": "Dagohoy"
   },
   {
-    "id": 828,
     "provinceId": 40,
     "name": "Danao"
   },
   {
-    "id": 829,
     "provinceId": 40,
     "name": "Dauis"
   },
   {
-    "id": 830,
     "provinceId": 40,
     "name": "Dimiao"
   },
   {
-    "id": 831,
     "provinceId": 40,
     "name": "Duero"
   },
   {
-    "id": 832,
     "provinceId": 40,
     "name": "Garcia Hernandez"
   },
   {
-    "id": 833,
     "provinceId": 40,
     "name": "Guindulman"
   },
   {
-    "id": 834,
     "provinceId": 40,
     "name": "Inabanga"
   },
   {
-    "id": 835,
     "provinceId": 40,
     "name": "Jagna"
   },
   {
-    "id": 836,
     "provinceId": 40,
     "name": "Getafe"
   },
   {
-    "id": 837,
     "provinceId": 40,
     "name": "Lila"
   },
   {
-    "id": 838,
     "provinceId": 40,
     "name": "Loay"
   },
   {
-    "id": 839,
     "provinceId": 40,
     "name": "Loboc"
   },
   {
-    "id": 840,
     "provinceId": 40,
     "name": "Loon"
   },
   {
-    "id": 841,
     "provinceId": 40,
     "name": "Mabini"
   },
   {
-    "id": 842,
     "provinceId": 40,
     "name": "Maribojoc"
   },
   {
-    "id": 843,
     "provinceId": 40,
     "name": "Panglao"
   },
   {
-    "id": 844,
     "provinceId": 40,
     "name": "Pilar"
   },
   {
-    "id": 845,
     "provinceId": 40,
     "name": "Pres. Carlos P. Garcia"
   },
   {
-    "id": 846,
     "provinceId": 40,
     "name": "Sagbayan"
   },
   {
-    "id": 847,
     "provinceId": 40,
     "name": "San Isidro"
   },
   {
-    "id": 848,
     "provinceId": 40,
     "name": "San Miguel"
   },
   {
-    "id": 849,
     "provinceId": 40,
     "name": "Sevilla"
   },
   {
-    "id": 850,
     "provinceId": 40,
     "name": "Sierra Bullones"
   },
   {
-    "id": 851,
     "provinceId": 40,
     "name": "Sikatuna"
   },
   {
-    "id": 852,
     "provinceId": 40,
     "name": "City of Tagbilaran"
   },
   {
-    "id": 853,
     "provinceId": 40,
     "name": "Talibon"
   },
   {
-    "id": 854,
     "provinceId": 40,
     "name": "Trinidad"
   },
   {
-    "id": 855,
     "provinceId": 40,
     "name": "Tubigon"
   },
   {
-    "id": 856,
     "provinceId": 40,
     "name": "Ubay"
   },
   {
-    "id": 857,
     "provinceId": 40,
     "name": "Valencia"
   },
   {
-    "id": 858,
     "provinceId": 40,
     "name": "Bien Unido"
   },
   {
-    "id": 859,
     "provinceId": 41,
     "name": "Alcantara"
   },
   {
-    "id": 860,
     "provinceId": 41,
     "name": "Alcoy"
   },
   {
-    "id": 861,
     "provinceId": 41,
     "name": "Alegria"
   },
   {
-    "id": 862,
     "provinceId": 41,
     "name": "Aloguinsan"
   },
   {
-    "id": 863,
     "provinceId": 41,
     "name": "Argao"
   },
   {
-    "id": 864,
     "provinceId": 41,
     "name": "Asturias"
   },
   {
-    "id": 865,
     "provinceId": 41,
     "name": "Badian"
   },
   {
-    "id": 866,
     "provinceId": 41,
     "name": "Balamban"
   },
   {
-    "id": 867,
     "provinceId": 41,
     "name": "Bantayan"
   },
   {
-    "id": 868,
     "provinceId": 41,
     "name": "Barili"
   },
   {
-    "id": 869,
     "provinceId": 41,
     "name": "City of Bogo"
   },
   {
-    "id": 870,
     "provinceId": 41,
     "name": "Boljoon"
   },
   {
-    "id": 871,
     "provinceId": 41,
     "name": "Borbon"
   },
   {
-    "id": 872,
     "provinceId": 41,
     "name": "City of Carcar"
   },
   {
-    "id": 873,
     "provinceId": 41,
     "name": "Carmen"
   },
   {
-    "id": 874,
     "provinceId": 41,
     "name": "Catmon"
   },
   {
-    "id": 875,
     "provinceId": 41,
     "name": "City of Cebu"
   },
   {
-    "id": 876,
     "provinceId": 41,
     "name": "Compostela"
   },
   {
-    "id": 877,
     "provinceId": 41,
     "name": "Consolacion"
   },
   {
-    "id": 878,
     "provinceId": 41,
     "name": "Cordova"
   },
   {
-    "id": 879,
     "provinceId": 41,
     "name": "Daanbantayan"
   },
   {
-    "id": 880,
     "provinceId": 41,
     "name": "Dalaguete"
   },
   {
-    "id": 881,
     "provinceId": 41,
     "name": "Danao City"
   },
   {
-    "id": 882,
     "provinceId": 41,
     "name": "Dumanjug"
   },
   {
-    "id": 883,
     "provinceId": 41,
     "name": "Ginatilan"
   },
   {
-    "id": 884,
     "provinceId": 41,
     "name": "City of Lapu-Lapu"
   },
   {
-    "id": 885,
     "provinceId": 41,
     "name": "Liloan"
   },
   {
-    "id": 886,
     "provinceId": 41,
     "name": "Madridejos"
   },
   {
-    "id": 887,
     "provinceId": 41,
     "name": "Malabuyoc"
   },
   {
-    "id": 888,
     "provinceId": 41,
     "name": "City of Mandaue"
   },
   {
-    "id": 889,
     "provinceId": 41,
     "name": "Medellin"
   },
   {
-    "id": 890,
     "provinceId": 41,
     "name": "Minglanilla"
   },
   {
-    "id": 891,
     "provinceId": 41,
     "name": "Moalboal"
   },
   {
-    "id": 892,
     "provinceId": 41,
     "name": "City of Naga"
   },
   {
-    "id": 893,
     "provinceId": 41,
     "name": "Oslob"
   },
   {
-    "id": 894,
     "provinceId": 41,
     "name": "Pilar"
   },
   {
-    "id": 895,
     "provinceId": 41,
     "name": "Pinamungajan"
   },
   {
-    "id": 896,
     "provinceId": 41,
     "name": "Poro"
   },
   {
-    "id": 897,
     "provinceId": 41,
     "name": "Ronda"
   },
   {
-    "id": 898,
     "provinceId": 41,
     "name": "Samboan"
   },
   {
-    "id": 899,
     "provinceId": 41,
     "name": "San Fernando"
   },
   {
-    "id": 900,
     "provinceId": 41,
     "name": "San Francisco"
   },
   {
-    "id": 901,
     "provinceId": 41,
     "name": "San Remigio"
   },
   {
-    "id": 902,
     "provinceId": 41,
     "name": "Santa Fe"
   },
   {
-    "id": 903,
     "provinceId": 41,
     "name": "Santander"
   },
   {
-    "id": 904,
     "provinceId": 41,
     "name": "Sibonga"
   },
   {
-    "id": 905,
     "provinceId": 41,
     "name": "Sogod"
   },
   {
-    "id": 906,
     "provinceId": 41,
     "name": "Tabogon"
   },
   {
-    "id": 907,
     "provinceId": 41,
     "name": "Tabuelan"
   },
   {
-    "id": 908,
     "provinceId": 41,
     "name": "City of Talisay"
   },
   {
-    "id": 909,
     "provinceId": 41,
     "name": "City of Toledo"
   },
   {
-    "id": 910,
     "provinceId": 41,
     "name": "Tuburan"
   },
   {
-    "id": 911,
     "provinceId": 41,
     "name": "Tudela"
   },
   {
-    "id": 912,
     "provinceId": 42,
     "name": "Amlan"
   },
   {
-    "id": 913,
     "provinceId": 42,
     "name": "Ayungon"
   },
   {
-    "id": 914,
     "provinceId": 42,
     "name": "Bacong"
   },
   {
-    "id": 915,
     "provinceId": 42,
     "name": "City of Bais"
   },
   {
-    "id": 916,
     "provinceId": 42,
     "name": "Basay"
   },
   {
-    "id": 917,
     "provinceId": 42,
     "name": "City of Bayawan"
   },
   {
-    "id": 918,
     "provinceId": 42,
     "name": "Bindoy"
   },
   {
-    "id": 919,
     "provinceId": 42,
     "name": "City of Canlaon"
   },
   {
-    "id": 920,
     "provinceId": 42,
     "name": "Dauin"
   },
   {
-    "id": 921,
     "provinceId": 42,
     "name": "City of Dumaguete"
   },
   {
-    "id": 922,
     "provinceId": 42,
     "name": "City of Guihulngan"
   },
   {
-    "id": 923,
     "provinceId": 42,
     "name": "Jimalalud"
   },
   {
-    "id": 924,
     "provinceId": 42,
     "name": "La Libertad"
   },
   {
-    "id": 925,
     "provinceId": 42,
     "name": "Mabinay"
   },
   {
-    "id": 926,
     "provinceId": 42,
     "name": "Manjuyod"
   },
   {
-    "id": 927,
     "provinceId": 42,
     "name": "Pamplona"
   },
   {
-    "id": 928,
     "provinceId": 42,
     "name": "San Jose"
   },
   {
-    "id": 929,
     "provinceId": 42,
     "name": "Santa Catalina"
   },
   {
-    "id": 930,
     "provinceId": 42,
     "name": "Siaton"
   },
   {
-    "id": 931,
     "provinceId": 42,
     "name": "Sibulan"
   },
   {
-    "id": 932,
     "provinceId": 42,
     "name": "City of Tanjay"
   },
   {
-    "id": 933,
     "provinceId": 42,
     "name": "Tayasan"
   },
   {
-    "id": 934,
     "provinceId": 42,
     "name": "Valencia"
   },
   {
-    "id": 935,
     "provinceId": 42,
     "name": "Vallehermoso"
   },
   {
-    "id": 936,
     "provinceId": 42,
     "name": "Zamboanguita"
   },
   {
-    "id": 937,
     "provinceId": 43,
     "name": "Enrique Villanueva"
   },
   {
-    "id": 938,
     "provinceId": 43,
     "name": "Larena"
   },
   {
-    "id": 939,
     "provinceId": 43,
     "name": "Lazi"
   },
   {
-    "id": 940,
     "provinceId": 43,
     "name": "Maria"
   },
   {
-    "id": 941,
     "provinceId": 43,
     "name": "San Juan"
   },
   {
-    "id": 942,
     "provinceId": 43,
     "name": "Siquijor"
   },
   {
-    "id": 943,
     "provinceId": 44,
     "name": "Arteche"
   },
   {
-    "id": 944,
     "provinceId": 44,
     "name": "Balangiga"
   },
   {
-    "id": 945,
     "provinceId": 44,
     "name": "Balangkayan"
   },
   {
-    "id": 946,
     "provinceId": 44,
     "name": "City of Borongan"
   },
   {
-    "id": 947,
     "provinceId": 44,
     "name": "Can-Avid"
   },
   {
-    "id": 948,
     "provinceId": 44,
     "name": "Dolores"
   },
   {
-    "id": 949,
     "provinceId": 44,
     "name": "General Macarthur"
   },
   {
-    "id": 950,
     "provinceId": 44,
     "name": "Giporlos"
   },
   {
-    "id": 951,
     "provinceId": 44,
     "name": "Guiuan"
   },
   {
-    "id": 952,
     "provinceId": 44,
     "name": "Hernani"
   },
   {
-    "id": 953,
     "provinceId": 44,
     "name": "Jipapad"
   },
   {
-    "id": 954,
     "provinceId": 44,
     "name": "Lawaan"
   },
   {
-    "id": 955,
     "provinceId": 44,
     "name": "Llorente"
   },
   {
-    "id": 956,
     "provinceId": 44,
     "name": "Maslog"
   },
   {
-    "id": 957,
     "provinceId": 44,
     "name": "Maydolong"
   },
   {
-    "id": 958,
     "provinceId": 44,
     "name": "Mercedes"
   },
   {
-    "id": 959,
     "provinceId": 44,
     "name": "Oras"
   },
   {
-    "id": 960,
     "provinceId": 44,
     "name": "Quinapondan"
   },
   {
-    "id": 961,
     "provinceId": 44,
     "name": "Salcedo"
   },
   {
-    "id": 962,
     "provinceId": 44,
     "name": "San Julian"
   },
   {
-    "id": 963,
     "provinceId": 44,
     "name": "San Policarpo"
   },
   {
-    "id": 964,
     "provinceId": 44,
     "name": "Sulat"
   },
   {
-    "id": 965,
     "provinceId": 44,
     "name": "Taft"
   },
   {
-    "id": 966,
     "provinceId": 45,
     "name": "Abuyog"
   },
   {
-    "id": 967,
     "provinceId": 45,
     "name": "Alangalang"
   },
   {
-    "id": 968,
     "provinceId": 45,
     "name": "Albuera"
   },
   {
-    "id": 969,
     "provinceId": 45,
     "name": "Babatngon"
   },
   {
-    "id": 970,
     "provinceId": 45,
     "name": "Barugo"
   },
   {
-    "id": 971,
     "provinceId": 45,
     "name": "Bato"
   },
   {
-    "id": 972,
     "provinceId": 45,
     "name": "City of Baybay"
   },
   {
-    "id": 973,
     "provinceId": 45,
     "name": "Burauen"
   },
   {
-    "id": 974,
     "provinceId": 45,
     "name": "Calubian"
   },
   {
-    "id": 975,
     "provinceId": 45,
     "name": "Capoocan"
   },
   {
-    "id": 976,
     "provinceId": 45,
     "name": "Carigara"
   },
   {
-    "id": 977,
     "provinceId": 45,
     "name": "Dagami"
   },
   {
-    "id": 978,
     "provinceId": 45,
     "name": "Dulag"
   },
   {
-    "id": 979,
     "provinceId": 45,
     "name": "Hilongos"
   },
   {
-    "id": 980,
     "provinceId": 45,
     "name": "Hindang"
   },
   {
-    "id": 981,
     "provinceId": 45,
     "name": "Inopacan"
   },
   {
-    "id": 982,
     "provinceId": 45,
     "name": "Isabel"
   },
   {
-    "id": 983,
     "provinceId": 45,
     "name": "Jaro"
   },
   {
-    "id": 984,
     "provinceId": 45,
     "name": "Javier"
   },
   {
-    "id": 985,
     "provinceId": 45,
     "name": "Julita"
   },
   {
-    "id": 986,
     "provinceId": 45,
     "name": "Kananga"
   },
   {
-    "id": 987,
     "provinceId": 45,
     "name": "La Paz"
   },
   {
-    "id": 988,
     "provinceId": 45,
     "name": "Leyte"
   },
   {
-    "id": 989,
     "provinceId": 45,
     "name": "Macarthur"
   },
   {
-    "id": 990,
     "provinceId": 45,
     "name": "Mahaplag"
   },
   {
-    "id": 991,
     "provinceId": 45,
     "name": "Matag-Ob"
   },
   {
-    "id": 992,
     "provinceId": 45,
     "name": "Matalom"
   },
   {
-    "id": 993,
     "provinceId": 45,
     "name": "Mayorga"
   },
   {
-    "id": 994,
     "provinceId": 45,
     "name": "Merida"
   },
   {
-    "id": 995,
     "provinceId": 45,
     "name": "Ormoc City"
   },
   {
-    "id": 996,
     "provinceId": 45,
     "name": "Palo"
   },
   {
-    "id": 997,
     "provinceId": 45,
     "name": "Palompon"
   },
   {
-    "id": 998,
     "provinceId": 45,
     "name": "Pastrana"
   },
   {
-    "id": 999,
     "provinceId": 45,
     "name": "San Isidro"
   },
   {
-    "id": 1000,
     "provinceId": 45,
     "name": "San Miguel"
   },
   {
-    "id": 1001,
     "provinceId": 45,
     "name": "Santa Fe"
   },
   {
-    "id": 1002,
     "provinceId": 45,
     "name": "Tabango"
   },
   {
-    "id": 1003,
     "provinceId": 45,
     "name": "Tabontabon"
   },
   {
-    "id": 1004,
     "provinceId": 45,
     "name": "City of Tacloban"
   },
   {
-    "id": 1005,
     "provinceId": 45,
     "name": "Tanauan"
   },
   {
-    "id": 1006,
     "provinceId": 45,
     "name": "Tolosa"
   },
   {
-    "id": 1007,
     "provinceId": 45,
     "name": "Tunga"
   },
   {
-    "id": 1008,
     "provinceId": 45,
     "name": "Villaba"
   },
   {
-    "id": 1009,
     "provinceId": 46,
     "name": "Allen"
   },
   {
-    "id": 1010,
     "provinceId": 46,
     "name": "Biri"
   },
   {
-    "id": 1011,
     "provinceId": 46,
     "name": "Bobon"
   },
   {
-    "id": 1012,
     "provinceId": 46,
     "name": "Capul"
   },
   {
-    "id": 1013,
     "provinceId": 46,
     "name": "Catarman"
   },
   {
-    "id": 1014,
     "provinceId": 46,
     "name": "Catubig"
   },
   {
-    "id": 1015,
     "provinceId": 46,
     "name": "Gamay"
   },
   {
-    "id": 1016,
     "provinceId": 46,
     "name": "Laoang"
   },
   {
-    "id": 1017,
     "provinceId": 46,
     "name": "Lapinig"
   },
   {
-    "id": 1018,
     "provinceId": 46,
     "name": "Las Navas"
   },
   {
-    "id": 1019,
     "provinceId": 46,
     "name": "Lavezares"
   },
   {
-    "id": 1020,
     "provinceId": 46,
     "name": "Mapanas"
   },
   {
-    "id": 1021,
     "provinceId": 46,
     "name": "Mondragon"
   },
   {
-    "id": 1022,
     "provinceId": 46,
     "name": "Palapag"
   },
   {
-    "id": 1023,
     "provinceId": 46,
     "name": "Pambujan"
   },
   {
-    "id": 1024,
     "provinceId": 46,
     "name": "Rosario"
   },
   {
-    "id": 1025,
     "provinceId": 46,
     "name": "San Antonio"
   },
   {
-    "id": 1026,
     "provinceId": 46,
     "name": "San Isidro"
   },
   {
-    "id": 1027,
     "provinceId": 46,
     "name": "San Jose"
   },
   {
-    "id": 1028,
     "provinceId": 46,
     "name": "San Roque"
   },
   {
-    "id": 1029,
     "provinceId": 46,
     "name": "San Vicente"
   },
   {
-    "id": 1030,
     "provinceId": 46,
     "name": "Silvino Lobos"
   },
   {
-    "id": 1031,
     "provinceId": 46,
     "name": "Victoria"
   },
   {
-    "id": 1032,
     "provinceId": 46,
     "name": "Lope De Vega"
   },
   {
-    "id": 1033,
     "provinceId": 47,
     "name": "Almagro"
   },
   {
-    "id": 1034,
     "provinceId": 47,
     "name": "Basey"
   },
   {
-    "id": 1035,
     "provinceId": 47,
     "name": "City of Calbayog"
   },
   {
-    "id": 1036,
     "provinceId": 47,
     "name": "Calbiga"
   },
   {
-    "id": 1037,
     "provinceId": 47,
     "name": "City of Catbalogan"
   },
   {
-    "id": 1038,
     "provinceId": 47,
     "name": "Daram"
   },
   {
-    "id": 1039,
     "provinceId": 47,
     "name": "Gandara"
   },
   {
-    "id": 1040,
     "provinceId": 47,
     "name": "Hinabangan"
   },
   {
-    "id": 1041,
     "provinceId": 47,
     "name": "Jiabong"
   },
   {
-    "id": 1042,
     "provinceId": 47,
     "name": "Marabut"
   },
   {
-    "id": 1043,
     "provinceId": 47,
     "name": "Matuguinao"
   },
   {
-    "id": 1044,
     "provinceId": 47,
     "name": "Motiong"
   },
   {
-    "id": 1045,
     "provinceId": 47,
     "name": "Pinabacdao"
   },
   {
-    "id": 1046,
     "provinceId": 47,
     "name": "San Jose De Buan"
   },
   {
-    "id": 1047,
     "provinceId": 47,
     "name": "San Sebastian"
   },
   {
-    "id": 1048,
     "provinceId": 47,
     "name": "Santa Margarita"
   },
   {
-    "id": 1049,
     "provinceId": 47,
     "name": "Santa Rita"
   },
   {
-    "id": 1050,
     "provinceId": 47,
     "name": "Santo Niño"
   },
   {
-    "id": 1051,
     "provinceId": 47,
     "name": "Talalora"
   },
   {
-    "id": 1052,
     "provinceId": 47,
     "name": "Tarangnan"
   },
   {
-    "id": 1053,
     "provinceId": 47,
     "name": "Villareal"
   },
   {
-    "id": 1054,
     "provinceId": 47,
     "name": "Paranas"
   },
   {
-    "id": 1055,
     "provinceId": 47,
     "name": "Zumarraga"
   },
   {
-    "id": 1056,
     "provinceId": 47,
     "name": "Tagapul-An"
   },
   {
-    "id": 1057,
     "provinceId": 47,
     "name": "San Jorge"
   },
   {
-    "id": 1058,
     "provinceId": 47,
     "name": "Pagsanghan"
   },
   {
-    "id": 1059,
     "provinceId": 48,
     "name": "Anahawan"
   },
   {
-    "id": 1060,
     "provinceId": 48,
     "name": "Bontoc"
   },
   {
-    "id": 1061,
     "provinceId": 48,
     "name": "Hinunangan"
   },
   {
-    "id": 1062,
     "provinceId": 48,
     "name": "Hinundayan"
   },
   {
-    "id": 1063,
     "provinceId": 48,
     "name": "Libagon"
   },
   {
-    "id": 1064,
     "provinceId": 48,
     "name": "Liloan"
   },
   {
-    "id": 1065,
     "provinceId": 48,
     "name": "City of Maasin"
   },
   {
-    "id": 1066,
     "provinceId": 48,
     "name": "Macrohon"
   },
   {
-    "id": 1067,
     "provinceId": 48,
     "name": "Malitbog"
   },
   {
-    "id": 1068,
     "provinceId": 48,
     "name": "Padre Burgos"
   },
   {
-    "id": 1069,
     "provinceId": 48,
     "name": "Pintuyan"
   },
   {
-    "id": 1070,
     "provinceId": 48,
     "name": "Saint Bernard"
   },
   {
-    "id": 1071,
     "provinceId": 48,
     "name": "San Francisco"
   },
   {
-    "id": 1072,
     "provinceId": 48,
     "name": "San Juan"
   },
   {
-    "id": 1073,
     "provinceId": 48,
     "name": "San Ricardo"
   },
   {
-    "id": 1074,
     "provinceId": 48,
     "name": "Silago"
   },
   {
-    "id": 1075,
     "provinceId": 48,
     "name": "Sogod"
   },
   {
-    "id": 1076,
     "provinceId": 48,
     "name": "Tomas Oppus"
   },
   {
-    "id": 1077,
     "provinceId": 48,
     "name": "Limasawa"
   },
   {
-    "id": 1078,
     "provinceId": 49,
     "name": "Almeria"
   },
   {
-    "id": 1079,
     "provinceId": 49,
     "name": "Biliran"
   },
   {
-    "id": 1080,
     "provinceId": 49,
     "name": "Cabucgayan"
   },
   {
-    "id": 1081,
     "provinceId": 49,
     "name": "Caibiran"
   },
   {
-    "id": 1082,
     "provinceId": 49,
     "name": "Culaba"
   },
   {
-    "id": 1083,
     "provinceId": 49,
     "name": "Kawayan"
   },
   {
-    "id": 1084,
     "provinceId": 49,
     "name": "Maripipi"
   },
   {
-    "id": 1085,
     "provinceId": 49,
     "name": "Naval"
   },
   {
-    "id": 1086,
     "provinceId": 50,
     "name": "City of Dapitan"
   },
   {
-    "id": 1087,
     "provinceId": 50,
     "name": "City of Dipolog"
   },
   {
-    "id": 1088,
     "provinceId": 50,
     "name": "Katipunan"
   },
   {
-    "id": 1089,
     "provinceId": 50,
     "name": "La Libertad"
   },
   {
-    "id": 1090,
     "provinceId": 50,
     "name": "Labason"
   },
   {
-    "id": 1091,
     "provinceId": 50,
     "name": "Liloy"
   },
   {
-    "id": 1092,
     "provinceId": 50,
     "name": "Manukan"
   },
   {
-    "id": 1093,
     "provinceId": 50,
     "name": "Mutia"
   },
   {
-    "id": 1094,
     "provinceId": 50,
     "name": "Piñan"
   },
   {
-    "id": 1095,
     "provinceId": 50,
     "name": "Polanco"
   },
   {
-    "id": 1096,
     "provinceId": 50,
     "name": "Pres. Manuel A. Roxas"
   },
   {
-    "id": 1097,
     "provinceId": 50,
     "name": "Rizal"
   },
   {
-    "id": 1098,
     "provinceId": 50,
     "name": "Salug"
   },
   {
-    "id": 1099,
     "provinceId": 50,
     "name": "Sergio Osmeña Sr."
   },
   {
-    "id": 1100,
     "provinceId": 50,
     "name": "Siayan"
   },
   {
-    "id": 1101,
     "provinceId": 50,
     "name": "Sibuco"
   },
   {
-    "id": 1102,
     "provinceId": 50,
     "name": "Sibutad"
   },
   {
-    "id": 1103,
     "provinceId": 50,
     "name": "Sindangan"
   },
   {
-    "id": 1104,
     "provinceId": 50,
     "name": "Siocon"
   },
   {
-    "id": 1105,
     "provinceId": 50,
     "name": "Sirawai"
   },
   {
-    "id": 1106,
     "provinceId": 50,
     "name": "Tampilisan"
   },
   {
-    "id": 1107,
     "provinceId": 50,
     "name": "Jose Dalman"
   },
   {
-    "id": 1108,
     "provinceId": 50,
     "name": "Gutalac"
   },
   {
-    "id": 1109,
     "provinceId": 50,
     "name": "Baliguian"
   },
   {
-    "id": 1110,
     "provinceId": 50,
     "name": "Godod"
   },
   {
-    "id": 1111,
     "provinceId": 50,
     "name": "Bacungan"
   },
   {
-    "id": 1112,
     "provinceId": 50,
     "name": "Kalawit"
   },
   {
-    "id": 1113,
     "provinceId": 51,
     "name": "Aurora"
   },
   {
-    "id": 1114,
     "provinceId": 51,
     "name": "Bayog"
   },
   {
-    "id": 1115,
     "provinceId": 51,
     "name": "Dimataling"
   },
   {
-    "id": 1116,
     "provinceId": 51,
     "name": "Dinas"
   },
   {
-    "id": 1117,
     "provinceId": 51,
     "name": "Dumalinao"
   },
   {
-    "id": 1118,
     "provinceId": 51,
     "name": "Dumingag"
   },
   {
-    "id": 1119,
     "provinceId": 51,
     "name": "Kumalarang"
   },
   {
-    "id": 1120,
     "provinceId": 51,
     "name": "Labangan"
   },
   {
-    "id": 1121,
     "provinceId": 51,
     "name": "Lapuyan"
   },
   {
-    "id": 1122,
     "provinceId": 51,
     "name": "Mahayag"
   },
   {
-    "id": 1123,
     "provinceId": 51,
     "name": "Margosatubig"
   },
   {
-    "id": 1124,
     "provinceId": 51,
     "name": "Midsalip"
   },
   {
-    "id": 1125,
     "provinceId": 51,
     "name": "Molave"
   },
   {
-    "id": 1126,
     "provinceId": 51,
     "name": "City of Pagadian"
   },
   {
-    "id": 1127,
     "provinceId": 51,
     "name": "Ramon Magsaysay"
   },
   {
-    "id": 1128,
     "provinceId": 51,
     "name": "San Miguel"
   },
   {
-    "id": 1129,
     "provinceId": 51,
     "name": "San Pablo"
   },
   {
-    "id": 1130,
     "provinceId": 51,
     "name": "Tabina"
   },
   {
-    "id": 1131,
     "provinceId": 51,
     "name": "Tambulig"
   },
   {
-    "id": 1132,
     "provinceId": 51,
     "name": "Tukuran"
   },
   {
-    "id": 1133,
     "provinceId": 51,
     "name": "City of Zamboanga"
   },
   {
-    "id": 1134,
     "provinceId": 51,
     "name": "Lakewood"
   },
   {
-    "id": 1135,
     "provinceId": 51,
     "name": "Josefina"
   },
   {
-    "id": 1136,
     "provinceId": 51,
     "name": "Pitogo"
   },
   {
-    "id": 1137,
     "provinceId": 51,
     "name": "Sominot"
   },
   {
-    "id": 1138,
     "provinceId": 51,
     "name": "Vincenzo A. Sagun"
   },
   {
-    "id": 1139,
     "provinceId": 51,
     "name": "Guipos"
   },
   {
-    "id": 1140,
     "provinceId": 51,
     "name": "Tigbao"
   },
   {
-    "id": 1141,
     "provinceId": 52,
     "name": "Alicia"
   },
   {
-    "id": 1142,
     "provinceId": 52,
     "name": "Buug"
   },
   {
-    "id": 1143,
     "provinceId": 52,
     "name": "Diplahan"
   },
   {
-    "id": 1144,
     "provinceId": 52,
     "name": "Imelda"
   },
   {
-    "id": 1145,
     "provinceId": 52,
     "name": "Ipil"
   },
   {
-    "id": 1146,
     "provinceId": 52,
     "name": "Kabasalan"
   },
   {
-    "id": 1147,
     "provinceId": 52,
     "name": "Mabuhay"
   },
   {
-    "id": 1148,
     "provinceId": 52,
     "name": "Malangas"
   },
   {
-    "id": 1149,
     "provinceId": 52,
     "name": "Naga"
   },
   {
-    "id": 1150,
     "provinceId": 52,
     "name": "Olutanga"
   },
   {
-    "id": 1151,
     "provinceId": 52,
     "name": "Payao"
   },
   {
-    "id": 1152,
     "provinceId": 52,
     "name": "Roseller Lim"
   },
   {
-    "id": 1153,
     "provinceId": 52,
     "name": "Siay"
   },
   {
-    "id": 1154,
     "provinceId": 52,
     "name": "Talusan"
   },
   {
-    "id": 1155,
     "provinceId": 52,
     "name": "Titay"
   },
   {
-    "id": 1156,
     "provinceId": 52,
     "name": "Tungawan"
   },
   {
-    "id": 1157,
     "provinceId": 52,
     "name": "City of Isabela"
   },
   {
-    "id": 1158,
     "provinceId": 53,
     "name": "Baungon"
   },
   {
-    "id": 1159,
     "provinceId": 53,
     "name": "Damulog"
   },
   {
-    "id": 1160,
     "provinceId": 53,
     "name": "Dangcagan"
   },
   {
-    "id": 1161,
     "provinceId": 53,
     "name": "Don Carlos"
   },
   {
-    "id": 1162,
     "provinceId": 53,
     "name": "Impasug-ong"
   },
   {
-    "id": 1163,
     "provinceId": 53,
     "name": "Kadingilan"
   },
   {
-    "id": 1164,
     "provinceId": 53,
     "name": "Kalilangan"
   },
   {
-    "id": 1165,
     "provinceId": 53,
     "name": "Kibawe"
   },
   {
-    "id": 1166,
     "provinceId": 53,
     "name": "Kitaotao"
   },
   {
-    "id": 1167,
     "provinceId": 53,
     "name": "Lantapan"
   },
   {
-    "id": 1168,
     "provinceId": 53,
     "name": "Libona"
   },
   {
-    "id": 1169,
     "provinceId": 53,
     "name": "City of Malaybalay"
   },
   {
-    "id": 1170,
     "provinceId": 53,
     "name": "Malitbog"
   },
   {
-    "id": 1171,
     "provinceId": 53,
     "name": "Manolo Fortich"
   },
   {
-    "id": 1172,
     "provinceId": 53,
     "name": "Maramag"
   },
   {
-    "id": 1173,
     "provinceId": 53,
     "name": "Pangantucan"
   },
   {
-    "id": 1174,
     "provinceId": 53,
     "name": "Quezon"
   },
   {
-    "id": 1175,
     "provinceId": 53,
     "name": "San Fernando"
   },
   {
-    "id": 1176,
     "provinceId": 53,
     "name": "Sumilao"
   },
   {
-    "id": 1177,
     "provinceId": 53,
     "name": "Talakag"
   },
   {
-    "id": 1178,
     "provinceId": 53,
     "name": "City of Valencia"
   },
   {
-    "id": 1179,
     "provinceId": 53,
     "name": "Cabanglasan"
   },
   {
-    "id": 1180,
     "provinceId": 54,
     "name": "Catarman"
   },
   {
-    "id": 1181,
     "provinceId": 54,
     "name": "Guinsiliban"
   },
   {
-    "id": 1182,
     "provinceId": 54,
     "name": "Mahinog"
   },
   {
-    "id": 1183,
     "provinceId": 54,
     "name": "Mambajao"
   },
   {
-    "id": 1184,
     "provinceId": 54,
     "name": "Sagay"
   },
   {
-    "id": 1185,
     "provinceId": 55,
     "name": "Bacolod"
   },
   {
-    "id": 1186,
     "provinceId": 55,
     "name": "Baloi"
   },
   {
-    "id": 1187,
     "provinceId": 55,
     "name": "Baroy"
   },
   {
-    "id": 1188,
     "provinceId": 55,
     "name": "City of Iligan"
   },
   {
-    "id": 1189,
     "provinceId": 55,
     "name": "Kapatagan"
   },
   {
-    "id": 1190,
     "provinceId": 55,
     "name": "Sultan Naga Dimaporo"
   },
   {
-    "id": 1191,
     "provinceId": 55,
     "name": "Kauswagan"
   },
   {
-    "id": 1192,
     "provinceId": 55,
     "name": "Kolambugan"
   },
   {
-    "id": 1193,
     "provinceId": 55,
     "name": "Lala"
   },
   {
-    "id": 1194,
     "provinceId": 55,
     "name": "Linamon"
   },
   {
-    "id": 1195,
     "provinceId": 55,
     "name": "Magsaysay"
   },
   {
-    "id": 1196,
     "provinceId": 55,
     "name": "Maigo"
   },
   {
-    "id": 1197,
     "provinceId": 55,
     "name": "Matungao"
   },
   {
-    "id": 1198,
     "provinceId": 55,
     "name": "Munai"
   },
   {
-    "id": 1199,
     "provinceId": 55,
     "name": "Nunungan"
   },
   {
-    "id": 1200,
     "provinceId": 55,
     "name": "Pantao Ragat"
   },
   {
-    "id": 1201,
     "provinceId": 55,
     "name": "Poona Piagapo"
   },
   {
-    "id": 1202,
     "provinceId": 55,
     "name": "Salvador"
   },
   {
-    "id": 1203,
     "provinceId": 55,
     "name": "Sapad"
   },
   {
-    "id": 1204,
     "provinceId": 55,
     "name": "Tagoloan"
   },
   {
-    "id": 1205,
     "provinceId": 55,
     "name": "Tangcal"
   },
   {
-    "id": 1206,
     "provinceId": 55,
     "name": "Tubod"
   },
   {
-    "id": 1207,
     "provinceId": 55,
     "name": "Pantar"
   },
   {
-    "id": 1208,
     "provinceId": 56,
     "name": "Aloran"
   },
   {
-    "id": 1209,
     "provinceId": 56,
     "name": "Baliangao"
   },
   {
-    "id": 1210,
     "provinceId": 56,
     "name": "Bonifacio"
   },
   {
-    "id": 1211,
     "provinceId": 56,
     "name": "Calamba"
   },
   {
-    "id": 1212,
     "provinceId": 56,
     "name": "Clarin"
   },
   {
-    "id": 1213,
     "provinceId": 56,
     "name": "Concepcion"
   },
   {
-    "id": 1214,
     "provinceId": 56,
     "name": "Jimenez"
   },
   {
-    "id": 1215,
     "provinceId": 56,
     "name": "Lopez Jaena"
   },
   {
-    "id": 1216,
     "provinceId": 56,
     "name": "City of Oroquieta"
   },
   {
-    "id": 1217,
     "provinceId": 56,
     "name": "City of Ozamiz"
   },
   {
-    "id": 1218,
     "provinceId": 56,
     "name": "Panaon"
   },
   {
-    "id": 1219,
     "provinceId": 56,
     "name": "Plaridel"
   },
   {
-    "id": 1220,
     "provinceId": 56,
     "name": "Sapang Dalaga"
   },
   {
-    "id": 1221,
     "provinceId": 56,
     "name": "Sinacaban"
   },
   {
-    "id": 1222,
     "provinceId": 56,
     "name": "City of Tangub"
   },
   {
-    "id": 1223,
     "provinceId": 56,
     "name": "Tudela"
   },
   {
-    "id": 1224,
     "provinceId": 56,
     "name": "Don Victoriano Chiongbian"
   },
   {
-    "id": 1225,
     "provinceId": 57,
     "name": "Alubijid"
   },
   {
-    "id": 1226,
     "provinceId": 57,
     "name": "Balingasag"
   },
   {
-    "id": 1227,
     "provinceId": 57,
     "name": "Balingoan"
   },
   {
-    "id": 1228,
     "provinceId": 57,
     "name": "Binuangan"
   },
   {
-    "id": 1229,
     "provinceId": 57,
     "name": "City of Cagayan De Oro"
   },
   {
-    "id": 1230,
     "provinceId": 57,
     "name": "Claveria"
   },
   {
-    "id": 1231,
     "provinceId": 57,
     "name": "City of El Salvador"
   },
   {
-    "id": 1232,
     "provinceId": 57,
     "name": "City of Gingoog"
   },
   {
-    "id": 1233,
     "provinceId": 57,
     "name": "Gitagum"
   },
   {
-    "id": 1234,
     "provinceId": 57,
     "name": "Initao"
   },
   {
-    "id": 1235,
     "provinceId": 57,
     "name": "Jasaan"
   },
   {
-    "id": 1236,
     "provinceId": 57,
     "name": "Kinoguitan"
   },
   {
-    "id": 1237,
     "provinceId": 57,
     "name": "Lagonglong"
   },
   {
-    "id": 1238,
     "provinceId": 57,
     "name": "Laguindingan"
   },
   {
-    "id": 1239,
     "provinceId": 57,
     "name": "Libertad"
   },
   {
-    "id": 1240,
     "provinceId": 57,
     "name": "Lugait"
   },
   {
-    "id": 1241,
     "provinceId": 57,
     "name": "Magsaysay"
   },
   {
-    "id": 1242,
     "provinceId": 57,
     "name": "Manticao"
   },
   {
-    "id": 1243,
     "provinceId": 57,
     "name": "Medina"
   },
   {
-    "id": 1244,
     "provinceId": 57,
     "name": "Naawan"
   },
   {
-    "id": 1245,
     "provinceId": 57,
     "name": "Opol"
   },
   {
-    "id": 1246,
     "provinceId": 57,
     "name": "Salay"
   },
   {
-    "id": 1247,
     "provinceId": 57,
     "name": "Sugbongcogon"
   },
   {
-    "id": 1248,
     "provinceId": 57,
     "name": "Tagoloan"
   },
   {
-    "id": 1249,
     "provinceId": 57,
     "name": "Talisayan"
   },
   {
-    "id": 1250,
     "provinceId": 57,
     "name": "Villanueva"
   },
   {
-    "id": 1251,
     "provinceId": 58,
     "name": "Asuncion"
   },
   {
-    "id": 1252,
     "provinceId": 58,
     "name": "Carmen"
   },
   {
-    "id": 1253,
     "provinceId": 58,
     "name": "Kapalong"
   },
   {
-    "id": 1254,
     "provinceId": 58,
     "name": "New Corella"
   },
   {
-    "id": 1255,
     "provinceId": 58,
     "name": "City of Panabo"
   },
   {
-    "id": 1256,
     "provinceId": 58,
     "name": "Island Garden City of Samal"
   },
   {
-    "id": 1257,
     "provinceId": 58,
     "name": "Santo Tomas"
   },
   {
-    "id": 1258,
     "provinceId": 58,
     "name": "City of Tagum"
   },
   {
-    "id": 1259,
     "provinceId": 58,
     "name": "Talaingod"
   },
   {
-    "id": 1260,
     "provinceId": 58,
     "name": "Braulio E. Dujali"
   },
   {
-    "id": 1261,
     "provinceId": 58,
     "name": "San Isidro"
   },
   {
-    "id": 1262,
     "provinceId": 59,
     "name": "Bansalan"
   },
   {
-    "id": 1263,
     "provinceId": 59,
     "name": "City of Davao"
   },
   {
-    "id": 1264,
     "provinceId": 59,
     "name": "City of Digos"
   },
   {
-    "id": 1265,
     "provinceId": 59,
     "name": "Hagonoy"
   },
   {
-    "id": 1266,
     "provinceId": 59,
     "name": "Kiblawan"
   },
   {
-    "id": 1267,
     "provinceId": 59,
     "name": "Magsaysay"
   },
   {
-    "id": 1268,
     "provinceId": 59,
     "name": "Malalag"
   },
   {
-    "id": 1269,
     "provinceId": 59,
     "name": "Matanao"
   },
   {
-    "id": 1270,
     "provinceId": 59,
     "name": "Padada"
   },
   {
-    "id": 1271,
     "provinceId": 59,
     "name": "Santa Cruz"
   },
   {
-    "id": 1272,
     "provinceId": 59,
     "name": "Sulop"
   },
   {
-    "id": 1273,
     "provinceId": 60,
     "name": "Baganga"
   },
   {
-    "id": 1274,
     "provinceId": 60,
     "name": "Banaybanay"
   },
   {
-    "id": 1275,
     "provinceId": 60,
     "name": "Boston"
   },
   {
-    "id": 1276,
     "provinceId": 60,
     "name": "Caraga"
   },
   {
-    "id": 1277,
     "provinceId": 60,
     "name": "Cateel"
   },
   {
-    "id": 1278,
     "provinceId": 60,
     "name": "Governor Generoso"
   },
   {
-    "id": 1279,
     "provinceId": 60,
     "name": "Lupon"
   },
   {
-    "id": 1280,
     "provinceId": 60,
     "name": "Manay"
   },
   {
-    "id": 1281,
     "provinceId": 60,
     "name": "City of Mati"
   },
   {
-    "id": 1282,
     "provinceId": 60,
     "name": "San Isidro"
   },
   {
-    "id": 1283,
     "provinceId": 60,
     "name": "Tarragona"
   },
   {
-    "id": 1284,
     "provinceId": 61,
     "name": "Compostela"
   },
   {
-    "id": 1285,
     "provinceId": 61,
     "name": "Laak"
   },
   {
-    "id": 1286,
     "provinceId": 61,
     "name": "Mabini"
   },
   {
-    "id": 1287,
     "provinceId": 61,
     "name": "Maco"
   },
   {
-    "id": 1288,
     "provinceId": 61,
     "name": "Maragusan"
   },
   {
-    "id": 1289,
     "provinceId": 61,
     "name": "Mawab"
   },
   {
-    "id": 1290,
     "provinceId": 61,
     "name": "Monkayo"
   },
   {
-    "id": 1291,
     "provinceId": 61,
     "name": "Montevista"
   },
   {
-    "id": 1292,
     "provinceId": 61,
     "name": "Nabunturan"
   },
   {
-    "id": 1293,
     "provinceId": 61,
     "name": "New Bataan"
   },
   {
-    "id": 1294,
     "provinceId": 61,
     "name": "Pantukan"
   },
   {
-    "id": 1295,
     "provinceId": 62,
     "name": "Don Marcelino"
   },
   {
-    "id": 1296,
     "provinceId": 62,
     "name": "Jose Abad Santos"
   },
   {
-    "id": 1297,
     "provinceId": 62,
     "name": "Malita"
   },
   {
-    "id": 1298,
     "provinceId": 62,
     "name": "Santa Maria"
   },
   {
-    "id": 1299,
     "provinceId": 62,
     "name": "Sarangani"
   },
   {
-    "id": 1300,
     "provinceId": 63,
     "name": "Alamada"
   },
   {
-    "id": 1301,
     "provinceId": 63,
     "name": "Carmen"
   },
   {
-    "id": 1302,
     "provinceId": 63,
     "name": "Kabacan"
   },
   {
-    "id": 1303,
     "provinceId": 63,
     "name": "City of Kidapawan"
   },
   {
-    "id": 1304,
     "provinceId": 63,
     "name": "Libungan"
   },
   {
-    "id": 1305,
     "provinceId": 63,
     "name": "Magpet"
   },
   {
-    "id": 1306,
     "provinceId": 63,
     "name": "Makilala"
   },
   {
-    "id": 1307,
     "provinceId": 63,
     "name": "Matalam"
   },
   {
-    "id": 1308,
     "provinceId": 63,
     "name": "Midsayap"
   },
   {
-    "id": 1309,
     "provinceId": 63,
     "name": "M'Lang"
   },
   {
-    "id": 1310,
     "provinceId": 63,
     "name": "Pigkawayan"
   },
   {
-    "id": 1311,
     "provinceId": 63,
     "name": "Pikit"
   },
   {
-    "id": 1312,
     "provinceId": 63,
     "name": "President Roxas"
   },
   {
-    "id": 1313,
     "provinceId": 63,
     "name": "Tulunan"
   },
   {
-    "id": 1314,
     "provinceId": 63,
     "name": "Antipas"
   },
   {
-    "id": 1315,
     "provinceId": 63,
     "name": "Banisilan"
   },
   {
-    "id": 1316,
     "provinceId": 63,
     "name": "Aleosan"
   },
   {
-    "id": 1317,
     "provinceId": 63,
     "name": "Arakan"
   },
   {
-    "id": 1318,
     "provinceId": 64,
     "name": "Banga"
   },
   {
-    "id": 1319,
     "provinceId": 64,
     "name": "City of General Santos"
   },
   {
-    "id": 1320,
     "provinceId": 64,
     "name": "City of Koronadal"
   },
   {
-    "id": 1321,
     "provinceId": 64,
     "name": "Norala"
   },
   {
-    "id": 1322,
     "provinceId": 64,
     "name": "Polomolok"
   },
   {
-    "id": 1323,
     "provinceId": 64,
     "name": "Surallah"
   },
   {
-    "id": 1324,
     "provinceId": 64,
     "name": "Tampakan"
   },
   {
-    "id": 1325,
     "provinceId": 64,
     "name": "Tantangan"
   },
   {
-    "id": 1326,
     "provinceId": 64,
     "name": "T'Boli"
   },
   {
-    "id": 1327,
     "provinceId": 64,
     "name": "Tupi"
   },
   {
-    "id": 1328,
     "provinceId": 64,
     "name": "Santo Niño"
   },
   {
-    "id": 1329,
     "provinceId": 64,
     "name": "Lake Sebu"
   },
   {
-    "id": 1330,
     "provinceId": 65,
     "name": "Bagumbayan"
   },
   {
-    "id": 1331,
     "provinceId": 65,
     "name": "Columbio"
   },
   {
-    "id": 1332,
     "provinceId": 65,
     "name": "Esperanza"
   },
   {
-    "id": 1333,
     "provinceId": 65,
     "name": "Isulan"
   },
   {
-    "id": 1334,
     "provinceId": 65,
     "name": "Kalamansig"
   },
   {
-    "id": 1335,
     "provinceId": 65,
     "name": "Lebak"
   },
   {
-    "id": 1336,
     "provinceId": 65,
     "name": "Lutayan"
   },
   {
-    "id": 1337,
     "provinceId": 65,
     "name": "Lambayong"
   },
   {
-    "id": 1338,
     "provinceId": 65,
     "name": "Palimbang"
   },
   {
-    "id": 1339,
     "provinceId": 65,
     "name": "President Quirino"
   },
   {
-    "id": 1340,
     "provinceId": 65,
     "name": "City of Tacurong"
   },
   {
-    "id": 1341,
     "provinceId": 65,
     "name": "Sen. Ninoy Aquino"
   },
   {
-    "id": 1342,
     "provinceId": 66,
     "name": "Alabel"
   },
   {
-    "id": 1343,
     "provinceId": 66,
     "name": "Glan"
   },
   {
-    "id": 1344,
     "provinceId": 66,
     "name": "Kiamba"
   },
   {
-    "id": 1345,
     "provinceId": 66,
     "name": "Maasim"
   },
   {
-    "id": 1346,
     "provinceId": 66,
     "name": "Maitum"
   },
   {
-    "id": 1347,
     "provinceId": 66,
     "name": "Malapatan"
   },
   {
-    "id": 1348,
     "provinceId": 66,
     "name": "Malungon"
   },
   {
-    "id": 1349,
     "provinceId": 66,
     "name": "Cotabato City"
   },
   {
-    "id": 1350,
     "provinceId": 1,
     "name": "Manila"
   },
   {
-    "id": 1351,
     "provinceId": 1,
     "name": "Mandaluyong City"
   },
   {
-    "id": 1352,
     "provinceId": 1,
     "name": "Marikina City"
   },
   {
-    "id": 1353,
     "provinceId": 1,
     "name": "Pasig City"
   },
   {
-    "id": 1354,
     "provinceId": 1,
     "name": "Quezon City"
   },
   {
-    "id": 1355,
     "provinceId": 1,
     "name": "San Juan City"
   },
   {
-    "id": 1356,
     "provinceId": 1,
     "name": "Caloocan City"
   },
   {
-    "id": 1357,
     "provinceId": 1,
     "name": "Malabon City"
   },
   {
-    "id": 1358,
     "provinceId": 1,
     "name": "Navotas City"
   },
   {
-    "id": 1359,
     "provinceId": 1,
     "name": "Valenzuela City"
   },
   {
-    "id": 1360,
     "provinceId": 1,
     "name": "Las Piñas City"
   },
   {
-    "id": 1361,
     "provinceId": 1,
     "name": "Makati City"
   },
   {
-    "id": 1362,
     "provinceId": 1,
     "name": "Muntinlupa City"
   },
   {
-    "id": 1363,
     "provinceId": 1,
     "name": "Parañaque City"
   },
   {
-    "id": 1364,
     "provinceId": 1,
     "name": "Pasay City"
   },
   {
-    "id": 1365,
     "provinceId": 1,
     "name": "Pateros"
   },
   {
-    "id": 1366,
     "provinceId": 1,
     "name": "Taguig City"
   },
   {
-    "id": 1367,
     "provinceId": 67,
     "name": "Bangued"
   },
   {
-    "id": 1368,
     "provinceId": 67,
     "name": "Boliney"
   },
   {
-    "id": 1369,
     "provinceId": 67,
     "name": "Bucay"
   },
   {
-    "id": 1370,
     "provinceId": 67,
     "name": "Bucloc"
   },
   {
-    "id": 1371,
     "provinceId": 67,
     "name": "Daguioman"
   },
   {
-    "id": 1372,
     "provinceId": 67,
     "name": "Danglas"
   },
   {
-    "id": 1373,
     "provinceId": 67,
     "name": "Dolores"
   },
   {
-    "id": 1374,
     "provinceId": 67,
     "name": "La Paz"
   },
   {
-    "id": 1375,
     "provinceId": 67,
     "name": "Lacub"
   },
   {
-    "id": 1376,
     "provinceId": 67,
     "name": "Lagangilang"
   },
   {
-    "id": 1377,
     "provinceId": 67,
     "name": "Lagayan"
   },
   {
-    "id": 1378,
     "provinceId": 67,
     "name": "Langiden"
   },
   {
-    "id": 1379,
     "provinceId": 67,
     "name": "Licuan-Baay"
   },
   {
-    "id": 1380,
     "provinceId": 67,
     "name": "Luba"
   },
   {
-    "id": 1381,
     "provinceId": 67,
     "name": "Malibcong"
   },
   {
-    "id": 1382,
     "provinceId": 67,
     "name": "Manabo"
   },
   {
-    "id": 1383,
     "provinceId": 67,
     "name": "Peñarrubia"
   },
   {
-    "id": 1384,
     "provinceId": 67,
     "name": "Pidigan"
   },
   {
-    "id": 1385,
     "provinceId": 67,
     "name": "Pilar"
   },
   {
-    "id": 1386,
     "provinceId": 67,
     "name": "Sallapadan"
   },
   {
-    "id": 1387,
     "provinceId": 67,
     "name": "San Isidro"
   },
   {
-    "id": 1388,
     "provinceId": 67,
     "name": "San Juan"
   },
   {
-    "id": 1389,
     "provinceId": 67,
     "name": "San Quintin"
   },
   {
-    "id": 1390,
     "provinceId": 67,
     "name": "Tayum"
   },
   {
-    "id": 1391,
     "provinceId": 67,
     "name": "Tineg"
   },
   {
-    "id": 1392,
     "provinceId": 67,
     "name": "Tubo"
   },
   {
-    "id": 1393,
     "provinceId": 67,
     "name": "Villaviciosa"
   },
   {
-    "id": 1394,
     "provinceId": 68,
     "name": "Atok"
   },
   {
-    "id": 1395,
     "provinceId": 68,
     "name": "City of Baguio"
   },
   {
-    "id": 1396,
     "provinceId": 68,
     "name": "Bakun"
   },
   {
-    "id": 1397,
     "provinceId": 68,
     "name": "Bokod"
   },
   {
-    "id": 1398,
     "provinceId": 68,
     "name": "Buguias"
   },
   {
-    "id": 1399,
     "provinceId": 68,
     "name": "Itogon"
   },
   {
-    "id": 1400,
     "provinceId": 68,
     "name": "Kabayan"
   },
   {
-    "id": 1401,
     "provinceId": 68,
     "name": "Kapangan"
   },
   {
-    "id": 1402,
     "provinceId": 68,
     "name": "Kibungan"
   },
   {
-    "id": 1403,
     "provinceId": 68,
     "name": "La Trinidad"
   },
   {
-    "id": 1404,
     "provinceId": 68,
     "name": "Mankayan"
   },
   {
-    "id": 1405,
     "provinceId": 68,
     "name": "Sablan"
   },
   {
-    "id": 1406,
     "provinceId": 68,
     "name": "Tuba"
   },
   {
-    "id": 1407,
     "provinceId": 68,
     "name": "Tublay"
   },
   {
-    "id": 1408,
     "provinceId": 69,
     "name": "Banaue"
   },
   {
-    "id": 1409,
     "provinceId": 69,
     "name": "Hungduan"
   },
   {
-    "id": 1410,
     "provinceId": 69,
     "name": "Kiangan"
   },
   {
-    "id": 1411,
     "provinceId": 69,
     "name": "Lagawe"
   },
   {
-    "id": 1412,
     "provinceId": 69,
     "name": "Lamut"
   },
   {
-    "id": 1413,
     "provinceId": 69,
     "name": "Mayoyao"
   },
   {
-    "id": 1414,
     "provinceId": 69,
     "name": "Alfonso Lista"
   },
   {
-    "id": 1415,
     "provinceId": 69,
     "name": "Aguinaldo"
   },
   {
-    "id": 1416,
     "provinceId": 69,
     "name": "Hingyon"
   },
   {
-    "id": 1417,
     "provinceId": 69,
     "name": "Tinoc"
   },
   {
-    "id": 1418,
     "provinceId": 69,
     "name": "Asipulo"
   },
   {
-    "id": 1419,
     "provinceId": 70,
     "name": "Balbalan"
   },
   {
-    "id": 1420,
     "provinceId": 70,
     "name": "Lubuagan"
   },
   {
-    "id": 1421,
     "provinceId": 70,
     "name": "Pasil"
   },
   {
-    "id": 1422,
     "provinceId": 70,
     "name": "Pinukpuk"
   },
   {
-    "id": 1423,
     "provinceId": 70,
     "name": "Rizal"
   },
   {
-    "id": 1424,
     "provinceId": 70,
     "name": "City of Tabuk"
   },
   {
-    "id": 1425,
     "provinceId": 70,
     "name": "Tanudan"
   },
   {
-    "id": 1426,
     "provinceId": 70,
     "name": "Tinglayan"
   },
   {
-    "id": 1427,
     "provinceId": 71,
     "name": "Barlig"
   },
   {
-    "id": 1428,
     "provinceId": 71,
     "name": "Bauko"
   },
   {
-    "id": 1429,
     "provinceId": 71,
     "name": "Besao"
   },
   {
-    "id": 1430,
     "provinceId": 71,
     "name": "Bontoc"
   },
   {
-    "id": 1431,
     "provinceId": 71,
     "name": "Natonin"
   },
   {
-    "id": 1432,
     "provinceId": 71,
     "name": "Paracelis"
   },
   {
-    "id": 1433,
     "provinceId": 71,
     "name": "Sabangan"
   },
   {
-    "id": 1434,
     "provinceId": 71,
     "name": "Sadanga"
   },
   {
-    "id": 1435,
     "provinceId": 71,
     "name": "Sagada"
   },
   {
-    "id": 1436,
     "provinceId": 71,
     "name": "Tadian"
   },
   {
-    "id": 1437,
     "provinceId": 72,
     "name": "Calanasan"
   },
   {
-    "id": 1438,
     "provinceId": 72,
     "name": "Conner"
   },
   {
-    "id": 1439,
     "provinceId": 72,
     "name": "Flora"
   },
   {
-    "id": 1440,
     "provinceId": 72,
     "name": "Kabugao"
   },
   {
-    "id": 1441,
     "provinceId": 72,
     "name": "Luna"
   },
   {
-    "id": 1442,
     "provinceId": 72,
     "name": "Pudtol"
   },
   {
-    "id": 1443,
     "provinceId": 72,
     "name": "Santa Marcela"
   },
   {
-    "id": 1444,
     "provinceId": 73,
     "name": "City of Lamitan"
   },
   {
-    "id": 1445,
     "provinceId": 73,
     "name": "Lantawan"
   },
   {
-    "id": 1446,
     "provinceId": 73,
     "name": "Maluso"
   },
   {
-    "id": 1447,
     "provinceId": 73,
     "name": "Sumisip"
   },
   {
-    "id": 1448,
     "provinceId": 73,
     "name": "Tipo-Tipo"
   },
   {
-    "id": 1449,
     "provinceId": 73,
     "name": "Tuburan"
   },
   {
-    "id": 1450,
     "provinceId": 73,
     "name": "Akbar"
   },
   {
-    "id": 1451,
     "provinceId": 73,
     "name": "Al-Barka"
   },
   {
-    "id": 1452,
     "provinceId": 73,
     "name": "Hadji Mohammad Ajul"
   },
   {
-    "id": 1453,
     "provinceId": 73,
     "name": "Ungkaya Pukan"
   },
   {
-    "id": 1454,
     "provinceId": 73,
     "name": "Hadji Muhtamad"
   },
   {
-    "id": 1455,
     "provinceId": 73,
     "name": "Tabuan-Lasa"
   },
   {
-    "id": 1456,
     "provinceId": 74,
     "name": "Bacolod-Kalawi"
   },
   {
-    "id": 1457,
     "provinceId": 74,
     "name": "Balabagan"
   },
   {
-    "id": 1458,
     "provinceId": 74,
     "name": "Balindong"
   },
   {
-    "id": 1459,
     "provinceId": 74,
     "name": "Bayang"
   },
   {
-    "id": 1460,
     "provinceId": 74,
     "name": "Binidayan"
   },
   {
-    "id": 1461,
     "provinceId": 74,
     "name": "Bubong"
   },
   {
-    "id": 1462,
     "provinceId": 74,
     "name": "Butig"
   },
   {
-    "id": 1463,
     "provinceId": 74,
     "name": "Ganassi"
   },
   {
-    "id": 1464,
     "provinceId": 74,
     "name": "Kapai"
   },
   {
-    "id": 1465,
     "provinceId": 74,
     "name": "Lumba-Bayabao"
   },
   {
-    "id": 1466,
     "provinceId": 74,
     "name": "Lumbatan"
   },
   {
-    "id": 1467,
     "provinceId": 74,
     "name": "Madalum"
   },
   {
-    "id": 1468,
     "provinceId": 74,
     "name": "Madamba"
   },
   {
-    "id": 1469,
     "provinceId": 74,
     "name": "Malabang"
   },
   {
-    "id": 1470,
     "provinceId": 74,
     "name": "Marantao"
   },
   {
-    "id": 1471,
     "provinceId": 74,
     "name": "City of Marawi"
   },
   {
-    "id": 1472,
     "provinceId": 74,
     "name": "Masiu"
   },
   {
-    "id": 1473,
     "provinceId": 74,
     "name": "Mulondo"
   },
   {
-    "id": 1474,
     "provinceId": 74,
     "name": "Pagayawan"
   },
   {
-    "id": 1475,
     "provinceId": 74,
     "name": "Piagapo"
   },
   {
-    "id": 1476,
     "provinceId": 74,
     "name": "Poona Bayabao"
   },
   {
-    "id": 1477,
     "provinceId": 74,
     "name": "Pualas"
   },
   {
-    "id": 1478,
     "provinceId": 74,
     "name": "Ditsaan-Ramain"
   },
   {
-    "id": 1479,
     "provinceId": 74,
     "name": "Saguiaran"
   },
   {
-    "id": 1480,
     "provinceId": 74,
     "name": "Tamparan"
   },
   {
-    "id": 1481,
     "provinceId": 74,
     "name": "Taraka"
   },
   {
-    "id": 1482,
     "provinceId": 74,
     "name": "Tubaran"
   },
   {
-    "id": 1483,
     "provinceId": 74,
     "name": "Tugaya"
   },
   {
-    "id": 1484,
     "provinceId": 74,
     "name": "Wao"
   },
   {
-    "id": 1485,
     "provinceId": 74,
     "name": "Marogong"
   },
   {
-    "id": 1486,
     "provinceId": 74,
     "name": "Calanogas"
   },
   {
-    "id": 1487,
     "provinceId": 74,
     "name": "Buadiposo-Buntong"
   },
   {
-    "id": 1488,
     "provinceId": 74,
     "name": "Maguing"
   },
   {
-    "id": 1489,
     "provinceId": 74,
     "name": "Picong"
   },
   {
-    "id": 1490,
     "provinceId": 74,
     "name": "Lumbayanague"
   },
   {
-    "id": 1491,
     "provinceId": 74,
     "name": "Amai Manabilang"
   },
   {
-    "id": 1492,
     "provinceId": 74,
     "name": "Tagoloan Ii"
   },
   {
-    "id": 1493,
     "provinceId": 74,
     "name": "Kapatagan"
   },
   {
-    "id": 1494,
     "provinceId": 74,
     "name": "Sultan Dumalondong"
   },
   {
-    "id": 1495,
     "provinceId": 74,
     "name": "Lumbaca-Unayan"
   },
   {
-    "id": 1496,
     "provinceId": 75,
     "name": "Ampatuan"
   },
   {
-    "id": 1497,
     "provinceId": 75,
     "name": "Buldon"
   },
   {
-    "id": 1498,
     "provinceId": 75,
     "name": "Buluan"
   },
   {
-    "id": 1499,
     "provinceId": 75,
     "name": "Datu Paglas"
   },
   {
-    "id": 1500,
     "provinceId": 75,
     "name": "Datu Piang"
   },
   {
-    "id": 1501,
     "provinceId": 75,
     "name": "Datu Odin Sinsuat"
   },
   {
-    "id": 1502,
     "provinceId": 75,
     "name": "Shariff Aguak"
   },
   {
-    "id": 1503,
     "provinceId": 75,
     "name": "Matanog"
   },
   {
-    "id": 1504,
     "provinceId": 75,
     "name": "Pagalungan"
   },
   {
-    "id": 1505,
     "provinceId": 75,
     "name": "Parang"
   },
   {
-    "id": 1506,
     "provinceId": 75,
     "name": "Sultan Kudarat"
   },
   {
-    "id": 1507,
     "provinceId": 75,
     "name": "Sultan Sa Barongis"
   },
   {
-    "id": 1508,
     "provinceId": 75,
     "name": "Kabuntalan"
   },
   {
-    "id": 1509,
     "provinceId": 75,
     "name": "Upi"
   },
   {
-    "id": 1510,
     "provinceId": 75,
     "name": "Talayan"
   },
   {
-    "id": 1511,
     "provinceId": 75,
     "name": "South Upi"
   },
   {
-    "id": 1512,
     "provinceId": 75,
     "name": "Barira"
   },
   {
-    "id": 1513,
     "provinceId": 75,
     "name": "Gen. S.K. Pendatun"
   },
   {
-    "id": 1514,
     "provinceId": 75,
     "name": "Mamasapano"
   },
   {
-    "id": 1515,
     "provinceId": 75,
     "name": "Talitay"
   },
   {
-    "id": 1516,
     "provinceId": 75,
     "name": "Pagagawan"
   },
   {
-    "id": 1517,
     "provinceId": 75,
     "name": "Paglat"
   },
   {
-    "id": 1518,
     "provinceId": 75,
     "name": "Sultan Mastura"
   },
   {
-    "id": 1519,
     "provinceId": 75,
     "name": "Guindulungan"
   },
   {
-    "id": 1520,
     "provinceId": 75,
     "name": "Datu Saudi-Ampatuan"
   },
   {
-    "id": 1521,
     "provinceId": 75,
     "name": "Datu Unsay"
   },
   {
-    "id": 1522,
     "provinceId": 75,
     "name": "Datu Abdullah Sangki"
   },
   {
-    "id": 1523,
     "provinceId": 75,
     "name": "Rajah Buayan"
   },
   {
-    "id": 1524,
     "provinceId": 75,
     "name": "Datu Blah T. Sinsuat"
   },
   {
-    "id": 1525,
     "provinceId": 75,
     "name": "Datu Anggal Midtimbang"
   },
   {
-    "id": 1526,
     "provinceId": 75,
     "name": "Mangudadatu"
   },
   {
-    "id": 1527,
     "provinceId": 75,
     "name": "Pandag"
   },
   {
-    "id": 1528,
     "provinceId": 75,
     "name": "Northern Kabuntalan"
   },
   {
-    "id": 1529,
     "provinceId": 75,
     "name": "Datu Hoffer Ampatuan"
   },
   {
-    "id": 1530,
     "provinceId": 75,
     "name": "Datu Salibo"
   },
   {
-    "id": 1531,
     "provinceId": 75,
     "name": "Shariff Saydona Mustapha"
   },
   {
-    "id": 1532,
     "provinceId": 76,
     "name": "Indanan"
   },
   {
-    "id": 1533,
     "provinceId": 76,
     "name": "Jolo"
   },
   {
-    "id": 1534,
     "provinceId": 76,
     "name": "Kalingalan Caluang"
   },
   {
-    "id": 1535,
     "provinceId": 76,
     "name": "Luuk"
   },
   {
-    "id": 1536,
     "provinceId": 76,
     "name": "Maimbung"
   },
   {
-    "id": 1537,
     "provinceId": 76,
     "name": "Hadji Panglima Tahil"
   },
   {
-    "id": 1538,
     "provinceId": 76,
     "name": "Old Panamao"
   },
   {
-    "id": 1539,
     "provinceId": 76,
     "name": "Pangutaran"
   },
   {
-    "id": 1540,
     "provinceId": 76,
     "name": "Parang"
   },
   {
-    "id": 1541,
     "provinceId": 76,
     "name": "Pata"
   },
   {
-    "id": 1542,
     "provinceId": 76,
     "name": "Patikul"
   },
   {
-    "id": 1543,
     "provinceId": 76,
     "name": "Siasi"
   },
   {
-    "id": 1544,
     "provinceId": 76,
     "name": "Talipao"
   },
   {
-    "id": 1545,
     "provinceId": 76,
     "name": "Tapul"
   },
   {
-    "id": 1546,
     "provinceId": 76,
     "name": "Tongkil"
   },
   {
-    "id": 1547,
     "provinceId": 76,
     "name": "Panglima Estino"
   },
   {
-    "id": 1548,
     "provinceId": 76,
     "name": "Lugus"
   },
   {
-    "id": 1549,
     "provinceId": 76,
     "name": "Pandami"
   },
   {
-    "id": 1550,
     "provinceId": 76,
     "name": "Omar"
   },
   {
-    "id": 1551,
     "provinceId": 77,
     "name": "Panglima Sugala"
   },
   {
-    "id": 1552,
     "provinceId": 77,
     "name": "Bongao (Capital)"
   },
   {
-    "id": 1553,
     "provinceId": 77,
     "name": "Mapun"
   },
   {
-    "id": 1554,
     "provinceId": 77,
     "name": "Simunul"
   },
   {
-    "id": 1555,
     "provinceId": 77,
     "name": "Sitangkai"
   },
   {
-    "id": 1556,
     "provinceId": 77,
     "name": "South Ubian"
   },
   {
-    "id": 1557,
     "provinceId": 77,
     "name": "Tandubas"
   },
   {
-    "id": 1558,
     "provinceId": 77,
     "name": "Turtle Islands"
   },
   {
-    "id": 1559,
     "provinceId": 77,
     "name": "Languyan"
   },
   {
-    "id": 1560,
     "provinceId": 77,
     "name": "Sapa-Sapa"
   },
   {
-    "id": 1561,
     "provinceId": 77,
     "name": "Sibutu"
   },
   {
-    "id": 1562,
     "provinceId": 78,
     "name": "Buenavista"
   },
   {
-    "id": 1563,
     "provinceId": 78,
     "name": "City of Butuan"
   },
   {
-    "id": 1564,
     "provinceId": 78,
     "name": "City of Cabadbaran"
   },
   {
-    "id": 1565,
     "provinceId": 78,
     "name": "Carmen"
   },
   {
-    "id": 1566,
     "provinceId": 78,
     "name": "Jabonga"
   },
   {
-    "id": 1567,
     "provinceId": 78,
     "name": "Kitcharao"
   },
   {
-    "id": 1568,
     "provinceId": 78,
     "name": "Las Nieves"
   },
   {
-    "id": 1569,
     "provinceId": 78,
     "name": "Magallanes"
   },
   {
-    "id": 1570,
     "provinceId": 78,
     "name": "Nasipit"
   },
   {
-    "id": 1571,
     "provinceId": 78,
     "name": "Santiago"
   },
   {
-    "id": 1572,
     "provinceId": 78,
     "name": "Tubay"
   },
   {
-    "id": 1573,
     "provinceId": 78,
     "name": "Remedios T. Romualdez"
   },
   {
-    "id": 1574,
     "provinceId": 79,
     "name": "City of Bayugan"
   },
   {
-    "id": 1575,
     "provinceId": 79,
     "name": "Bunawan"
   },
   {
-    "id": 1576,
     "provinceId": 79,
     "name": "Esperanza"
   },
   {
-    "id": 1577,
     "provinceId": 79,
     "name": "La Paz"
   },
   {
-    "id": 1578,
     "provinceId": 79,
     "name": "Loreto"
   },
   {
-    "id": 1579,
     "provinceId": 79,
     "name": "Prosperidad"
   },
   {
-    "id": 1580,
     "provinceId": 79,
     "name": "Rosario"
   },
   {
-    "id": 1581,
     "provinceId": 79,
     "name": "San Francisco"
   },
   {
-    "id": 1582,
     "provinceId": 79,
     "name": "San Luis"
   },
   {
-    "id": 1583,
     "provinceId": 79,
     "name": "Santa Josefa"
   },
   {
-    "id": 1584,
     "provinceId": 79,
     "name": "Talacogon"
   },
   {
-    "id": 1585,
     "provinceId": 79,
     "name": "Trento"
   },
   {
-    "id": 1586,
     "provinceId": 79,
     "name": "Veruela"
   },
   {
-    "id": 1587,
     "provinceId": 79,
     "name": "Sibagat"
   },
   {
-    "id": 1588,
     "provinceId": 80,
     "name": "Alegria"
   },
   {
-    "id": 1589,
     "provinceId": 80,
     "name": "Bacuag"
   },
   {
-    "id": 1590,
     "provinceId": 80,
     "name": "Burgos"
   },
   {
-    "id": 1591,
     "provinceId": 80,
     "name": "Claver"
   },
   {
-    "id": 1592,
     "provinceId": 80,
     "name": "Dapa"
   },
   {
-    "id": 1593,
     "provinceId": 80,
     "name": "Del Carmen"
   },
   {
-    "id": 1594,
     "provinceId": 80,
     "name": "General Luna"
   },
   {
-    "id": 1595,
     "provinceId": 80,
     "name": "Gigaquit"
   },
   {
-    "id": 1596,
     "provinceId": 80,
     "name": "Mainit"
   },
   {
-    "id": 1597,
     "provinceId": 80,
     "name": "Malimono"
   },
   {
-    "id": 1598,
     "provinceId": 80,
     "name": "Pilar"
   },
   {
-    "id": 1599,
     "provinceId": 80,
     "name": "Placer"
   },
   {
-    "id": 1600,
     "provinceId": 80,
     "name": "San Benito"
   },
   {
-    "id": 1601,
     "provinceId": 80,
     "name": "San Francisco"
   },
   {
-    "id": 1602,
     "provinceId": 80,
     "name": "San Isidro"
   },
   {
-    "id": 1603,
     "provinceId": 80,
     "name": "Santa Monica"
   },
   {
-    "id": 1604,
     "provinceId": 80,
     "name": "Sison"
   },
   {
-    "id": 1605,
     "provinceId": 80,
     "name": "Socorro"
   },
   {
-    "id": 1606,
     "provinceId": 80,
     "name": "City of Surigao"
   },
   {
-    "id": 1607,
     "provinceId": 80,
     "name": "Tagana-An"
   },
   {
-    "id": 1608,
     "provinceId": 80,
     "name": "Tubod"
   },
   {
-    "id": 1609,
     "provinceId": 81,
     "name": "Barobo"
   },
   {
-    "id": 1610,
     "provinceId": 81,
     "name": "Bayabas"
   },
   {
-    "id": 1611,
     "provinceId": 81,
     "name": "City of Bislig"
   },
   {
-    "id": 1612,
     "provinceId": 81,
     "name": "Cagwait"
   },
   {
-    "id": 1613,
     "provinceId": 81,
     "name": "Cantilan"
   },
   {
-    "id": 1614,
     "provinceId": 81,
     "name": "Carmen"
   },
   {
-    "id": 1615,
     "provinceId": 81,
     "name": "Carrascal"
   },
   {
-    "id": 1616,
     "provinceId": 81,
     "name": "Cortes"
   },
   {
-    "id": 1617,
     "provinceId": 81,
     "name": "Hinatuan"
   },
   {
-    "id": 1618,
     "provinceId": 81,
     "name": "Lanuza"
   },
   {
-    "id": 1619,
     "provinceId": 81,
     "name": "Lianga"
   },
   {
-    "id": 1620,
     "provinceId": 81,
     "name": "Lingig"
   },
   {
-    "id": 1621,
     "provinceId": 81,
     "name": "Madrid"
   },
   {
-    "id": 1622,
     "provinceId": 81,
     "name": "Marihatag"
   },
   {
-    "id": 1623,
     "provinceId": 81,
     "name": "San Agustin"
   },
   {
-    "id": 1624,
     "provinceId": 81,
     "name": "San Miguel"
   },
   {
-    "id": 1625,
     "provinceId": 81,
     "name": "Tagbina"
   },
   {
-    "id": 1626,
     "provinceId": 81,
     "name": "Tago"
   },
   {
-    "id": 1627,
     "provinceId": 81,
     "name": "City of Tandag"
   },
   {
-    "id": 1628,
     "provinceId": 82,
     "name": "Basilisa"
   },
   {
-    "id": 1629,
     "provinceId": 82,
     "name": "Cagdianao"
   },
   {
-    "id": 1630,
     "provinceId": 82,
     "name": "Dinagat"
   },
   {
-    "id": 1631,
     "provinceId": 82,
     "name": "Libjo"
   },
   {
-    "id": 1632,
     "provinceId": 82,
     "name": "Loreto"
   },
   {
-    "id": 1633,
     "provinceId": 82,
     "name": "San Jose"
   },
   {
-    "id": 1634,
     "provinceId": 82,
     "name": "Tubajon"
   }

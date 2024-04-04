@@ -1,411 +1,329 @@
 [
   {
-    "id": 1,
     "regionId": 1,
     "name": "Metro Manila"
   },
   {
-    "id": 2,
     "regionId": 3,
     "name": "Ilocos Norte"
   },
   {
-    "id": 3,
     "regionId": 3,
     "name": "Ilocos Sur"
   },
   {
-    "id": 4,
     "regionId": 3,
     "name": "La Union"
   },
   {
-    "id": 5,
     "regionId": 3,
     "name": "Pangasinan"
   },
   {
-    "id": 6,
     "regionId": 4,
     "name": "Batanes"
   },
   {
-    "id": 7,
     "regionId": 4,
     "name": "Cagayan"
   },
   {
-    "id": 8,
     "regionId": 4,
     "name": "Isabela"
   },
   {
-    "id": 9,
     "regionId": 4,
     "name": "Nueva Vizcaya"
   },
   {
-    "id": 10,
     "regionId": 4,
     "name": "Quirino"
   },
   {
-    "id": 11,
     "regionId": 5,
     "name": "Bataan"
   },
   {
-    "id": 12,
     "regionId": 5,
     "name": "Bulacan"
   },
   {
-    "id": 13,
     "regionId": 5,
     "name": "Nueva Ecija"
   },
   {
-    "id": 14,
     "regionId": 5,
     "name": "Pampanga"
   },
   {
-    "id": 15,
     "regionId": 5,
     "name": "Tarlac"
   },
   {
-    "id": 16,
     "regionId": 5,
     "name": "Zambales"
   },
   {
-    "id": 17,
     "regionId": 5,
     "name": "Aurora"
   },
   {
-    "id": 18,
     "regionId": 6,
     "name": "Batangas"
   },
   {
-    "id": 19,
     "regionId": 6,
     "name": "Cavite"
   },
   {
-    "id": 20,
     "regionId": 6,
     "name": "Laguna"
   },
   {
-    "id": 21,
     "regionId": 6,
     "name": "Quezon"
   },
   {
-    "id": 22,
     "regionId": 6,
     "name": "Rizal"
   },
   {
-    "id": 23,
     "regionId": 7,
     "name": "Marinduque"
   },
   {
-    "id": 24,
     "regionId": 7,
     "name": "Occidental Mindoro"
   },
   {
-    "id": 25,
     "regionId": 7,
     "name": "Oriental Mindoro"
   },
   {
-    "id": 26,
     "regionId": 7,
     "name": "Palawan"
   },
   {
-    "id": 27,
     "regionId": 7,
     "name": "Romblon"
   },
   {
-    "id": 28,
     "regionId": 8,
     "name": "Albay"
   },
   {
-    "id": 29,
     "regionId": 8,
     "name": "Camarines Norte"
   },
   {
-    "id": 30,
     "regionId": 8,
     "name": "Camarines Sur"
   },
   {
-    "id": 31,
     "regionId": 8,
     "name": "Catanduanes"
   },
   {
-    "id": 32,
     "regionId": 8,
     "name": "Masbate"
   },
   {
-    "id": 33,
     "regionId": 8,
     "name": "Sorsogon"
   },
   {
-    "id": 34,
     "regionId": 9,
     "name": "Aklan"
   },
   {
-    "id": 35,
     "regionId": 9,
     "name": "Antique"
   },
   {
-    "id": 36,
     "regionId": 9,
     "name": "Capiz"
   },
   {
-    "id": 37,
     "regionId": 9,
     "name": "Iloilo"
   },
   {
-    "id": 38,
     "regionId": 9,
     "name": "Negros Occidental"
   },
   {
-    "id": 39,
     "regionId": 9,
     "name": "Guimaras"
   },
   {
-    "id": 40,
     "regionId": 10,
     "name": "Bohol"
   },
   {
-    "id": 41,
     "regionId": 10,
     "name": "Cebu"
   },
   {
-    "id": 42,
     "regionId": 10,
     "name": "Negros Oriental"
   },
   {
-    "id": 43,
     "regionId": 10,
     "name": "Siquijor"
   },
   {
-    "id": 44,
     "regionId": 11,
     "name": "Eastern Samar"
   },
   {
-    "id": 45,
     "regionId": 11,
     "name": "Leyte"
   },
   {
-    "id": 46,
     "regionId": 11,
     "name": "Northern Samar"
   },
   {
-    "id": 47,
     "regionId": 11,
     "name": "Samar"
   },
   {
-    "id": 48,
     "regionId": 11,
     "name": "Southern Leyte"
   },
   {
-    "id": 49,
     "regionId": 11,
     "name": "Biliran"
   },
   {
-    "id": 50,
     "regionId": 12,
     "name": "Zamboanga del Norte"
   },
   {
-    "id": 51,
     "regionId": 12,
     "name": "Zamboanga del Sur"
   },
   {
-    "id": 52,
     "regionId": 12,
     "name": "Zamboanga Sibugay"
   },
   {
-    "id": 53,
     "regionId": 13,
     "name": "Bukidnon"
   },
   {
-    "id": 54,
     "regionId": 13,
     "name": "Camiguin"
   },
   {
-    "id": 55,
     "regionId": 13,
     "name": "Lanao del Norte"
   },
   {
-    "id": 56,
     "regionId": 13,
     "name": "Misamis Occidental"
   },
   {
-    "id": 57,
     "regionId": 13,
     "name": "Misamis Oriental"
   },
   {
-    "id": 58,
     "regionId": 14,
     "name": "Davao del Norte"
   },
   {
-    "id": 59,
     "regionId": 14,
     "name": "Davao del Sur"
   },
   {
-    "id": 60,
     "regionId": 14,
     "name": "Davao Oriental"
   },
   {
-    "id": 61,
     "regionId": 14,
     "name": "Davao de Oro"
   },
   {
-    "id": 62,
     "regionId": 14,
     "name": "Davao Occidental"
   },
   {
-    "id": 63,
     "regionId": 15,
     "name": "Cotabato"
   },
   {
-    "id": 64,
     "regionId": 15,
     "name": "South Cotabato"
   },
   {
-    "id": 65,
     "regionId": 15,
     "name": "Sultan Kudarat"
   },
   {
-    "id": 66,
     "regionId": 15,
     "name": "Sarangani"
   },
   {
-    "id": 67,
     "regionId": 2,
     "name": "Abra"
   },
   {
-    "id": 68,
     "regionId": 2,
     "name": "Benguet"
   },
   {
-    "id": 69,
     "regionId": 2,
     "name": "Ifugao"
   },
   {
-    "id": 70,
     "regionId": 2,
     "name": "Kalinga"
   },
   {
-    "id": 71,
     "regionId": 2,
     "name": "Mountain Province"
   },
   {
-    "id": 72,
     "regionId": 2,
     "name": "Apayao"
   },
   {
-    "id": 73,
     "regionId": 17,
     "name": "Basilan"
   },
   {
-    "id": 74,
     "regionId": 17,
     "name": "Lanao del Sur"
   },
   {
-    "id": 75,
     "regionId": 17,
     "name": "Maguindanao"
   },
   {
-    "id": 76,
     "regionId": 17,
     "name": "Sulu"
   },
   {
-    "id": 77,
     "regionId": 17,
     "name": "Tawi-Tawi"
   },
   {
-    "id": 78,
     "regionId": 16,
     "name": "Agusan del Norte"
   },
   {
-    "id": 79,
     "regionId": 16,
     "name": "Agusan del Sur"
   },
   {
-    "id": 80,
     "regionId": 16,
     "name": "Surigao del Norte"
   },
   {
-    "id": 81,
     "regionId": 16,
     "name": "Surigao del Sur"
   },
   {
-    "id": 82,
     "regionId": 16,
     "name": "Dinagat Islands"
   }

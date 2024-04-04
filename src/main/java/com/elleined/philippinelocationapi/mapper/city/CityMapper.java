@@ -4,7 +4,6 @@ import com.elleined.philippinelocationapi.dto.city.CityDTO;
 import com.elleined.philippinelocationapi.mapper.CustomMapper;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.request.city.CityRequest;
-import com.elleined.philippinelocationapi.service.city.CityService;
 import com.elleined.philippinelocationapi.service.province.ProvinceService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -28,7 +27,7 @@ public abstract class CityMapper implements CustomMapper<City, CityDTO, CityRequ
     @Mappings({
             @Mapping(target = "id", ignore = true),
             @Mapping(target = "name", source = "name"),
-            @Mapping(target = "province", expression = "java(cityService.getById(cityRequest.getProvinceId()))"),
+            @Mapping(target = "province", expression = "java(provinceService.getById(cityRequest.getProvinceId()))"),
             @Mapping(target = "baranggays", expression = "java(new java.util.HashSet<>())"),
     })
     public abstract City toEntity(CityRequest cityRequest);

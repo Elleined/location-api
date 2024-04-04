@@ -1,9 +1,10 @@
 package com.elleined.philippinelocationapi.populator;
 
-import com.elleined.philippinelocationapi.dto.province.ProvinceDTO;
+import com.elleined.philippinelocationapi.mapper.province.ProvinceMapper;
+import com.elleined.philippinelocationapi.model.province.Province;
+import com.elleined.philippinelocationapi.request.province.ProvinceRequest;
 import com.elleined.philippinelocationapi.service.province.ProvinceService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,23 +15,28 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Component
-@Qualifier("provincePopulator")
 @Transactional
 public class ProvincePopulator extends Populator {
     private final ProvinceService provinceService;
+    private final ProvinceMapper provinceMapper;
 
-    protected ProvincePopulator(ObjectMapper objectMapper, ProvinceService provinceService) {
+    protected ProvincePopulator(ObjectMapper objectMapper, ProvinceService provinceService, ProvinceMapper provinceMapper) {
         super(objectMapper);
         this.provinceService = provinceService;
+        this.provinceMapper = provinceMapper;
     }
 
     @Override
     public void populate(final String jsonFile) throws IOException {
         var resource = new ClassPathResource(jsonFile);
         byte[] dataBytes = FileCopyUtils.copyToByteArray(resource.getInputStream());
-        var type = objectMapper.getTypeFactory().constructCollectionType(List.class, ProvinceDTO.class);
+        var type = objectMapper.getTypeFactory().constructCollectionType(List.class, ProvinceRequest.class);
 
-        List<ProvinceDTO> provinces = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
+        List<ProvinceRequest> provinceRequests = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
+        List<Province> provinces = provinceRequests.stream()
+                .map(provinceMapper::toEntity)
+                .toList();
+
         provinceService.saveAll(provinces);
     }
 }

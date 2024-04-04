@@ -1,6 +1,8 @@
 package com.elleined.philippinelocationapi.populator;
 
-import com.elleined.philippinelocationapi.dto.city.CityDTO;
+import com.elleined.philippinelocationapi.mapper.city.CityMapper;
+import com.elleined.philippinelocationapi.model.city.City;
+import com.elleined.philippinelocationapi.request.city.CityRequest;
 import com.elleined.philippinelocationapi.service.city.CityService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,19 +20,25 @@ import java.util.List;
 @Transactional
 public class CityPopulator extends Populator {
     private final CityService cityService;
+    private final CityMapper cityMapper;
 
-    protected CityPopulator(ObjectMapper objectMapper, CityService cityService) {
+    protected CityPopulator(ObjectMapper objectMapper, CityService cityService, CityMapper cityMapper) {
         super(objectMapper);
         this.cityService = cityService;
+        this.cityMapper = cityMapper;
     }
 
     @Override
     public void populate(final String jsonFile) throws IOException {
         var resource = new ClassPathResource(jsonFile);
         byte[] dataBytes = FileCopyUtils.copyToByteArray(resource.getInputStream());
-        var type = objectMapper.getTypeFactory().constructCollectionType(List.class, CityDTO.class);
+        var type = objectMapper.getTypeFactory().constructCollectionType(List.class, CityRequest.class);
 
-        List<CityDTO> cities = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
-        cityService.saveAll(cities);
+        List<CityRequest> cityRequests = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
+        List<City> citys = cityRequests.stream()
+                .map(cityMapper::toEntity)
+                .toList();
+
+        cityService.saveAll(citys);
     }
 }

@@ -1,86 +1,69 @@
 [
   {
-    "id": 1,
     "name": "NCR",
     "description": "National Capital Region"
   },
   {
-    "id": 2,
     "name": "CAR",
     "description": "Cordillera Administrative Region"
   },
   {
-    "id": 3,
     "name": "Region I",
     "description": "Ilocos Region"
   },
   {
-    "id": 4,
     "name": "Region II",
     "description": "Cagayan Valley"
   },
   {
-    "id": 5,
     "name": "Region III",
     "description": "Central Luzon"
   },
   {
-    "id": 6,
     "name": "Region IV-A",
     "description": "CALABARZON"
   },
   {
-    "id": 7,
     "name": "Region IV-B",
     "description": "MIMAROPA"
   },
   {
-    "id": 8,
     "name": "Region V",
     "description": "Bicol Region"
   },
   {
-    "id": 9,
     "name": "Region VI",
     "description": "Western Visayas"
   },
   {
-    "id": 10,
     "name": "Region VII",
     "description": "Central Visayas"
   },
   {
-    "id": 11,
     "name": "Region VIII",
     "description": "Eastern Visayas"
   },
   {
-    "id": 12,
     "name": "Region IX",
     "description": "Zamboanga Peninsula"
   },
   {
-    "id": 13,
     "name": "Region X",
     "description": "Northern Mindanao"
   },
   {
-    "id": 14,
     "name": "Region XI",
     "description": "Davao Region"
   },
   {
-    "id": 15,
     "name": "Region XII",
     "description": "SOCCSKSARGEN"
   },
   {
-    "id": 16,
     "name": "Region XIII",
     "description": "CARAGA"
   },
   {
-    "id": 17,
     "name": "ARMM",
     "description": "Autonomous Region in Muslim Mindanao"
   }
