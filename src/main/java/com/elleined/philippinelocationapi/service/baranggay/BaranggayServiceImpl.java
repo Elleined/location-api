@@ -3,7 +3,7 @@ package com.elleined.philippinelocationapi.service.baranggay;
 import com.elleined.philippinelocationapi.dto.baranggay.BaranggayDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.mapper.BaranggayMapper;
+import com.elleined.philippinelocationapi.mapper.baranggay.BaranggayMapper;
 import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.repository.baranggay.BaranggayRepository;

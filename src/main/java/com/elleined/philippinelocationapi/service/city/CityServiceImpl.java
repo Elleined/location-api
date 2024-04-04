@@ -3,7 +3,7 @@ package com.elleined.philippinelocationapi.service.city;
 import com.elleined.philippinelocationapi.dto.city.CityDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.mapper.CityMapper;
+import com.elleined.philippinelocationapi.mapper.city.CityMapper;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.repository.city.CityRepository;

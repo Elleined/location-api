@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "tbl_region", indexes = {
@@ -31,5 +32,11 @@ public class Region extends Location {
         super(id, name);
         this.description = description;
         this.provinces = provinces;
+    }
+
+    public Set<Integer> getAllProvinceIds() {
+        return this.getProvinces().stream()
+                .map(Location::getId)
+                .collect(Collectors.toSet());
     }
 }

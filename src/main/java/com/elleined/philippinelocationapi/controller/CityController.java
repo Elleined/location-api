@@ -1,7 +1,7 @@
 package com.elleined.philippinelocationapi.controller;
 
 import com.elleined.philippinelocationapi.dto.city.CityDTO;
-import com.elleined.philippinelocationapi.mapper.CityMapper;
+import com.elleined.philippinelocationapi.mapper.city.CityMapper;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.service.city.CityService;

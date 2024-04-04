@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(
@@ -39,5 +40,11 @@ public class Province extends Location {
         super(id, name);
         this.region = region;
         this.cities = cities;
+    }
+
+    public Set<Integer> getAllCityIds() {
+        return this.getCities().stream()
+                .map(Location::getId)
+                .collect(Collectors.toSet());
     }
 }

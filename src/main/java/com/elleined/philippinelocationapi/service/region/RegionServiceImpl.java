@@ -3,7 +3,7 @@ package com.elleined.philippinelocationapi.service.region;
 import com.elleined.philippinelocationapi.dto.region.RegionDTO;
 import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.mapper.RegionMapper;
+import com.elleined.philippinelocationapi.mapper.region.RegionMapper;
 import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.region.RegionRepository;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +27,7 @@ class RegionServiceImpl implements RegionService {
         if (regionDTOS.stream().anyMatch(this::isAlreadyExists)) throw new AlreadyExistsException("Cannot save all regions! because one of the provided region id already exists!");
 
         List<Region> regions = regionDTOS.stream()
-                .map(regionMapper::toEntity)
+                .map(regionDTO -> regionMapper.toEntity(regionDTO))
                 .toList();
         regionRepository.saveAll(regions);
         log.debug("Saving all regions success...");

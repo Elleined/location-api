@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(
@@ -38,5 +39,11 @@ public class City extends Location {
         super(id, name);
         this.province = province;
         this.baranggays = baranggays;
+    }
+
+    public Set<Integer> getAllBaranggayIds() {
+        return this.getBaranggays().stream()
+                .map(Location::getId)
+                .collect(Collectors.toSet());
     }
 }
