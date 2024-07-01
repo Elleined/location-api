@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -17,33 +18,21 @@ import java.util.stream.Collectors;
         name = "tbl_city",
         indexes = @Index(name = "name_idx", columnList = "name")
 )
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@SuperBuilder
 public class City extends Location {
 
     @ManyToOne(optional = false)
     @JoinColumn(
             name = "province_id",
             referencedColumnName = "id",
-            nullable = false
+            nullable = false,
+            updatable = false
     )
     private Province province;
 
-    // city id reference is in tbl baraggay table
     @OneToMany(mappedBy = "city")
     private Set<Baranggay> baranggays;
-
-    @Builder
-    public City(int id, String name, Province province, Set<Baranggay> baranggays) {
-        super(id, name);
-        this.province = province;
-        this.baranggays = baranggays;
-    }
-
-    public Set<Integer> getAllBaranggayIds() {
-        return this.getBaranggays().stream()
-                .map(Location::getId)
-                .collect(Collectors.toSet());
-    }
 }

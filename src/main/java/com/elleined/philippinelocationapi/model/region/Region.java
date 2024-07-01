@@ -7,36 +7,27 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @Entity
-@Table(name = "tbl_region", indexes = {
-        @Index(name = "name_idx", columnList = "name")
-})
-@NoArgsConstructor
+@Table(
+        name = "tbl_region",
+        indexes = {
+                @Index(name = "name_idx", columnList = "name")
+        }
+)
 @Getter
 @Setter
+@NoArgsConstructor
+@SuperBuilder
 public class Region extends Location {
 
     @Column(name = "region_description")
     private String description;
 
-    // region id reference is in tbl province table
     @OneToMany(mappedBy = "region")
     private Set<Province> provinces;
-
-    @Builder
-    public Region(int id, String name, String description, Set<Province> provinces) {
-        super(id, name);
-        this.description = description;
-        this.provinces = provinces;
-    }
-
-    public Set<Integer> getAllProvinceIds() {
-        return this.getProvinces().stream()
-                .map(Location::getId)
-                .collect(Collectors.toSet());
-    }
 }

@@ -5,11 +5,13 @@ import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @MappedSuperclass
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@SuperBuilder
 public abstract class Location extends PrimaryKeyIdentity {
 
     @Column(
@@ -17,9 +19,4 @@ public abstract class Location extends PrimaryKeyIdentity {
             nullable = false
     )
     private String name;
-
-    public Location(int id, String name) {
-        super(id);
-        this.name = name;
-    }
 }

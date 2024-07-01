@@ -7,28 +7,25 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Table(
         name = "tbl_baranggay",
         indexes = @Index(name = "name_idx", columnList = "name")
 )
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@SuperBuilder
 public class Baranggay extends Location {
 
     @ManyToOne(optional = false)
     @JoinColumn(
             name = "city_id",
             referencedColumnName = "id",
-            nullable = false
+            nullable = false,
+            updatable = false
     )
     private City city;
-
-    @Builder
-    public Baranggay(int id, String name, City city) {
-        super(id, name);
-        this.city = city;
-    }
 }

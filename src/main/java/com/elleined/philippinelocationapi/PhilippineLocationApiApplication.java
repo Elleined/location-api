@@ -1,6 +1,7 @@
 package com.elleined.philippinelocationapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.datafaker.Faker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -21,5 +22,10 @@ public class PhilippineLocationApiApplication {
 	@Bean
 	public ObjectMapper objectMapper() {
 		return new ObjectMapper();
+	}
+
+	@Bean
+	public Faker faker() {
+		return new Faker();
 	}
 }
