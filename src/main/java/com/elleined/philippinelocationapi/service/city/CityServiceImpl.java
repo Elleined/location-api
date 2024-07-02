@@ -27,17 +27,11 @@ class CityServiceImpl implements CityService {
 
     @Override
     public Page<City> findAllByName(Region region, Province province, String name, Pageable pageable) {
-        if (!region.has(province))
-            throw new ResourceNotOwnedException("Cannot get all by name! because region doesn't have the province");
-
         return cityRepository.findAllByName(region, province, name, pageable);
     }
 
     @Override
     public Page<City> getAllBy(Region region, Province province, Pageable pageable) {
-        if (!region.has(province))
-            throw new ResourceNotOwnedException("Cannot get all city! because region doesn't have the province");
-
         return cityRepository.findAll(region, province, pageable);
 
     }
