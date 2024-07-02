@@ -28,7 +28,7 @@ public class BaranggayServiceImpl implements BaranggayService {
 
     @Override
     public Page<Baranggay> findAllByName(Region region, Province province, City city, String name, Pageable pageable) {
-        if (region.has(province))
+        if (!region.has(province))
             throw new ResourceNotOwnedException("Cannot find all by name! because region doesn't have this province");
 
         if (!province.has(city))
@@ -39,7 +39,7 @@ public class BaranggayServiceImpl implements BaranggayService {
 
     @Override
     public Page<Baranggay> getAllBy(Region region, Province province, City city, Pageable pageable) {
-        if (region.has(province))
+        if (!region.has(province))
             throw new ResourceNotOwnedException("Cannot find all by name! because region doesn't have this province");
 
         if (!province.has(city))

@@ -17,7 +17,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/regions/{regionId}/provinces{provinceId}/cities/{cityId}/baranggays")
+@RequestMapping("/regions/{regionId}/provinces/{provinceId}/cities/{cityId}/baranggays")
 @RequiredArgsConstructor
 public class BaranggayController {
     private final BaranggayService baranggayService;
