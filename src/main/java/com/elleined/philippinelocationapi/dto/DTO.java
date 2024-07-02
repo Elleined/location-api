@@ -7,9 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public abstract class DTO {
-
+public abstract class DTO extends HateoasDTO {
     private int id;
 }

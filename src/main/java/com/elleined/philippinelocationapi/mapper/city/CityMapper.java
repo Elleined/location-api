@@ -2,38 +2,32 @@ package com.elleined.philippinelocationapi.mapper.city;
 
 import com.elleined.philippinelocationapi.dto.city.CityDTO;
 import com.elleined.philippinelocationapi.mapper.CustomMapper;
+import com.elleined.philippinelocationapi.mapper.province.ProvinceMapper;
 import com.elleined.philippinelocationapi.model.city.City;
-import com.elleined.philippinelocationapi.request.city.CityRequest;
-import com.elleined.philippinelocationapi.service.province.ProvinceService;
+import com.elleined.philippinelocationapi.model.province.Province;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.springframework.beans.factory.annotation.Autowired;
 
-@Mapper(componentModel = "spring")
-public abstract class CityMapper implements CustomMapper<City, CityDTO, CityRequest> {
-
-    protected ProvinceService provinceService;
+@Mapper(
+        componentModel = "spring",
+        uses = ProvinceMapper.class
+)
+public interface CityMapper extends CustomMapper<City, CityDTO> {
 
     @Mappings({
             @Mapping(target = "id", source = "id"),
             @Mapping(target = "name", source = "name"),
-            @Mapping(target = "provinceId", source = "province.id"),
-            @Mapping(target = "regionId", source = "province.region.id"),
-            @Mapping(target = "baranggayIds", expression = "java(city.getAllBaranggayIds())"),
+            @Mapping(target = "provinceDTO", source = "province")
     })
-    public abstract CityDTO toDTO(City city);
+    CityDTO toDTO(City city);
 
     @Mappings({
             @Mapping(target = "id", ignore = true),
             @Mapping(target = "name", source = "name"),
-            @Mapping(target = "province", expression = "java(provinceService.getById(cityRequest.getProvinceId()))"),
+            @Mapping(target = "province", source = "province"),
             @Mapping(target = "baranggays", expression = "java(new java.util.HashSet<>())"),
     })
-    public abstract City toEntity(CityRequest cityRequest);
-
-    @Autowired
-    public void setProvinceService(ProvinceService provinceService) {
-        this.provinceService = provinceService;
-    }
+    City toEntity(String name,
+                  Province province);
 }
