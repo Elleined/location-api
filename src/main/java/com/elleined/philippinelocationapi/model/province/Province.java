@@ -34,4 +34,8 @@ public class Province extends Location {
 
     @OneToMany(mappedBy = "province")
     private Set<City> cities;
+
+    public boolean has(City city) {
+        return this.getCities().contains(city);
+    }
 }

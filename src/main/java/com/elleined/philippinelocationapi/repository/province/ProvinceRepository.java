@@ -10,9 +10,23 @@ import org.springframework.data.repository.query.Param;
 
 public interface ProvinceRepository extends JpaRepository<Province, Integer> {
 
-    @Query("SELECT p FROM Province p WHERE p.name LIKE CONCAT('%', :name, '%') ORDER BY p.id")
-    Page<Province> findAllByName(@Param("name") String name, Pageable pageable);
+    @Query("""
+            SELECT
+                p
+            FROM
+                Province p
+            WHERE
+                p.name
+            LIKE
+                CONCAT('%', :name, '%')
+            AND
+                p.region = :region
+            """)
+    Page<Province> findAllByName(@Param("region") Region region,
+                                 @Param("name") String name,
+                                 Pageable pageable);
 
     @Query("SELECT p FROM Province p WHERE p.region = :region")
-    Page<Province> findAll(@Param("region") Region region, Pageable pageable);
+    Page<Province> findAll(@Param("region") Region region,
+                           Pageable pageable);
 }

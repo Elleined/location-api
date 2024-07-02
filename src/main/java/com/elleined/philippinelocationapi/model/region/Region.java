@@ -28,4 +28,8 @@ public class Region extends Location {
 
     @OneToMany(mappedBy = "region")
     private Set<Province> provinces;
+
+    public boolean has(Province province) {
+        return this.getProvinces().contains(province);
+    }
 }

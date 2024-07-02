@@ -2,8 +2,10 @@ package com.elleined.philippinelocationapi.populator;
 
 import com.elleined.philippinelocationapi.mapper.baranggay.BaranggayMapper;
 import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
+import com.elleined.philippinelocationapi.model.city.City;
+import com.elleined.philippinelocationapi.repository.baranggay.BaranggayRepository;
 import com.elleined.philippinelocationapi.request.baranggay.BaranggayRequest;
-import com.elleined.philippinelocationapi.service.baranggay.BaranggayService;
+import com.elleined.philippinelocationapi.service.city.CityService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -17,13 +19,16 @@ import java.util.List;
 @Component
 @Transactional
 public class BaranggayPopulator extends Populator {
-    private final BaranggayService baranggayService;
+    private final BaranggayRepository baranggayRepository;
     private final BaranggayMapper baranggayMapper;
 
-    protected BaranggayPopulator(ObjectMapper objectMapper, BaranggayService baranggayService, BaranggayMapper baranggayMapper) {
+    private final CityService cityService;
+
+    public BaranggayPopulator(ObjectMapper objectMapper, BaranggayRepository baranggayRepository, BaranggayMapper baranggayMapper, CityService cityService) {
         super(objectMapper);
-        this.baranggayService = baranggayService;
+        this.baranggayRepository = baranggayRepository;
         this.baranggayMapper = baranggayMapper;
+        this.cityService = cityService;
     }
 
     @Override
@@ -34,9 +39,12 @@ public class BaranggayPopulator extends Populator {
 
         List<BaranggayRequest> baranggayRequests = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
         List<Baranggay> baranggays = baranggayRequests.stream()
-                .map(baranggayMapper::toEntity)
+                .map(request -> {
+                    City city = cityService.getById(request.getCityId());
+                    return baranggayMapper.toEntity(request.getName(), city);
+                })
                 .toList();
 
-        baranggayService.saveAll(baranggays);
+        baranggayRepository.saveAll(baranggays);
     }
 }

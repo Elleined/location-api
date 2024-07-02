@@ -1,8 +1,10 @@
 package com.elleined.philippinelocationapi.service.city;
 
-import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceNotOwnedException;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
+import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.city.CityRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,13 +26,19 @@ class CityServiceImpl implements CityService {
     }
 
     @Override
-    public Page<City> findAllByName(String name, Pageable pageable) {
-        return cityRepository.findAllByName(name, pageable);
+    public Page<City> findAllByName(Region region, Province province, String name, Pageable pageable) {
+        if (!region.has(province))
+            throw new ResourceNotOwnedException("Cannot get all by name! because region doesn't have the province");
+
+        return cityRepository.findAllByName(region, province, name, pageable);
     }
 
     @Override
-    public Page<City> getAllBy(Province province, Pageable pageable) {
-        return cityRepository.findAll(province, pageable);
+    public Page<City> getAllBy(Region region, Province province, Pageable pageable) {
+        if (!region.has(province))
+            throw new ResourceNotOwnedException("Cannot get all city! because region doesn't have the province");
+
+        return cityRepository.findAll(region, province, pageable);
 
     }
 }

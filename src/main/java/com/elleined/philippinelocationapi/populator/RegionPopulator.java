@@ -2,8 +2,8 @@ package com.elleined.philippinelocationapi.populator;
 
 import com.elleined.philippinelocationapi.mapper.region.RegionMapper;
 import com.elleined.philippinelocationapi.model.region.Region;
+import com.elleined.philippinelocationapi.repository.region.RegionRepository;
 import com.elleined.philippinelocationapi.request.region.RegionRequest;
-import com.elleined.philippinelocationapi.service.region.RegionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -17,12 +17,12 @@ import java.util.List;
 @Component
 @Transactional
 public class RegionPopulator extends Populator {
-    private final RegionService regionService;
+    private final RegionRepository regionRepository;
     private final RegionMapper regionMapper;
 
-    protected RegionPopulator(ObjectMapper objectMapper, RegionService regionService, RegionMapper regionMapper) {
+    public RegionPopulator(ObjectMapper objectMapper, RegionRepository regionRepository, RegionMapper regionMapper) {
         super(objectMapper);
-        this.regionService = regionService;
+        this.regionRepository = regionRepository;
         this.regionMapper = regionMapper;
     }
 
@@ -34,9 +34,9 @@ public class RegionPopulator extends Populator {
 
         List<RegionRequest> regionRequests = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
         List<Region> regions = regionRequests.stream()
-                .map(regionMapper::toEntity)
+                .map(request -> regionMapper.toEntity(request.getName(), request.getDescription()))
                 .toList();
 
-        regionService.saveAll(regions);
+        regionRepository.saveAll(regions);
     }
 }

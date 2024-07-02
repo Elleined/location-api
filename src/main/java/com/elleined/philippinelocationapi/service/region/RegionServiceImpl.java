@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.service.region;
 
-import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.region.RegionRepository;
 import lombok.RequiredArgsConstructor;

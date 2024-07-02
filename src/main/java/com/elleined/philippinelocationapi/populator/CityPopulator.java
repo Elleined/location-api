@@ -2,8 +2,10 @@ package com.elleined.philippinelocationapi.populator;
 
 import com.elleined.philippinelocationapi.mapper.city.CityMapper;
 import com.elleined.philippinelocationapi.model.city.City;
+import com.elleined.philippinelocationapi.model.province.Province;
+import com.elleined.philippinelocationapi.repository.city.CityRepository;
 import com.elleined.philippinelocationapi.request.city.CityRequest;
-import com.elleined.philippinelocationapi.service.city.CityService;
+import com.elleined.philippinelocationapi.service.province.ProvinceService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
@@ -19,13 +21,16 @@ import java.util.List;
 @Qualifier("cityPopulator")
 @Transactional
 public class CityPopulator extends Populator {
-    private final CityService cityService;
+    private final CityRepository cityRepository;
     private final CityMapper cityMapper;
 
-    protected CityPopulator(ObjectMapper objectMapper, CityService cityService, CityMapper cityMapper) {
+    private final ProvinceService provinceService;
+
+    public CityPopulator(ObjectMapper objectMapper, CityRepository cityRepository, CityMapper cityMapper, ProvinceService provinceService) {
         super(objectMapper);
-        this.cityService = cityService;
+        this.cityRepository = cityRepository;
         this.cityMapper = cityMapper;
+        this.provinceService = provinceService;
     }
 
     @Override
@@ -35,10 +40,13 @@ public class CityPopulator extends Populator {
         var type = objectMapper.getTypeFactory().constructCollectionType(List.class, CityRequest.class);
 
         List<CityRequest> cityRequests = objectMapper.readValue(new String(dataBytes, StandardCharsets.UTF_8), type);
-        List<City> citys = cityRequests.stream()
-                .map(cityMapper::toEntity)
+        List<City> cities = cityRequests.stream()
+                .map(request -> {
+                    Province province = provinceService.getById(request.getProvinceId());
+                    return cityMapper.toEntity(request.getName(), province);
+                })
                 .toList();
 
-        cityService.saveAll(citys);
+        cityRepository.saveAll(cities);
     }
 }

@@ -4,6 +4,7 @@ import com.elleined.philippinelocationapi.populator.BaranggayPopulator;
 import com.elleined.philippinelocationapi.populator.CityPopulator;
 import com.elleined.philippinelocationapi.populator.ProvincePopulator;
 import com.elleined.philippinelocationapi.populator.RegionPopulator;
+import com.elleined.philippinelocationapi.repository.region.RegionRepository;
 import com.elleined.philippinelocationapi.service.region.RegionService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,7 @@ import java.io.IOException;
 @Slf4j
 @RequiredArgsConstructor
 public class AfterStartUp {
+    private final RegionRepository regionRepository;
 
     private final RegionPopulator regionPopulator;
     private final ProvincePopulator provincePopulator;
@@ -32,7 +34,7 @@ public class AfterStartUp {
     @PostConstruct
     @Transactional
     void init() throws IOException {
-        if (!regionService.getAll().isEmpty()) {
+        if (regionRepository.existsById(1)) {
             log.debug("Returning because location values already been saved!");
             return;
         }

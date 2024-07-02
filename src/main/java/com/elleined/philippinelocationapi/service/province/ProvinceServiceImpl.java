@@ -1,6 +1,6 @@
 package com.elleined.philippinelocationapi.service.province;
 
-import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.province.ProvinceRepository;
@@ -24,12 +24,12 @@ class ProvinceServiceImpl implements ProvinceService {
     }
 
     @Override
-    public Page<Province> findAllByName(String name, Pageable pageable) {
-        return provinceRepository.findAllByName(name, pageable);
+    public Page<Province> getAllBy(Region region, Pageable pageable) {
+        return provinceRepository.findAll(region, pageable);
     }
 
     @Override
-    public Page<Province> getAllBy(Region region, Pageable pageable) {
-        return provinceRepository.findAll(region, pageable);
+    public Page<Province> findAllByName(Region region, String name, Pageable pageable) {
+        return provinceRepository.findAllByName(region, name, pageable);
     }
 }

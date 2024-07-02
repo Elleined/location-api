@@ -3,6 +3,7 @@ package com.elleined.philippinelocationapi.mapper.region;
 import com.elleined.philippinelocationapi.dto.region.RegionDTO;
 import com.elleined.philippinelocationapi.mapper.CustomMapper;
 import com.elleined.philippinelocationapi.model.region.Region;
+import com.elleined.philippinelocationapi.request.region.RegionRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

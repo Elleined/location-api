@@ -1,8 +1,11 @@
 package com.elleined.philippinelocationapi.service.baranggay;
 
-import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceNotOwnedException;
 import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
 import com.elleined.philippinelocationapi.model.city.City;
+import com.elleined.philippinelocationapi.model.province.Province;
+import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.baranggay.BaranggayRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,12 +27,24 @@ public class BaranggayServiceImpl implements BaranggayService {
     }
 
     @Override
-    public Page<Baranggay> findAllByName(String name, Pageable pageable) {
-        return baranggayRepository.findAllByName(name, pageable);
+    public Page<Baranggay> findAllByName(Region region, Province province, City city, String name, Pageable pageable) {
+        if (region.has(province))
+            throw new ResourceNotOwnedException("Cannot find all by name! because region doesn't have this province");
+
+        if (!province.has(city))
+            throw new ResourceNotOwnedException("Cannot find all by name! because province doesn't have this city");
+
+        return baranggayRepository.findAllByName(region, province, city, name, pageable);
     }
 
     @Override
-    public Page<Baranggay> getAllBy(City city, Pageable pageable) {
-        return baranggayRepository.findAll(city, pageable);
+    public Page<Baranggay> getAllBy(Region region, Province province, City city, Pageable pageable) {
+        if (region.has(province))
+            throw new ResourceNotOwnedException("Cannot find all by name! because region doesn't have this province");
+
+        if (!province.has(city))
+            throw new ResourceNotOwnedException("Cannot find all by name! because province doesn't have this city");
+
+        return baranggayRepository.findAll(region, province, city, pageable);
     }
 }

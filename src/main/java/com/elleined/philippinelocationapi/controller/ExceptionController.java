@@ -1,9 +1,8 @@
 package com.elleined.philippinelocationapi.controller;
 
 import com.elleined.philippinelocationapi.dto.APIResponse;
-import com.elleined.philippinelocationapi.exception.AlreadyExistsException;
-import com.elleined.philippinelocationapi.exception.EmptyUUIDException;
-import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
+import com.elleined.philippinelocationapi.exception.PhilippineLocationAPIException;
+import com.elleined.philippinelocationapi.exception.resource.ResourceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
@@ -11,22 +10,23 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import java.io.IOException;
 import java.util.List;
 
 @ControllerAdvice
 public class ExceptionController {
 
-    @ExceptionHandler({ResourceNotFoundException.class, AlreadyExistsException.class, IOException.class})
-    public ResponseEntity<APIResponse> handleResourceNotFoundException(RuntimeException ex) {
-        var response = new APIResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    @ExceptionHandler(ResourceException.class)
+    public ResponseEntity<APIResponse> handleResourceException(ResourceException ex) {
+        var responseMessage = new APIResponse(ex.getMessage(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(responseMessage, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(EmptyUUIDException.class)
-    public ResponseEntity<APIResponse> handleEmptyUUIDException(EmptyUUIDException ex) {
-        var response = new APIResponse(ex.getMessage(), HttpStatus.FORBIDDEN);
-        return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
+    @ExceptionHandler({
+            PhilippineLocationAPIException.class,
+    })
+    public ResponseEntity<APIResponse> handleSystemException(RuntimeException ex) {
+        var responseMessage = new APIResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(responseMessage, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(BindException.class)
