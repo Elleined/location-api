@@ -41,7 +41,7 @@ public class ProvincePopulator extends Populator {
         List<Province> provinces = provinceRequests.stream()
                 .map(request -> {
                     Region region = regionService.getById(request.getRegionId());
-                    return provinceMapper.toEntity(region.getName(), region);
+                    return provinceMapper.toEntity(request.getName(), region);
                 }).toList();
 
         provinceRepository.saveAll(provinces);
