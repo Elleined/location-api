@@ -1,7 +1,6 @@
 package com.elleined.philippinelocationapi.dto;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter

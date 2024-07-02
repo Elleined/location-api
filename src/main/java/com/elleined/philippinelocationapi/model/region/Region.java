@@ -3,14 +3,12 @@ package com.elleined.philippinelocationapi.model.region;
 import com.elleined.philippinelocationapi.model.Location;
 import com.elleined.philippinelocationapi.model.province.Province;
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Entity
 @Table(

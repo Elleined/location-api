@@ -23,7 +23,7 @@ public class ProvinceController {
     @GetMapping
     public List<ProvinceDTO> getAllBy(@PathVariable("regionId") int regionId) {
         Region region = regionService.getById(regionId);
-        return provinceService.getAllBy(region).stream()
+        return provinceService.getAllBy(region, ).stream()
                 .map(provinceMapper::toDTO)
                 .toList();
     }
@@ -36,7 +36,7 @@ public class ProvinceController {
 
     @GetMapping("/search")
     public List<ProvinceDTO> searchByLocationName(@RequestParam("name") String name) {
-        return provinceService.searchByName(name).stream()
+        return provinceService.findAllByName(name, ).stream()
                 .map(provinceMapper::toDTO)
                 .toList();
     }

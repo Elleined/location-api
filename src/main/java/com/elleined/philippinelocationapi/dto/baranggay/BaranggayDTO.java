@@ -4,7 +4,6 @@ import com.elleined.philippinelocationapi.dto.LocationDTO;
 import com.elleined.philippinelocationapi.dto.city.CityDTO;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.hateoas.Link;
 

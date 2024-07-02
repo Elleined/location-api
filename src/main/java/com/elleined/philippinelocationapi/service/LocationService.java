@@ -2,15 +2,10 @@ package com.elleined.philippinelocationapi.service;
 
 import com.elleined.philippinelocationapi.exception.ResourceNotFoundException;
 import com.elleined.philippinelocationapi.model.Location;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface LocationService<ENTITY extends Location> {
-    ENTITY save(ENTITY entity);
-    List<ENTITY> saveAll(List<ENTITY> entities);
-    boolean existsById(int id);
-    List<ENTITY> getAll();
     ENTITY getById(int id) throws ResourceNotFoundException;
-    List<ENTITY> getAllById(List<Integer> ids);
-    List<ENTITY> searchByName(String name);
+    Page<ENTITY> findAllByName(String name, Pageable pageable);
 }

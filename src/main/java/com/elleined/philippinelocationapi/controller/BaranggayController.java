@@ -23,7 +23,7 @@ public class BaranggayController {
     @GetMapping
     public List<BaranggayDTO> getAllByCity(@PathVariable("cityId") int cityId) {
         City city = cityService.getById(cityId);
-        return baranggayService.getAllBy(city).stream()
+        return baranggayService.getAllBy(city, ).stream()
                 .map(baranggayMapper::toDTO)
                 .toList();
     }
@@ -36,7 +36,7 @@ public class BaranggayController {
 
     @GetMapping("/search")
     public List<BaranggayDTO> searchByLocationName(@RequestParam("name") String name) {
-        return baranggayService.searchByName(name).stream()
+        return baranggayService.findAllByName(name, ).stream()
                 .map(baranggayMapper::toDTO)
                 .toList();
     }

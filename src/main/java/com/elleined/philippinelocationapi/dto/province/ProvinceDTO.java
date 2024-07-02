@@ -4,13 +4,10 @@ import com.elleined.philippinelocationapi.dto.LocationDTO;
 import com.elleined.philippinelocationapi.dto.region.RegionDTO;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.hateoas.Link;
 
-import javax.swing.plaf.synth.Region;
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter

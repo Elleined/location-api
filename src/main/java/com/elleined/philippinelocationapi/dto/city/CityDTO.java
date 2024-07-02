@@ -1,17 +1,13 @@
 package com.elleined.philippinelocationapi.dto.city;
 
-import com.elleined.philippinelocationapi.dto.HateoasDTO;
 import com.elleined.philippinelocationapi.dto.LocationDTO;
-import com.elleined.philippinelocationapi.dto.baranggay.BaranggayDTO;
 import com.elleined.philippinelocationapi.dto.province.ProvinceDTO;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.hateoas.Link;
 
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter

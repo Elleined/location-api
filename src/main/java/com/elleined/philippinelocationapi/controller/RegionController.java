@@ -31,7 +31,7 @@ public class RegionController {
 
     @GetMapping("/search")
     public List<RegionDTO> searchByLocationName(@RequestParam("name") String name) {
-        return regionService.searchByName(name).stream()
+        return regionService.findAllByName(name, ).stream()
                 .map(regionMapper::toDTO)
                 .toList();
     }
