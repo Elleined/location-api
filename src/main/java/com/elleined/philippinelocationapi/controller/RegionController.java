@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/regions")
 @RequiredArgsConstructor
@@ -20,7 +22,7 @@ public class RegionController {
     private final RegionService regionService;
     private final RegionMapper regionMapper;
 
-    @GetMapping
+    @GetMapping("/paged")
     public Page<RegionDTO> getAll(@RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                   @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                   @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
@@ -29,6 +31,13 @@ public class RegionController {
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return regionService.getAll(pageable)
                 .map(regionMapper::toDTO);
+    }
+
+    @GetMapping
+    public List<RegionDTO> getAll() {
+        return regionService.getAll().stream()
+                .map(regionMapper::toDTO)
+                .toList();
     }
 
     @GetMapping("/search")

@@ -14,6 +14,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/regions/{regionId}/provinces/{provinceId}/cities")
@@ -24,7 +26,7 @@ public class CityController {
     private final RegionService regionService;
     private final ProvinceService provinceService;
 
-    @GetMapping
+    @GetMapping("/paged")
     public Page<CityDTO> getAllBy(@PathVariable("regionId") int regionId,
                                   @PathVariable("provinceId") int provinceId,
                                   @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
@@ -38,6 +40,18 @@ public class CityController {
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return cityService.getAllBy(region, province, pageable)
                 .map(cityMapper::toDTO);
+    }
+
+    @GetMapping
+    public List<CityDTO> getAllBy(@PathVariable("regionId") int regionId,
+                                  @PathVariable("provinceId") int provinceId) {
+
+        Region region = regionService.getById(regionId);
+        Province province = provinceService.getById(provinceId);
+
+        return cityService.getAllBy(region, province).stream()
+                .map(cityMapper::toDTO)
+                .toList();
     }
 
     @GetMapping("/search")

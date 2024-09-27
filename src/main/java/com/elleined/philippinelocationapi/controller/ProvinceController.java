@@ -12,6 +12,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/regions/{regionId}/provinces")
 @RequiredArgsConstructor
@@ -21,7 +23,7 @@ public class ProvinceController {
 
     private final RegionService regionService;
 
-    @GetMapping
+    @GetMapping("/paged")
     public Page<ProvinceDTO> getAllBy(@PathVariable("regionId") int regionId,
                                       @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                       @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
@@ -33,6 +35,14 @@ public class ProvinceController {
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return provinceService.getAllBy(region, pageable)
                 .map(provinceMapper::toDTO);
+    }
+
+    @GetMapping
+    public List<ProvinceDTO> getAllBy(@PathVariable("regionId") int regionId) {
+        Region region = regionService.getById(regionId);
+        return provinceService.getAllBy(region).stream()
+                .map(provinceMapper::toDTO)
+                .toList();
     }
 
     @GetMapping("/search")
