@@ -1,7 +1,6 @@
 package com.elleined.philippinelocationapi.service.baranggay;
 
 import com.elleined.philippinelocationapi.exception.resource.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.exception.resource.ResourceNotOwnedException;
 import com.elleined.philippinelocationapi.model.baranggay.Baranggay;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
@@ -13,6 +12,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Slf4j
 @Service
@@ -34,5 +35,10 @@ public class BaranggayServiceImpl implements BaranggayService {
     @Override
     public Page<Baranggay> getAllBy(Region region, Province province, City city, Pageable pageable) {
         return baranggayRepository.findAll(region, province, city, pageable);
+    }
+
+    @Override
+    public List<Baranggay> getAllBy(Region region, Province province, City city) {
+        return baranggayRepository.findAll(region, province, city);
     }
 }

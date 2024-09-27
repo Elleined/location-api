@@ -10,6 +10,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface BaranggayRepository extends JpaRepository<Baranggay, Integer> {
 
     @Query("""
@@ -34,7 +36,6 @@ public interface BaranggayRepository extends JpaRepository<Baranggay, Integer> {
                                   @Param("name") String name,
                                   Pageable pageable);
 
-
     @Query("""
             SELECT
                 b
@@ -51,4 +52,21 @@ public interface BaranggayRepository extends JpaRepository<Baranggay, Integer> {
                             @Param("province") Province province,
                             @Param("city") City city,
                             Pageable pageable);
+
+
+    @Query("""
+            SELECT
+                b
+            FROM
+                Baranggay b
+            WHERE
+                b.city.province.region = :region
+            AND
+                b.city.province = :province
+            AND
+                b.city = :city
+            """)
+    List<Baranggay> findAll(@Param("region") Region region,
+                            @Param("province") Province province,
+                            @Param("city") City city);
 }

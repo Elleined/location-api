@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface CityRepository extends JpaRepository<City, Integer> {
 
     @Query("""
@@ -43,4 +45,17 @@ public interface CityRepository extends JpaRepository<City, Integer> {
     Page<City> findAll(@Param("region") Region region,
                        @Param("province") Province province,
                        Pageable pageable);
+
+    @Query("""
+            SELECT
+                c
+            FROM
+                City c
+            WHERE
+                c.province.region = :region
+            AND
+                c.province = :province
+            """)
+    List<City> findAll(@Param("region") Region region,
+                       @Param("province") Province province);
 }

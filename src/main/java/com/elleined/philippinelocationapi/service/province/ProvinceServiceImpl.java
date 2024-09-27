@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Slf4j
 @Service
 @Transactional
@@ -26,6 +28,11 @@ class ProvinceServiceImpl implements ProvinceService {
     @Override
     public Page<Province> getAllBy(Region region, Pageable pageable) {
         return provinceRepository.findAll(region, pageable);
+    }
+
+    @Override
+    public List<Province> getAllBy(Region region) {
+        return provinceRepository.findAll(region);
     }
 
     @Override

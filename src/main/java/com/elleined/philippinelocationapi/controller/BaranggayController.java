@@ -34,8 +34,7 @@ public class BaranggayController {
                                        @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                        @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                        @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
-                                       @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy,
-                                       @RequestParam(defaultValue = "false", name = "includeRelatedLinks") boolean includeRelatedLinks) {
+                                       @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy) {
 
         Region region = regionService.getById(regionId);
         Province province = provinceService.getById(provinceId);
@@ -43,8 +42,7 @@ public class BaranggayController {
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return baranggayService.getAllBy(region, province, city, pageable)
-                .map(baranggayMapper::toDTO)
-                .map(dto -> dto.addLinks(includeRelatedLinks));
+                .map(baranggayMapper::toDTO);
     }
 
     @GetMapping("/search")
@@ -55,8 +53,7 @@ public class BaranggayController {
                                             @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                             @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                             @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
-                                            @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy,
-                                            @RequestParam(defaultValue = "false", name = "includeRelatedLinks") boolean includeRelatedLinks) {
+                                            @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy) {
 
         Region region = regionService.getById(regionId);
         Province province = provinceService.getById(provinceId);
@@ -64,7 +61,6 @@ public class BaranggayController {
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return baranggayService.findAllByName(region, province, city, name, pageable)
-                .map(baranggayMapper::toDTO)
-                .map(dto -> dto.addLinks(includeRelatedLinks));
+                .map(baranggayMapper::toDTO);
     }
 }

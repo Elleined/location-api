@@ -1,7 +1,6 @@
 package com.elleined.philippinelocationapi.service.city;
 
 import com.elleined.philippinelocationapi.exception.resource.ResourceNotFoundException;
-import com.elleined.philippinelocationapi.exception.resource.ResourceNotOwnedException;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
 import com.elleined.philippinelocationapi.model.region.Region;
@@ -12,6 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Slf4j
 @Service
@@ -34,5 +35,10 @@ class CityServiceImpl implements CityService {
     public Page<City> getAllBy(Region region, Province province, Pageable pageable) {
         return cityRepository.findAll(region, province, pageable);
 
+    }
+
+    @Override
+    public List<City> getAllBy(Region region, Province province) {
+        return cityRepository.findAll(region, province);
     }
 }

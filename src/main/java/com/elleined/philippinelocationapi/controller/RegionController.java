@@ -24,13 +24,11 @@ public class RegionController {
     public Page<RegionDTO> getAll(@RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                   @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                   @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
-                                  @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy,
-                                  @RequestParam(defaultValue = "false", name = "includeRelatedLinks") boolean includeRelatedLinks) {
+                                  @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy) {
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return regionService.getAll(pageable)
-                .map(regionMapper::toDTO)
-                .map(dto -> dto.addLinks(includeRelatedLinks));
+                .map(regionMapper::toDTO);
     }
 
     @GetMapping("/search")
@@ -38,12 +36,10 @@ public class RegionController {
                                          @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                          @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                          @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
-                                         @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy,
-                                         @RequestParam(defaultValue = "false", name = "includeRelatedLinks") boolean includeRelatedLinks) {
+                                         @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy) {
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return regionService.findAllByName(name, pageable)
-                .map(regionMapper::toDTO)
-                .map(dto -> dto.addLinks(includeRelatedLinks));
+                .map(regionMapper::toDTO);
     }
 }

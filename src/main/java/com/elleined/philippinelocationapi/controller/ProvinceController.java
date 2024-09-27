@@ -26,15 +26,13 @@ public class ProvinceController {
                                       @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                       @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                       @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
-                                      @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy,
-                                      @RequestParam(defaultValue = "false", name = "includeRelatedLinks") boolean includeRelatedLinks) {
+                                      @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy) {
 
         Region region = regionService.getById(regionId);
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return provinceService.getAllBy(region, pageable)
-                .map(provinceMapper::toDTO)
-                .map(dto -> dto.addLinks(includeRelatedLinks));
+                .map(provinceMapper::toDTO);
     }
 
     @GetMapping("/search")
@@ -43,14 +41,12 @@ public class ProvinceController {
                                            @RequestParam(required = false, defaultValue = "1", value = "pageNumber") int pageNumber,
                                            @RequestParam(required = false, defaultValue = "5", value = "pageSize") int pageSize,
                                            @RequestParam(required = false, defaultValue = "ASC", value = "sortDirection") Sort.Direction direction,
-                                           @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy,
-                                           @RequestParam(defaultValue = "false", name = "includeRelatedLinks") boolean includeRelatedLinks) {
+                                           @RequestParam(required = false, defaultValue = "id", value = "sortBy") String sortBy) {
 
         Region region = regionService.getById(regionId);
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, direction, sortBy);
         return provinceService.findAllByName(region, name, pageable)
-                .map(provinceMapper::toDTO)
-                .map(dto -> dto.addLinks(includeRelatedLinks));
+                .map(provinceMapper::toDTO);
     }
 }

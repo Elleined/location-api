@@ -8,7 +8,11 @@ import com.elleined.philippinelocationapi.service.LocationService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 public interface BaranggayService extends LocationService<Baranggay> {
     Page<Baranggay> getAllBy(Region region, Province province, City city, Pageable pageable);
+    List<Baranggay> getAllBy(Region region, Province province, City city);
+
     Page<Baranggay> findAllByName(Region region, Province province, City city, String name, Pageable pageable);
 }
