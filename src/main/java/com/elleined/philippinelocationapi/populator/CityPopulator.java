@@ -3,9 +3,11 @@ package com.elleined.philippinelocationapi.populator;
 import com.elleined.philippinelocationapi.mapper.city.CityMapper;
 import com.elleined.philippinelocationapi.model.city.City;
 import com.elleined.philippinelocationapi.model.province.Province;
+import com.elleined.philippinelocationapi.model.region.Region;
 import com.elleined.philippinelocationapi.repository.city.CityRepository;
 import com.elleined.philippinelocationapi.request.city.CityRequest;
 import com.elleined.philippinelocationapi.service.province.ProvinceService;
+import com.elleined.philippinelocationapi.service.region.RegionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
@@ -24,12 +26,15 @@ public class CityPopulator extends Populator {
     private final CityRepository cityRepository;
     private final CityMapper cityMapper;
 
+    private final RegionService regionService;
+
     private final ProvinceService provinceService;
 
-    public CityPopulator(ObjectMapper objectMapper, CityRepository cityRepository, CityMapper cityMapper, ProvinceService provinceService) {
+    public CityPopulator(ObjectMapper objectMapper, CityRepository cityRepository, CityMapper cityMapper, RegionService regionService, ProvinceService provinceService) {
         super(objectMapper);
         this.cityRepository = cityRepository;
         this.cityMapper = cityMapper;
+        this.regionService = regionService;
         this.provinceService = provinceService;
     }
 

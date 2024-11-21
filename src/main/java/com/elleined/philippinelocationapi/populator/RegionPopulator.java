@@ -20,7 +20,10 @@ public class RegionPopulator extends Populator {
     private final RegionRepository regionRepository;
     private final RegionMapper regionMapper;
 
-    public RegionPopulator(ObjectMapper objectMapper, RegionRepository regionRepository, RegionMapper regionMapper) {
+    public RegionPopulator(ObjectMapper objectMapper,
+                           RegionRepository regionRepository,
+                           RegionMapper regionMapper) {
+
         super(objectMapper);
         this.regionRepository = regionRepository;
         this.regionMapper = regionMapper;

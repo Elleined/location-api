@@ -24,7 +24,11 @@ public class ProvincePopulator extends Populator {
 
     private final RegionService regionService;
 
-    public ProvincePopulator(ObjectMapper objectMapper, ProvinceRepository provinceRepository, ProvinceMapper provinceMapper, RegionService regionService) {
+    public ProvincePopulator(ObjectMapper objectMapper,
+                             ProvinceRepository provinceRepository,
+                             ProvinceMapper provinceMapper,
+                             RegionService regionService) {
+
         super(objectMapper);
         this.provinceRepository = provinceRepository;
         this.provinceMapper = provinceMapper;

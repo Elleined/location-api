@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 @Transactional
 @RequiredArgsConstructor
-class RegionServiceImpl implements RegionService {
+public class RegionServiceImpl implements RegionService {
     private final RegionRepository regionRepository;
 
     @Override

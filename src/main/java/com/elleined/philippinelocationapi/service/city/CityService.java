@@ -9,4 +9,6 @@ import java.util.List;
 public interface CityService {
     List<City> getAllBy(Region region, Province province);
     City getById(Region region, Province province, int id);
+
+    City getById(int id);
 }

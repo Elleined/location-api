@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @Transactional
 @RequiredArgsConstructor
-class ProvinceServiceImpl implements ProvinceService {
+public class ProvinceServiceImpl implements ProvinceService {
     private final ProvinceRepository provinceRepository;
 
     @Override
@@ -26,5 +26,10 @@ class ProvinceServiceImpl implements ProvinceService {
     @Override
     public Province getById(Region region, int id) {
         return provinceRepository.findById(region, id).orElseThrow(() -> new ResourceNotFoundException("Province with id of " + id + " doesn't exists!"));
+    }
+
+    @Override
+    public Province getById(int id) {
+        return provinceRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Province with id of " + id + " doesn't exists!"));
     }
 }

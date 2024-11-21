@@ -24,7 +24,11 @@ public class BaranggayPopulator extends Populator {
 
     private final CityService cityService;
 
-    public BaranggayPopulator(ObjectMapper objectMapper, BaranggayRepository baranggayRepository, BaranggayMapper baranggayMapper, CityService cityService) {
+    public BaranggayPopulator(ObjectMapper objectMapper,
+                              BaranggayRepository baranggayRepository,
+                              BaranggayMapper baranggayMapper,
+                              CityService cityService) {
+
         super(objectMapper);
         this.baranggayRepository = baranggayRepository;
         this.baranggayMapper = baranggayMapper;

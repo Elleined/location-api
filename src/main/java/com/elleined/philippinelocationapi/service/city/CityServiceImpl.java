@@ -16,7 +16,7 @@ import java.util.List;
 @Service
 @Transactional
 @RequiredArgsConstructor
-class CityServiceImpl implements CityService {
+public class CityServiceImpl implements CityService {
     private final CityRepository cityRepository;
 
     @Override
@@ -25,7 +25,12 @@ class CityServiceImpl implements CityService {
     }
 
     @Override
-    public City getAllBy(Region region, Province province, int id) {
+    public City getById(Region region, Province province, int id) {
         return cityRepository.findById(region, province, id).orElseThrow(() -> new ResourceNotFoundException("City with id of " + id + " does not exists!"));
+    }
+
+    @Override
+    public City getById(int id) {
+        return cityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("City with id of " + id + " does not exists!"));
     }
 }
