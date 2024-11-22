@@ -27,6 +27,15 @@ public class BaranggayServiceImpl implements BaranggayService {
 
     @Override
     public Baranggay getById(Region region, Province province, City city, int id) {
+        if (!region.has(id))
+            throw new ResourceNotFoundException("Region with id of " + region.getId() + " doesn't have province with id of " + province.getId());
+
+        if (!province.has(id))
+            throw new ResourceNotFoundException("Province with id of " + province.getId() + " doesn't have city with id of " + city.getId());
+
+        if (!city.has(id))
+            throw new ResourceNotFoundException("City with id of " + city.getId() + " doesn't have baranggay with id of " + id);
+
         return baranggayRepository.findById(region, province, city, id).orElseThrow(() -> new ResourceNotFoundException("Baranggay with id of " + id + " does not exists!"));
     }
 }

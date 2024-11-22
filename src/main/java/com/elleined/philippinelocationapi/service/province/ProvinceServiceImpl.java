@@ -25,6 +25,9 @@ public class ProvinceServiceImpl implements ProvinceService {
 
     @Override
     public Province getById(Region region, int id) {
+        if (!region.has(id))
+            throw new ResourceNotFoundException("Region with id of " + region.getId() + " doesn't have province with id of " + id);
+
         return provinceRepository.findById(region, id).orElseThrow(() -> new ResourceNotFoundException("Province with id of " + id + " doesn't exists!"));
     }
 
