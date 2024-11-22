@@ -33,9 +33,4 @@ public class City extends Location {
 
     @OneToMany(mappedBy = "city")
     private Set<Baranggay> baranggays;
-
-    public boolean has(int id) {
-        return this.getBaranggays().stream()
-                .anyMatch(baranggay -> baranggay.getId() == id);
-    }
 }

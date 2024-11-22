@@ -26,12 +26,6 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public City getById(Region region, Province province, int id) {
-        if (!region.has(id))
-            throw new ResourceNotFoundException("Region with id of " + region.getId() + " doesn't have province with id of " + province.getId());
-
-        if (!province.has(id))
-            throw new ResourceNotFoundException("Province with id of " + province.getId() + " doesn't have city with id of " + id);
-
         return cityRepository.findById(region, province, id).orElseThrow(() -> new ResourceNotFoundException("City with id of " + id + " does not exists!"));
     }
 
